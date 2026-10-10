@@ -3,7 +3,13 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
-## 5c675b1 — 2026-10-10
+## eb7aa7e — 2026-10-10
+
+**Changed** the committed `pages/index.html` to regenerate the Pages
+visualization with the new chart layout (evenly spread songs, x-jitter, hover
+overviews, and bottom spacing).
+
+## 4df56d4 — 2026-10-10
 
 **Changed** the report page to add extra bottom spacing and clamp the hover
 tooltip within the viewport (flipping it above the cursor near the bottom edge)
