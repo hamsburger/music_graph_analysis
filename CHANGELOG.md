@@ -1,43 +1,49 @@
 # Changelog
 
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
-the commit's short hash.
+the commit's short hash and labels what was added, changed, or removed.
+
+## 8272fb0 — 2026-10-10
+
+**Changed** both changelog skills to record what was added, changed, or removed,
+and **changed** existing CHANGELOG.md and PROMPT_CHANGELOG.md entries to use the
+new **Added/Changed/Removed** labels.
 
 ## 400ea5b — 2026-10-10
 
-Added the Phase 3 summarization sandbox: a lyrics → LLM summary → LLM judge
+**Added** the Phase 3 summarization sandbox: a lyrics → LLM summary → LLM judge
 pipeline under `summarization_experiments/`, with prompt files, caching, a CLI,
 and network-free tests.
 
 ## 849295d — 2026-10-10
 
-Updated the update-changelog skill so entries are written after the change
+**Changed** the update-changelog skill so entries are written after the change
 commit and then folded back into that same commit.
 
 ## 03e0098 — 2026-10-10
 
-Completed Phase 2: each selected song's relationships are collected in both
+**Added** Phase 2: each selected song's relationships are now collected in both
 directions (what it sampled/interpolated, and what sampled/interpolated it).
 
 ## 5b18297 — 2026-10-10
 
-Added AGENTS.md documenting the repo conventions, commands, and guardrails for
-coding agents.
+**Added** AGENTS.md documenting the repo conventions, commands, and guardrails
+for coding agents.
 
 ## acee454 — 2026-10-10
 
-Added the update-changelog skill and the initial CHANGELOG.md.
+**Added** the update-changelog skill and the initial CHANGELOG.md.
 
 ## 81a6cf1 — 2026-10-10
 
-Added Phase 1 era analysis: an artist's songs are split into equal-length eras
-and the top songs per era are selected by pageviews.
+**Added** Phase 1 era analysis: an artist's songs are split into equal-length
+eras and the top songs per era are selected by pageviews.
 
 ## 733932d — 2026-10-09
 
-Initial implementation of the Genius API module, with the package skeleton,
-example scripts, and client tests.
+**Added** the Genius API module with the package skeleton, example scripts, and
+client tests.
 
 ## bc5fee5 — 2026-10-09
 
-Initial push containing the project README and a sample Genius API payload.
+**Added** the project README and a sample Genius API payload.

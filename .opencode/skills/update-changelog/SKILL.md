@@ -2,14 +2,17 @@
 name: update-changelog
 description: >
   Use whenever you create a git commit in this repo, or when the user asks to
-  update/append the changelog. Appends a brief 1-2 sentence summary of the
-  change, keyed by the commit's short hash, to the top of CHANGELOG.md.
+  update/append the changelog. Appends a brief entry, keyed by the commit's
+  short hash, that records what was added, changed, or removed, to the top of
+  CHANGELOG.md.
 ---
 
 # Update CHANGELOG on commit
 
 Keep `CHANGELOG.md` in sync with git history: every commit gets a short,
-human-readable entry keyed by its hash.
+human-readable entry keyed by its hash. Each entry must make clear **what was
+added, what was changed, and what was removed** — use the change-type labels in
+the format below so the nature of each change is explicit, not just the effect.
 
 ## When to run
 
@@ -29,13 +32,17 @@ they ask — you cannot observe those.
 ```markdown
 ## <short-hash> — <YYYY-MM-DD>
 
-<One or two sentences describing what changed and why.>
+**<Added|Changed|Removed>** <one or two sentences describing what changed and why.>
 ```
 
 - `<short-hash>` — from `git rev-parse --short HEAD`.
 - `<YYYY-MM-DD>` — the commit date (`git log -1 --format=%cs`).
-- Summary — plain prose, 1-2 sentences max. No bullet lists. Describe the
-  user-visible effect, not every file touched.
+- Change type — start the summary with one of the bold labels **Added**,
+  **Changed**, or **Removed**. If a commit does more than one, repeat the label
+  on each point (e.g. `**Added** ...` then `**Changed** ...`) so each is
+  explicit. Prefer the labels that actually apply; do not invent removals.
+- Summary — plain prose, 1-2 sentences max per label. No bullet lists. Describe
+  the user-visible effect, not every file touched.
 
 ## Steps
 
@@ -77,12 +84,18 @@ they ask — you cannot observe those.
 ```markdown
 # Changelog
 
+## 400ea5b — 2026-10-10
+
+**Added** the Phase 3 summarization sandbox under
+`summarization_experiments/`, with prompt files, caching, a CLI, and
+network-free tests. **Changed** the README to document the new commands.
+
 ## 81a6cf1 — 2026-10-10
 
-Added the Phase 1 era analysis: artist songs are split into equal-length eras
-and the top songs per era are selected by pageviews.
+**Added** the Phase 1 era analysis: an artist's songs are split into
+equal-length eras and the top songs per era are selected by pageviews.
 
 ## bc5fee5 — 2026-10-09
 
-Initial push with the Genius API client and example scripts.
+**Added** the initial Genius API client, example scripts, and a sample payload.
 ```
