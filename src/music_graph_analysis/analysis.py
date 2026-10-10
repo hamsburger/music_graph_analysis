@@ -32,6 +32,7 @@ from .genius import (
     GeniusClient,
     GeniusAPIError,
 )
+from .naming import artist_folder
 
 
 def _primary_artist_id(song: dict[str, Any]) -> int | None:
@@ -40,8 +41,7 @@ def _primary_artist_id(song: dict[str, Any]) -> int | None:
 
 
 def _artist_folder(artist_name: str | None, artist_id: int) -> str:
-    label = f"{artist_name}-{artist_id}" if artist_name else f"artist-{artist_id}"
-    return label
+    return artist_folder(artist_name, artist_id)
 
 
 def _date_label(song: dict[str, Any]) -> str | None:

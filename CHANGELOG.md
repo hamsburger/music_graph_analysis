@@ -3,6 +3,13 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
+## b7f26fe — 2026-10-10
+
+**Added** the production lyric summarization pipeline to the package
+(`config`, `llm`, `lyrics`, `naming`, `prompts`, `summarize`) and **changed**
+`analyze_artist.py` to attach an LLM `summary` to every song as its final,
+best-effort step (skipped without `OPENROUTER_API_KEY` or with `--no-summarize`).
+
 ## ec8a7b6 — 2026-10-10
 
 **Changed** the summarize prompt to require a detailed overview with each claim

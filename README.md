@@ -20,7 +20,11 @@ See [docs/repo-structure.md](docs/repo-structure.md) for a map of the codebase.
 
 - **Phase 1 (Complete)**: Divide songs into eras and pick top 5 most popular songs in each era
 - **Phase 2 (Complete)**: For each song, find out song relationships: samples, sampled_in, interpolates, interpolated_by
-- **Phase 3 (In progress)**: LLM Summary of lyrics for each song, then another LLM to summarize the lineage of the song (how it was created, who sampled it). See [docs/phase-3-summarization.md](docs/phase-3-summarization.md) for the experimentation plan.
+- **Phase 3 (In progress)**: LLM Summary of lyrics for each song is completed and integrated (see [docs/phase-3-summarization.md](docs/phase-3-summarization.md)); the LLM judge experiment and the song-lineage summary remain in the sandbox.
+- **Phase 4**: Produce something that can render on github and show the following things:
+  - Eras on a "time" x-axis.
+  - Themes, imageries, or emotional tones labeled on a chart for each era. User should be able to select which one that want to see in a dropdown menu.
+  - Render each song in the era as a shape of some sort? With the album image of the song being embedded in the shape.
 
 ## Improvements
 - Add CLAUDE/AGENT.md so you can be more confident in the data your coding agent is using as context for making decisions
@@ -35,8 +39,8 @@ Genius API Key
 # Setup
 
 Create and activate a virtual environment, then install the project (this also
-installs the runtime dependencies `requests` and `python-dotenv`, plus the dev
-extras such as `pytest`):
+installs the runtime dependencies `requests`, `python-dotenv`, and
+`lyricsgenius`, plus the dev extras such as `pytest`):
 
 ```bash
 python -m venv .venv
@@ -62,9 +66,16 @@ cp .env.example .env
 
 ```
 GENIUS_ACCESS_TOKEN=your_token_here
+OPENROUTER_API_KEY=your_openrouter_key_here
+OPENROUTER_MODEL=deepseek/deepseek-chat
 ```
 
 `.env` is gitignored; never commit real credentials.
+
+`OPENROUTER_API_KEY` enables the LLM lyric summaries attached to each song as
+the final analysis step; without it the analysis runs and summaries are skipped
+with a warning. `OPENROUTER_MODEL` is the summarizer model (default
+`deepseek/deepseek-chat`).
 
 ## Running the example
 
@@ -86,6 +97,11 @@ selected by pageviews, and each song's relationships are collected: what it
 `sampled`/`interpolated` (its inspirations) and the songs that `sampled_in`/
 `interpolated_by` it (its influence).
 
+As a final step, each song's lyrics are fetched and summarized with the LLM, and
+the resulting `summary` dict (`overview`, `themes`, `emotional_tone`,
+`key_imagery`) is attached to the song. This step is best-effort: without
+`OPENROUTER_API_KEY` it is skipped with a warning.
+
 ```bash
 python src/analyze_artist.py "SWV"
 ```
@@ -96,7 +112,9 @@ Useful flags:
 - `--json` — print the full structured result as JSON.
 - `--out FILE` — write the full result as JSON to a file.
 - `--no-cache` — disable the on-disk response cache (`data/cache/`).
-- `--min-interval SECONDS` — client-side throttle between API requests.
+- `--min-interval SECONDS` — client-side throttle between Genius API requests.
+- `--no-summarize` — skip the LLM lyric summarization step.
+- `--summarizer-model M` — OpenRouter model for summaries (default `OPENROUTER_MODEL`).
 
 ## Tests
 

@@ -5,8 +5,12 @@ Usage
     python src/analyze_artist.py "Artist Name" [--eras 5] [--top 5]
                                        [--json] [--out FILE]
                                        [--no-cache] [--cache-dir DIR]
+                                       [--no-summarize] [--summarizer-model M]
 
 The access token is read from ``GENIUS_ACCESS_TOKEN`` (loaded from ``.env``).
+As a final step each song's lyrics are summarized via the OpenRouter API and the
+summary is attached to the song; this needs ``OPENROUTER_API_KEY`` and is skipped
+with a warning when the key is missing (or with ``--no-summarize``).
 """
 
 from __future__ import annotations
@@ -17,7 +21,19 @@ import sys
 
 from dotenv import load_dotenv
 
-from music_graph_analysis import ArtistAnalyzer, GeniusAPIError, GeniusClient, JsonCache
+from music_graph_analysis import (
+    ArtistAnalyzer,
+    GeniusAPIError,
+    GeniusClient,
+    JsonCache,
+    LLMError,
+    LyricsSource,
+    OpenRouterClient,
+    SongSummarizer,
+    attach_summaries,
+    openrouter_api_key,
+    summarizer_model,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -27,7 +43,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--eras", type=int, default=5, help="Number of era buckets (default: 5)"
     )
     parser.add_argument(
-        "--top", type=int, default=5, help="Songs per era to analyse (default: 5)"
+        "--top", type=int, default=5, help="Songs per era to analyse (default: 5), ranked by popularity (views on Genius)"
     )
     parser.add_argument(
         "--json", action="store_true", help="Print the full result as JSON"
@@ -45,7 +61,23 @@ def build_parser() -> argparse.ArgumentParser:
         "--min-interval",
         type=float,
         default=0.34,
-        help="Minimum seconds between API requests (default: 0.34)",
+        help="Minimum seconds between Genius API requests (default: 0.34)",
+    )
+    parser.add_argument(
+        "--no-summarize",
+        action="store_true",
+        help="Skip the LLM lyric summarization step",
+    )
+    parser.add_argument(
+        "--summarizer-model",
+        default=None,
+        help="OpenRouter model for summaries (default: OPENROUTER_MODEL)",
+    )
+    parser.add_argument(
+        "--llm-min-interval",
+        type=float,
+        default=0.0,
+        help="Minimum seconds between OpenRouter requests (default: 0)",
     )
     return parser
 
@@ -72,6 +104,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Analysis failed: {exc}", file=sys.stderr)
         return 1
 
+    if not args.no_summarize:
+        _attach_summaries(result, args, cache)
+
     from music_graph_analysis import format_report
 
     print(format_report(result))
@@ -85,6 +120,34 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
     return 0
+
+
+def _attach_summaries(
+    result: dict, args: argparse.Namespace, cache: JsonCache | None
+) -> None:
+    """Summarize every song in ``result``, logging progress to stderr."""
+    if not openrouter_api_key():
+        print(
+            "Summarization skipped: OPENROUTER_API_KEY is not set (see .env.example).",
+            file=sys.stderr,
+        )
+        return
+
+    try:
+        llm = OpenRouterClient(min_interval=args.llm_min_interval)
+    except LLMError as exc:
+        print(f"Summarization skipped: {exc}", file=sys.stderr)
+        return
+
+    summarizer = SongSummarizer(
+        llm,
+        LyricsSource(cache=cache),
+        cache=cache,
+        summarizer_model=args.summarizer_model or summarizer_model(),
+    )
+    attach_summaries(
+        result, summarizer, log=lambda message: print(message, file=sys.stderr)
+    )
 
 
 if __name__ == "__main__":

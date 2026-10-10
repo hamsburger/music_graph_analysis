@@ -13,7 +13,8 @@ to a nested folder, with a `.json` extension on the final segment:
 
 ```
 key:  "{artist-name}-{artist-id}/discography"
-key:  "{artist-name}-{artist-id}/sampled_in/{song-title}-{song-id}"
+key:  "{artist-name}-{artist-id}/relationships/{song-title}-{song-id}"
+key:  "{artist-name}-{artist-id}/summaries/{song-title}-{song-id}-{model}-{digest}"
 ```
 
 which produces, for example:
@@ -22,12 +23,16 @@ which produces, for example:
 data/cache/
 └── kanye-west-123/
     ├── discography.json
-    └── sampled_in/
-        ├── stronger-456.json
-        └── power-789.json
+    ├── relationships/
+    │   ├── stronger-456.json
+    │   └── power-789.json
+    ├── lyrics/
+    │   └── stronger-456.json
+    └── summaries/
+        └── stronger-456-deepseek-deepseek-chat-1a2b3c4d5e6f.json
 ```
 
-Each artist therefore gets its own folder, and each sampled response lives
+Each artist therefore gets its own folder, and each cached response lives
 beside the artist it belongs to. This makes the cache easy to browse and
 inspect by hand instead of dealing with opaque hash filenames.
 
@@ -36,10 +41,16 @@ inspect by hand instead of dealing with opaque hash filenames.
 | Key path | Source | Used for |
 | --- | --- | --- |
 | `{artist}/discography` | `GET /artists/{id}/songs` (paged) | The artist's full song list. |
-| `{artist}/sampled_in/{song}` | `GET /songs/{id}` | The songs that sampled a given song. |
+| `{artist}/relationships/{song}` | `GET /songs/{id}` | A song's samples / sampled_in / interpolates / interpolated_by. |
+| `{artist}/lyrics/{song}` | `lyricsgenius` scrape | Raw lyrics for a song. |
+| `{artist}/summaries/{song}-{model}-{digest}` | OpenRouter chat completion | The LLM summary of a song's lyrics. |
 
-When no artist context is available, `sampled_in` responses fall back to a
-shared `songs/` folder (`songs/sampled_in/{song}.json`).
+When no artist context is available, relationship responses fall back to a
+shared `songs/` folder (`songs/relationships/{song}.json`).
+
+For summaries, `{digest}` is a short SHA-256 of the **rendered prompt**
+(lyrics + `summarize.txt`) and `{model}` is the summarizer slug, so editing the
+prompt or switching models produces a fresh entry rather than a stale hit.
 
 ## Behaviour
 

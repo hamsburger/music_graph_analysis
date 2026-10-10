@@ -7,7 +7,8 @@ Project-specific guidance for coding agents working in this repo.
 Python tool that analyses music sampling/interpolation graphs via the Genius API.
 An artist's career is split into equal-length **eras**; the most popular songs per
 era are selected and their `samples` / `sampled_in` / `interpolates` /
-`interpolated_by` relationships are collected and reported.
+`interpolated_by` relationships are collected and reported. As a final step each
+song's lyrics are summarized with an LLM and the summary is attached to the song.
 
 See [docs/repo-structure.md](docs/repo-structure.md) for the full codebase map and
 [docs/cache.md](docs/cache.md) for the on-disk cache design. Keep those docs in
@@ -34,10 +35,18 @@ Do not invent or assume a lint command.
 - Every module uses `from __future__ import annotations` and type hints.
 - Prefer pure, side-effect-free functions for logic (see `eras.py`): no network
   or file I/O in that layer, so it stays easy to unit test.
-- All network access is funnelled through `music_graph_analysis/genius.py`
-  (`GeniusClient`). Do not call `requests` from other modules.
-- `analysis.py` is the orchestration layer; `__init__.py` re-exports the public
-  API, so add public symbols there too.
+- Genius network access is funnelled through `music_graph_analysis/genius.py`
+  (`GeniusClient`); OpenRouter access through `music_graph_analysis/llm.py`
+  (`OpenRouterClient`). These are the only modules that call `requests`.
+  Lyrics scraping lives in `lyrics.py` (`LyricsSource`, lazy `lyricsgenius`).
+- `analysis.py` is the orchestration layer; `summarize.py` attaches the LLM
+  summary dict to each song. `__init__.py` re-exports the public API, so add
+  public symbols there too.
+- Prompts are package data under `music_graph_analysis/prompts/` (`summarize.txt`);
+  include new `.txt` files via `[tool.setuptools.package-data]` in `pyproject.toml`.
+- `analyze_artist.py` runs summarization as its final step. It is best-effort:
+  without `OPENROUTER_API_KEY` (or with `--no-summarize`) it warns and skips, so
+  the base analysis never requires the OpenRouter key.
 
 ## Gotchas
 

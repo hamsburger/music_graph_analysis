@@ -6,7 +6,11 @@ summarize the lyrics of each era-defining song, then have a second LLM act as a
 
 The first step is a throwaway sandbox under `summarization_experiments/` so we can
 tune prompts on real songs *before* wiring anything into the production
-`analysis.py` pipeline.
+`analysis.py` pipeline. The summarize stage has since been productionised: a
+summary-only `SongSummarizer` lives in the `music_graph_analysis` package
+(`llm.py`, `lyrics.py`, `summarize.py`, `prompts/summarize.txt`) and is attached
+to every song as the final step of `analyze_artist.py`. The judge remains a
+sandbox experiment.
 
 ## Goal & scope
 
@@ -19,9 +23,9 @@ Validate a three-stage pipeline end to end:
    that was left out.
 
 **Out of scope for now:** the second half of Phase 3 (summarizing a song's
-*lineage* — how it was created and who sampled it) and any integration into the
-installable `music_graph_analysis` package. Those come after the summary/judge
-loop is proven.
+*lineage* — how it was created and who sampled it) and the *judge* stage;
+the summarize stage itself now ships in the installable
+`music_graph_analysis` package (judge stays a sandbox experiment).
 
 ## Status & how to run
 
@@ -35,6 +39,13 @@ python summarization_experiments/run_pipeline.py data/report/millkzy.json --limi
 Per-song results land in `summarization_experiments/results/{artist}/` with an
 aggregate `report.json`. Unit tests (no network) live in
 `tests/test_summarization_experiments.py`.
+
+For the production summary-only path, run the normal analysis; it summarizes each
+song as its last step (see [repo-structure.md](repo-structure.md)):
+
+```bash
+python src/analyze_artist.py "Daniel Caesar"
+```
 
 ## Background (verified)
 

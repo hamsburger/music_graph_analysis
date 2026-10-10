@@ -20,6 +20,8 @@ music_graph_analysis/
 │   └── repo-structure.md    # This document.
 ├── notebook_experiments/    # Scratch space for exploratory notebooks.
 ├── summarization_experiments/  # Phase 3 sandbox: lyrics -> LLM summary -> judge.
+│                               # Judge/aggregate experiments live here; the
+│                               # summarizer used in production is in the package.
 ├── src/
 │   ├── analyze_artist.py            # CLI entry point for the era analysis.
 │   ├── genius_api_example.py        # Minimal /songs/{id} example script.
@@ -28,11 +30,20 @@ music_graph_analysis/
 │       ├── genius.py                # Genius REST API client.
 │       ├── eras.py                  # Pure era-bucketing logic.
 │       ├── cache.py                 # JSON disk cache.
+│       ├── naming.py                # Cache-key / label helpers.
+│       ├── config.py                # Summarizer env vars, model, prompts dir.
+│       ├── llm.py                   # OpenRouter chat-completions client.
+│       ├── lyrics.py                # LyricsSource (lazy lyricsgenius).
+│       ├── prompts.py               # Load/render prompt templates.
+│       ├── prompts/
+│       │   └── summarize.txt        # Summarize prompt (package data).
+│       ├── summarize.py             # SongSummarizer + attach_summaries.
 │       └── analysis.py              # Orchestration + report formatting.
 └── tests/
     ├── test_genius.py               # Client request/retry/paging tests.
     ├── test_eras.py                 # Bucketing and selection tests.
-    └── test_analysis.py             # End-to-end analysis tests (fake client).
+    ├── test_analysis.py             # End-to-end analysis tests (fake client).
+    └── test_summarize.py            # Summarizer tests (fake LLM + lyrics).
 ```
 
 ## Package modules
@@ -75,6 +86,42 @@ Pure, side-effect-free logic (no network or file I/O) that is easy to unit test.
   artist gets its own folder (e.g. `data/cache/kanye-west-123/discography.json`).
   Used to avoid re-hitting the API on repeated runs.
 
+### `music_graph_analysis/naming.py`
+- Dependency-free helpers shared by the analyzer and summarizer:
+  `content_hash` (short SHA-256 for cache keys), `artist_folder`,
+  `song_label`, and `model_slug` (slash-safe path segment).
+
+### `music_graph_analysis/config.py`
+- Summarizer configuration: `DEFAULT_PROMPTS_DIR`, `OPENROUTER_BASE_URL`,
+  `DEFAULT_SUMMARIZER_MODEL`, plus `openrouter_api_key()` and
+  `summarizer_model()` (reads `OPENROUTER_API_KEY` / `OPENROUTER_MODEL`).
+
+### `music_graph_analysis/llm.py`
+- `OpenRouterClient` — OpenAI-compatible chat-completions client for
+  `https://openrouter.ai/api/v1`; timeout, retries with exponential backoff,
+  and an optional `min_interval` throttle. `LLMError` on failure.
+
+### `music_graph_analysis/lyrics.py`
+- `LyricsSource` — fetches lyrics by song ID via the unofficial `lyricsgenius`
+  scraper (imported lazily) and caches the raw result per artist.
+  `LyricsError` when the token is missing or a fetch fails.
+
+### `music_graph_analysis/prompts.py` + `prompts/`
+- `load_prompt(name)` / `render(template, **values)` load and fill the
+  plain-text templates. `prompts/summarize.txt` is the summarize prompt and
+  ships as package data; rendering is literal `{token}` replacement so the
+  JSON examples inside the prompt keep their braces.
+
+### `music_graph_analysis/summarize.py`
+- `SongSummarizer` — fetches a song's lyrics, cleans them, calls the LLM with
+  the summarize prompt, and parses the strict-JSON summary (cached per model +
+  rendered prompt). `summarize_song(song)` returns the summary dict or `None`
+  when there are no usable lyrics.
+- `attach_summaries(result, summarizer)` — walks an analysis result and sets a
+  `summary` key on every song (or `None`); never aborts on a per-song error.
+- `clean_lyrics` / `extract_json` — the pure helpers (snippet/`[editing]`
+  rejection and tolerant JSON parsing).
+
 ### `music_graph_analysis/analysis.py`
 Orchestration layer that ties the client, cache, and era logic together.
 
@@ -86,13 +133,17 @@ Orchestration layer that ties the client, cache, and era logic together.
 
 ### `music_graph_analysis/__init__.py`
 Re-exports the public surface (`GeniusClient`, `ArtistAnalyzer`, `JsonCache`,
-era helpers, `format_report`, etc.) so callers can import from the package root.
+era helpers, `SongSummarizer`, `attach_summaries`, `format_report`, etc.) so
+callers can import from the package root.
 
 ## Entry points
 
-- `src/analyze_artist.py` — CLI for the era analysis:
+- `src/analyze_artist.py` — CLI for the era analysis. As a final step it
+  summarizes each song's lyrics and attaches the summary; without
+  `OPENROUTER_API_KEY` (or with `--no-summarize`) it warns and skips.
   ```bash
   python src/analyze_artist.py "SWV" [--eras N] [--top K] [--json] [--out FILE]
+                                     [--no-summarize] [--summarizer-model M]
   ```
 - `src/genius_api_example.py` — prints the raw `/songs/{id}` response.
 
@@ -118,6 +169,12 @@ artist id ──► iter_artist_songs (paged, cached)
                   │
                   ▼
           aggregated JSON + console report
+                  │
+                  ▼ (final step, best-effort)
+          attach_summaries ◄── LyricsSource (lyricsgenius)
+                  │              + OpenRouterClient (summarize.txt)
+                  ▼
+          each song gains a `summary` dict
 ```
 
 ## Tests
@@ -129,8 +186,8 @@ pytest
 ```
 
 Tests never hit the network: the Genius client tests monkeypatch
-`requests.get`, and the analysis tests use a `FakeClient` plus a temporary
-`JsonCache`.
+`requests.get`, the analysis tests use a `FakeClient` plus a temporary
+`JsonCache`, and the summarizer tests use a `FakeLLM` and `FakeLyricsSource`.
 
 ## Related concepts
 
