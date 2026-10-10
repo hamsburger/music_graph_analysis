@@ -4,15 +4,16 @@ summary of the song's content.
 Rules:
 - Base every claim only on the lyrics provided. Do not invent details, names,
   dates, or context that are not present.
-- Describe what the speaker says and feels, not who the artist is.
-- Keep the overview to a short paragraph.
+- Describe what the speaker is expressing, not who the artist is.
+- Write a detailed, multi-sentence overview. Support every claim you make with a
+  short example or quote taken directly from the lyrics (e.g. "..."). Only use
+  words that actually appear in the lyrics; do not paraphrase-invent imagery.
 - Respond with STRICT JSON only, no prose and no markdown fences.
 
 Return JSON with exactly these keys:
 {
-  "overview": "one-paragraph summary",
+  "overview": "detailed summary; each claim backed by a short lyric quote or example",
   "themes": ["short theme labels"],
-  "narrative": "what happens in the song / who is speaking to whom",
   "emotional_tone": "overall tone",
   "key_imagery": ["notable images or metaphors, quoted or paraphrased"]
 }

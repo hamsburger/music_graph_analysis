@@ -8,9 +8,10 @@ Usage
         [--no-cache] [--cache-dir DIR] [--out DIR] [--min-interval SECONDS]
 
 Reads a Phase 2 report, fetches each song's lyrics, summarizes them with an LLM,
-scores the summary with a second LLM, and writes the combined per-song results
-plus an aggregate report. Credentials come from ``.env`` (loaded automatically):
-``GENIUS_ACCESS_TOKEN`` and ``OPENROUTER_API_KEY``.
+scores the summary with a second LLM, and writes the combined per-song records to
+a single ``results.json`` plus an aggregate report. Credentials come from
+``.env`` (loaded automatically): ``GENIUS_ACCESS_TOKEN`` and
+``OPENROUTER_API_KEY``.
 """
 
 from __future__ import annotations
@@ -211,9 +212,8 @@ def main(argv: list[str] | None = None) -> int:
             }
         records.append(record)
 
-        path = out_dir / f"{song['id']}.json"
-        with path.open("w", encoding="utf-8") as handle:
-            json.dump(record, handle, ensure_ascii=False, indent=2)
+    with (out_dir / "results.json").open("w", encoding="utf-8") as handle:
+        json.dump({"songs": records}, handle, ensure_ascii=False, indent=2)
 
     report_out = aggregate(records, valid_threshold=pipeline.valid_threshold)
     report_out["artist"] = {

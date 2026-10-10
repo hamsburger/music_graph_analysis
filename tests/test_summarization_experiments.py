@@ -45,7 +45,6 @@ SUMMARY_JSON = json.dumps(
     {
         "overview": "A song about a relationship.",
         "themes": ["love"],
-        "narrative": "The speaker addresses a lover.",
         "emotional_tone": "melancholic",
         "key_imagery": ["rain"],
     }

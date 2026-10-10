@@ -75,7 +75,7 @@ summarization_experiments/
 │       └── judge/{song-title}-{song-id}.json
 ├── results/                   # gitignored; run outputs
 │   └── {artist-name}-{artist-id}/
-│       ├── {song-id}.json     # combined per-song (summary + judge)
+│       ├── results.json       # {"songs": [...]} — per-song summary + judge
 │       └── report.json        # aggregate: mean score, pass rate, distribution
 ├── __init__.py
 ├── config.py                  # env vars, model ids, paths, constants
@@ -101,7 +101,7 @@ summarization_experiments/
 
 - The LLM receives the raw lyrics plus `prompts/summarize.txt`.
 - It must return **strict JSON** with:
-  `overview`, `themes[]`, `narrative`, `emotional_tone`, `key_imagery[]`.
+  `overview`, `themes[]`, `emotional_tone`, `key_imagery[]`.
 - A tolerant JSON extractor strips fenced code blocks / leading prose before
   parsing.
 
@@ -165,7 +165,6 @@ summarization_experiments/
   "summary": {
     "overview": "one-paragraph summary of the song",
     "themes": ["love", "betrayal", "denial"],
-    "narrative": "the speaker addresses an ex-lover ...",
     "emotional_tone": "melancholic, conflicted",
     "key_imagery": ["russian roulette", "a bullet to my heart"]
   },

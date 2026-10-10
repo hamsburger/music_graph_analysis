@@ -3,6 +3,13 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
+## ec8a7b6 — 2026-10-10
+
+**Changed** the summarize prompt to require a detailed overview with each claim
+backed by a short lyric quote and **removed** the `narrative` field; **changed**
+run outputs to a single `results.json` (`{"songs": [...]}`) instead of one JSON
+file per song.
+
 ## 8272fb0 — 2026-10-10
 
 **Changed** both changelog skills to record what was added, changed, or removed,
