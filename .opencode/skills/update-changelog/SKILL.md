@@ -13,8 +13,9 @@ human-readable entry keyed by its hash.
 
 ## When to run
 
-- When you intend to and before you create a commit (`git commit ...`) on
-  the user's behalf. Also fold this CHANGELOG into the same commit.
+- **After** you create a commit (`git commit ...`) on the user's behalf. Add the
+  new entry for that commit, then fold the changelog change back into that same
+  commit with `git commit --amend`.
 - When the user explicitly asks to update or backfill the changelog.
 
 Do **not** run this for commits the user made outside the current session unless
@@ -38,7 +39,9 @@ they ask — you cannot observe those.
 
 ## Steps
 
-1. Read the commit you just created:
+1. Create the change commit **first**; do not touch `CHANGELOG.md` yet.
+
+2. Read the commit you just created:
 
    ```bash
    git rev-parse --short HEAD
@@ -51,15 +54,23 @@ they ask — you cannot observe those.
    git show --stat --oneline HEAD
    ```
 
-2. Read the current `CHANGELOG.md` (create it with a `# Changelog` heading if
+3. Read the current `CHANGELOG.md` (create it with a `# Changelog` heading if
    it does not exist).
 
-3. Insert the new entry directly below the `# Changelog` heading, above any
-   existing entries. Preserve all existing entries exactly.
+4. Insert the new entry for that commit directly below the `# Changelog`
+   heading, above any existing entries. Preserve all existing entries exactly.
 
-4. Do not commit the changelog update unless the user asks; leave it as a
-   working-tree change they can review, or amend it into the same commit only
-   if the user explicitly requests an amend.
+5. Fold the changelog update back into the commit it documents:
+
+   ```bash
+   git add CHANGELOG.md
+   git commit --amend --no-edit
+   ```
+
+6. Because `--amend` rewrites the commit hash, the hash you recorded in step 4
+   no longer matches HEAD. This is expected: while you are here, fix any earlier
+   entry whose hash is now superseded, and on the next run correct the entry you
+   just added.
 
 ## Example
 

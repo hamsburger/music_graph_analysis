@@ -3,7 +3,12 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash.
 
-## 4c2d435 — 2026-10-10
+## 849295d — 2026-10-10
+
+Updated the update-changelog skill so entries are written after the change
+commit and then folded back into that same commit.
+
+## 03e0098 — 2026-10-10
 
 Completed Phase 2: each selected song's relationships are collected in both
 directions (what it sampled/interpolated, and what sampled/interpolated it).
