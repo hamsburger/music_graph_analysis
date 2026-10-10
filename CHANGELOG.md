@@ -3,6 +3,12 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash.
 
+## 400ea5b — 2026-10-10
+
+Added the Phase 3 summarization sandbox: a lyrics → LLM summary → LLM judge
+pipeline under `summarization_experiments/`, with prompt files, caching, a CLI,
+and network-free tests.
+
 ## 849295d — 2026-10-10
 
 Updated the update-changelog skill so entries are written after the change

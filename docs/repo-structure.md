@@ -15,8 +15,11 @@ music_graph_analysis/
 │   ├── cache/               # Generated JSON response cache (gitignored).
 │   └── examples/            # Sample Genius API payloads for reference/tests.
 ├── docs/
+│   ├── cache.md             # On-disk response cache design.
+│   ├── phase-3-summarization.md  # LLM lyric summarization plan.
 │   └── repo-structure.md    # This document.
 ├── notebook_experiments/    # Scratch space for exploratory notebooks.
+├── summarization_experiments/  # Phase 3 sandbox: lyrics -> LLM summary -> judge.
 ├── src/
 │   ├── analyze_artist.py            # CLI entry point for the era analysis.
 │   ├── genius_api_example.py        # Minimal /songs/{id} example script.

@@ -19,6 +19,10 @@ env/
 # Analysis cache
 data/cache/
 
+# Phase 3 summarization experiments (generated data + results)
+summarization_experiments/data/
+summarization_experiments/results/
+
 # OS / editors
 .DS_Store
 .vscode/

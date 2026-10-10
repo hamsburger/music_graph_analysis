@@ -20,11 +20,13 @@ See [docs/repo-structure.md](docs/repo-structure.md) for a map of the codebase.
 
 - **Phase 1 (Complete)**: Divide songs into eras and pick top 5 most popular songs in each era
 - **Phase 2 (Complete)**: For each song, find out song relationships: samples, sampled_in, interpolates, interpolated_by
-- **Phase 3**: LLM Summary of lyrics for each song, then another LLM to summarize the lineage of the song (how it was created, who sampled it)
+- **Phase 3 (In progress)**: LLM Summary of lyrics for each song, then another LLM to summarize the lineage of the song (how it was created, who sampled it). See [docs/phase-3-summarization.md](docs/phase-3-summarization.md) for the experimentation plan.
 
 ## Improvements
 - Add CLAUDE/AGENT.md so you can be more confident in the data your coding agent is using as context for making decisions
 - Add skills for automations you're sure about, such as changelog generation on every commit
+- How is DeepSeek Flash so good at figuring out where to get context? (e.g. use lyricsgenius to get lyrics, implement the Genius API perfectly as if it has been grounded in its endpoint)
+- Batch Processing for LLM summarization? Right now we're just processing one song at a time.
 
 # Data Source
 

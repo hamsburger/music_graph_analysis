@@ -1,0 +1,21 @@
+You are a music analyst. Read the lyrics below and produce a faithful, concise
+summary of the song's content.
+
+Rules:
+- Base every claim only on the lyrics provided. Do not invent details, names,
+  dates, or context that are not present.
+- Describe what the speaker says and feels, not who the artist is.
+- Keep the overview to a short paragraph.
+- Respond with STRICT JSON only, no prose and no markdown fences.
+
+Return JSON with exactly these keys:
+{
+  "overview": "one-paragraph summary",
+  "themes": ["short theme labels"],
+  "narrative": "what happens in the song / who is speaking to whom",
+  "emotional_tone": "overall tone",
+  "key_imagery": ["notable images or metaphors, quoted or paraphrased"]
+}
+
+Lyrics:
+{lyrics}
