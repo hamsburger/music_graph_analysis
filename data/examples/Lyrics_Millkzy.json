@@ -1,0 +1,1730 @@
+{
+ "alternate_names": [],
+ "api_path": "/artists/4013925",
+ "description": {
+  "plain": "Devin Jones, best known by his stage name Millkzy, is a poet from St.Louis, Missouri."
+ },
+ "facebook_name": null,
+ "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+ "id": 4013925,
+ "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+ "instagram_name": "millkzy",
+ "is_meme_verified": false,
+ "is_verified": false,
+ "name": "Millkzy",
+ "translation_artist": false,
+ "twitter_name": null,
+ "url": "https://genius.com/artists/Millkzy",
+ "current_user_metadata": {
+  "permissions": [
+   "view_activity_stream",
+   "view_discography"
+  ],
+  "excluded_permissions": [
+   "edit",
+   "edit_images",
+   "edit_names",
+   "edit_anything",
+   "merge",
+   "sort_artist_songs",
+   "follow",
+   "view_contribution_opportunities",
+   "edit_translation_artist",
+   "split",
+   "see_short_id"
+  ],
+  "interactions": {
+   "following": false
+  }
+ },
+ "followers_count": 7,
+ "description_annotation": {
+  "_type": "referent",
+  "annotator_id": 21531435,
+  "annotator_login": "macadamian",
+  "api_path": "/referents/32227639",
+  "classification": "unreviewed",
+  "fragment": "Millkzy",
+  "id": 32227639,
+  "is_description": true,
+  "path": "/32227639/Millkzy/Millkzy",
+  "range": {
+   "content": "Millkzy"
+  },
+  "song_id": null,
+  "url": "https://genius.com/32227639/Millkzy/Millkzy",
+  "verified_annotator_ids": [],
+  "annotatable": {
+   "api_path": "/artists/4013925",
+   "context": null,
+   "id": 4013925,
+   "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+   "link_title": "Millkzy",
+   "title": "Millkzy",
+   "type": "Artist",
+   "url": "https://genius.com/artists/Millkzy"
+  },
+  "annotations": [
+   {
+    "api_path": "/annotations/32227639",
+    "body": {
+     "plain": "Devin Jones, best known by his stage name Millkzy, is a poet from St.Louis, Missouri."
+    },
+    "comment_count": 0,
+    "community": true,
+    "custom_preview": null,
+    "has_voters": true,
+    "id": 32227639,
+    "pinned": false,
+    "share_url": "https://genius.com/32227639",
+    "source": null,
+    "state": "pending",
+    "url": "https://genius.com/32227639/Millkzy/Millkzy",
+    "verified": false,
+    "votes_total": 3,
+    "current_user_metadata": {
+     "permissions": [],
+     "excluded_permissions": [
+      "vote",
+      "edit",
+      "cosign",
+      "uncosign",
+      "destroy",
+      "accept",
+      "reject",
+      "see_unreviewed",
+      "clear_votes",
+      "propose_edit_to",
+      "pin_to_profile",
+      "unpin_from_profile",
+      "update_source",
+      "edit_custom_preview",
+      "report_as_abusive",
+      "create_comment"
+     ],
+     "interactions": {
+      "cosign": false,
+      "pyong": false,
+      "vote": null
+     },
+     "iq_by_action": {}
+    },
+    "authors": [
+     {
+      "attribution": 0.8125,
+      "pinned_role": null,
+      "user": {
+       "api_path": "/users/21531435",
+       "avatar": {
+        "tiny": {
+         "url": "https://images.genius.com/avatars/tiny/510382d5100f4c797efa214657ab4cc8",
+         "bounding_box": {
+          "width": 16,
+          "height": 16
+         }
+        },
+        "thumb": {
+         "url": "https://images.genius.com/avatars/thumb/510382d5100f4c797efa214657ab4cc8",
+         "bounding_box": {
+          "width": 32,
+          "height": 32
+         }
+        },
+        "small": {
+         "url": "https://images.genius.com/avatars/small/510382d5100f4c797efa214657ab4cc8",
+         "bounding_box": {
+          "width": 100,
+          "height": 100
+         }
+        },
+        "medium": {
+         "url": "https://images.genius.com/avatars/medium/510382d5100f4c797efa214657ab4cc8",
+         "bounding_box": {
+          "width": 300,
+          "height": 400
+         }
+        }
+       },
+       "header_image_url": "https://images.genius.com/avatars/medium/510382d5100f4c797efa214657ab4cc8",
+       "human_readable_role_for_display": "Contributor",
+       "id": 21531435,
+       "iq": 872,
+       "login": "macadamian",
+       "name": "macadamian",
+       "role_for_display": "contributor",
+       "url": "https://genius.com/macadamian",
+       "current_user_metadata": {
+        "permissions": [],
+        "excluded_permissions": [
+         "follow"
+        ],
+        "interactions": {
+         "following": false
+        }
+       }
+      }
+     },
+     {
+      "attribution": 0.1875,
+      "pinned_role": null,
+      "user": {
+       "api_path": "/users/22114567",
+       "avatar": {
+        "tiny": {
+         "url": "https://images.genius.com/avatars/tiny/05a4978b1da5c0f493ebceb9e5b6196e",
+         "bounding_box": {
+          "width": 16,
+          "height": 16
+         }
+        },
+        "thumb": {
+         "url": "https://images.genius.com/avatars/thumb/05a4978b1da5c0f493ebceb9e5b6196e",
+         "bounding_box": {
+          "width": 32,
+          "height": 32
+         }
+        },
+        "small": {
+         "url": "https://images.genius.com/avatars/small/05a4978b1da5c0f493ebceb9e5b6196e",
+         "bounding_box": {
+          "width": 100,
+          "height": 100
+         }
+        },
+        "medium": {
+         "url": "https://images.genius.com/avatars/medium/05a4978b1da5c0f493ebceb9e5b6196e",
+         "bounding_box": {
+          "width": 300,
+          "height": 400
+         }
+        }
+       },
+       "header_image_url": "https://images.genius.com/avatars/medium/05a4978b1da5c0f493ebceb9e5b6196e",
+       "human_readable_role_for_display": null,
+       "id": 22114567,
+       "iq": 110,
+       "login": "millkzy",
+       "name": "millkzy",
+       "role_for_display": null,
+       "url": "https://genius.com/millkzy",
+       "current_user_metadata": {
+        "permissions": [],
+        "excluded_permissions": [
+         "follow"
+        ],
+        "interactions": {
+         "following": false
+        }
+       }
+      }
+     }
+    ],
+    "cosigned_by": [],
+    "rejection_comment": null,
+    "verified_by": null
+   }
+  ]
+ },
+ "user": null,
+ "songs": [
+  {
+   "annotation_count": 1,
+   "api_path": "/songs/10595643",
+   "artist_names": "Millkzy",
+   "full_title": "RUSSIAN ROULETTE(I ADORE U) by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+   "id": 10595643,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-russian-roulettei-adore-u-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-russian-roulettei-adore-u-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 1,
+    "hot": false,
+    "pageviews": 10658
+   },
+   "title": "RUSSIAN ROULETTE(I ADORE U)",
+   "title_with_featured": "RUSSIAN ROULETTE(I ADORE U)",
+   "url": "https://genius.com/Millkzy-russian-roulettei-adore-u-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "Look\n\n[Chorus]\nAnd put another bullet to my heart again\nOnce we stop, let\u2019s start again\nSince we back, I\u2019ll treat you better now so we won\u2019t part again\nHopefully, you feel a certain way inside your heart again\nTo realign the things I didn\u2019t do when we was arguing, or\u2014\nOr maybe I\u2019m invisible\nThe things you\u2019ve claimed you done may be forgivable\nSo, luckily, I\u2019m just the only one that\u2019s been delusional\nI hope I get away and you can find a man more suitable\n\n[Instrumental]\n\n[Verse]\nYou know that you my love, you know I do adore you\nBetter than the ones that came here just before you\nEverything you did, it made it seem so worth it\nBut it\u2019s things I may relay that you will misinterpret\nLike, think about the days we went when we wouldn't say shit\nOr many things you hated but you never named it\nThe times that you got mad but it wasn't worth explaining\nDo you treat me like your love or like your entertainment?\n\nI still hate I made it on your roster\n'Cause it compliments your ego and replaced your posture\nMaybe something happened among my own absence\n'Cause when we talk about it now, you only show a fraction\nA book of lies that's trailed by your deception\nI had read among the pages and then came a lesson:\nTo never trust the words of one you know that still supports you\nBut I'm blinded by the fact that I still do adore you\n\n[Instrumental]\n\n[Chorus]\nAnd put another bullet to my heart again\nOnce we stop, let\u2019s start again\nSince we back, I\u2019ll treat you better now so we won\u2019t part again\nHopefully, you feel a certain way inside your heart again\nTo realign the things I didn\u2019t do when we was arguing, or\u2014\nOr maybe I\u2019m invisible\nThe things you\u2019ve claimed you done may be forgivable\nSo, luckily, I\u2019m just the only one that\u2019s been delusional\nI hope I get away and you can find a man more suitable and"
+  },
+  {
+   "annotation_count": 1,
+   "api_path": "/songs/10675452",
+   "artist_names": "Millkzy",
+   "full_title": "CINDERELLA by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+   "id": 10675452,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-cinderella-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-cinderella-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 5,
+    "day": 17
+   },
+   "release_date_for_display": "May 17, 2024",
+   "release_date_with_abbreviated_month_for_display": "May 17, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 1,
+    "hot": false
+   },
+   "title": "CINDERELLA",
+   "title_with_featured": "CINDERELLA",
+   "url": "https://genius.com/Millkzy-cinderella-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[editing]"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10595888",
+   "artist_names": "Millkzy",
+   "full_title": "ROSE IN THE WINTER by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+   "id": 10595888,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-rose-in-the-winter-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-rose-in-the-winter-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "ROSE IN THE WINTER",
+   "title_with_featured": "ROSE IN THE WINTER",
+   "url": "https://genius.com/Millkzy-rose-in-the-winter-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "And, and can we have a conversation?\nA conversation 'bout what love is\nThe thing that made addictions before drugs did\nNow women want more things that they can't love with\n\nAnd now I'm single now, you see what love did?\nOr maybe, better yet, we talk about the meaning\nOr why you have an attitude in different seasons\n\nIs love one of those things you meant to do while healing?\nIf not, then tell me why you had the idea do it\nI rehab from your love, but I still do reuse it\n\nA pr\u0435tty picket fence is mostly things I dr\u0435am of\nThat picture without you is mainly just a frame, then\nAnd all the stuff you bought will hit the box they came in\n\nA rose that grew in winter was your main relation\nOr, better yet, a mansion that was always vacant\nThe chimes against the wind have lately sounded fainted\n\nYeah\n\nAnd, and can we have a conversation?\nA conversation 'bout what love is\nThe thing that made addictions before drugs did\nNow women want more things that they can't love with\n\nAnd now I'm single now, you see what love did?\nOr maybe, better yet, we talk about the meaning\nOr why you have an attitude in different seasons\n\nIs love one of those things you meant to do while healing?\nIf not, then tell me why you had the idea do it\nI rehab from your love, but I still do reuse it"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11336940",
+   "artist_names": "Millkzy",
+   "full_title": "7 MINUTES IN HEAVEN by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11336940,
+   "lyrics_owner_id": 9259728,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-7-minutes-in-heaven-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-7-minutes-in-heaven-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 1,
+    "day": 10
+   },
+   "release_date_for_display": "January 10, 2025",
+   "release_date_with_abbreviated_month_for_display": "Jan. 10, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "7 MINUTES IN HEAVEN",
+   "title_with_featured": "7 MINUTES IN HEAVEN",
+   "url": "https://genius.com/Millkzy-7-minutes-in-heaven-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Intro]\nYeah\nLook\nAnd\nYeah and\n\n[Verse 1]\nWhat if God gave you seven minutes in heaven what would you do ?\nWould you take the chance to sing in his glory please pick and chose\nWould you decline the invitation and wait until it's your time ?\nBut you chose to be unfaithful and touch among other dudes\nIt's\nSickening to see that all you needed was\n7 minutes\nTo play my name and play the game that show you that you ain't loyal\nAnd the fact that your own friend had the heart to tell the truth\nIt painted every single picture made for you\nI'm too whole heartedly hearted to tell you that we done\nI'm still clinging on to the times when that love was worth the moon\nBut you capitalized on your lies\nAnd never had the guts to tell me that you went there more than once\nAnd who do you love ?\nCoz all your actions show me different\nWhich is the worse ?\nI failed to see what the ressemblance is\nI wonder is this worth the heart and all the time than that this been\nWhen you could spend it with another lovely\n1 minute, 2 minute, 3 minutes, 4 minutes, 5 minutes, 6 minutes\nBut it only took you 7\nDid you feel somewhat guilty when you told me your confessions\nWhat happens when you can't go back to heaven\n\n[Bridge]\nYeah\nLook\nAnd\nYeah\n\n[Verse 2]\nWhat if God gave you seven minutes in heaven what would you do ?\nWould you take the chance to sing in his glory please pick and chose\nWould you decline the invitation and wait until it's your time ?\nBut you chose to be unfaithful and touch among other dudes\nIt's\nSickening to see that all you needed was\n7 minutes\nTo play my name and play the game that show you that you ain't loyal\nAnd the fact that your own friend had the heart to tell the truth\nIt painted every single picture made for you\n\n[Outro]\nYeah\nLook\nAnd\nYeah"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11273807",
+   "artist_names": "Millkzy",
+   "full_title": "A BEAST WITH BEAUTY by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11273807,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-a-beast-with-beauty-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-a-beast-with-beauty-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 12,
+    "day": 27
+   },
+   "release_date_for_display": "December 27, 2024",
+   "release_date_with_abbreviated_month_for_display": "Dec. 27, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "A BEAST WITH BEAUTY",
+   "title_with_featured": "A BEAST WITH BEAUTY",
+   "url": "https://genius.com/Millkzy-a-beast-with-beauty-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse 1]\nYeah, look\nAnd my perception is you was a good girl, a lovely girl, a beauty\nBut they all seen a beast within, a pretty figure, truly\nYou weren\u2032t the worst, but you had moments worthy for a groupie\nI tell y'all more about the story of a beast with beauty\nShe was a light with no darkness in sight\nInnocent lover wasn\u2032t capable of carryin\u2019 a lies\nNever did wrong or had intent of wishin' you no ill will\nBut I still got more of the story to relate to y\u2032all still\n\n[Chorus]\nAlways she was, never she is\nAnd all the things she became\nWhy do we glorify the good\nWh\u0435n all the worst comes undone?\nI n\u0435ver wanted to forgive\nI just felt bad at the time\nBecause if I don\u2032t know, nigga\nWould that make me feel less of one?\n\n[Verse 2]\nMy isolation won't exempt me\nHer heart too cold, too empty\nThat thing that beats, that beauty\nWould change within the time\nThat I said you won\u2032t be mine\nWhat\u2019s worse than drugs is love\nWhat\u2032s worse than crows is dove\nWhat's worse than hate is love\nThe irony is\nWe would all preach we wanted love\nThat\u2032s all that matter\nThen it hurts us\nAnd we take a break\nAnd say it made us better\nThen we tell all of our friends\nOur bad advice we recommend\nAnd then get back with the same piece\nAnd get hurt all over again\nYeah, look\nAnd my perception is you was a good girl, a lovely girl of beauty\nBut they all seen the beast within, a pretty figure, truly\nYou weren't the worst, but you had moments worthy for a groupie\nI tell y'all more about the story of a beast with beauty\n\n[Chorus]\nAlways she was, never she is\nOf all the things she became\nWhy do we glorify the good\nWhen all the worst comes undone?\nI never wanted to forgive\nI just felt bad at the time\n\u2032Cause if I don\u2032t know, nigga\nWould it make me feel less of one?"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10675427",
+   "artist_names": "Millkzy",
+   "full_title": "Third person point of view by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/2dff62680f07aa4c5993e8aaee9c0243.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/2dff62680f07aa4c5993e8aaee9c0243.1000x1000x1.jpg",
+   "id": 10675427,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-third-person-point-of-view-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-third-person-point-of-view-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/2dff62680f07aa4c5993e8aaee9c0243.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/2dff62680f07aa4c5993e8aaee9c0243.1000x1000x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "Third person point of view",
+   "title_with_featured": "Third person point of view",
+   "url": "https://genius.com/Millkzy-third-person-point-of-view-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Snippet]\nAnd from a third person, a third person point of view\nI understand that you gon' love that girl only 'cause she love you\nAnd its different things, a million things, that never made no sense\nHow you gon' say its too much drama but defend that very\u2014\n\nI never meant to call her out her name, but that's the way I'm feeling\nIt only seems she hurting you in times you should be healing\nNo need to have a second guess or any second thoughts\n'Cause then the moment she ain't feeling you, she'll sign for the di\u2014"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10595951",
+   "artist_names": "Millkzy",
+   "full_title": "MYANNA'S PERSPECTIVE by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+   "id": 10595951,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-myannas-perspective-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-myannas-perspective-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "MYANNA\u2019S PERSPECTIVE",
+   "title_with_featured": "MYANNA'S PERSPECTIVE",
+   "url": "https://genius.com/Millkzy-myannas-perspective-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Chorus]\nAnd lately I've been wondering how it feels from a woman's perspective\nTo lose someone you love 'cause they feeling neglected\nYes, you gave them your all so you never expected\nThat they find another love with a different directive\n\nYour phone been off, screaming \"do not disturb me\"\nI know I did you wrong, tell me what would the terms be\nTo regain all of the trust that I threw out the window\nI still hope that my mistake wasn't stupidly simple\n\n[Verse 1]\nA single mom working hour to hour\nYou still open to love, I should give you your flowers\n'Cause all the people texting you, many encounters\nNot one question 'bout her life or the beauty about her\n\n[Instrumental]\n\n[Verse 2]\nSo, once again, I will give you your praises\nYou held it down for him when the meaning was weightless\nSo, if you feelin' lost, listen baby, believe me\nIt's more things that come with love, just remember the meaning\n\n[Instrumental]\n\n[Myanna's Perspective]\nBut with me, I don't have a good view on it\nMine isn't very positive\nOnly 'cause . . . like I said, it's bipolar, like\nIt'll be good one day and then it changes on me\nAnd then I'm questioning whether I even deserve it\nThen I start questioning whether it's even real or not\nMaybe I'm just thinking of it because, um, I want it\nOr because everyone's talking about it and [?]\nBut when I do receive it, I do be happy\nI . . . very happy actually\nI, like, obsess over it\nLike, I show\u2014\nI-I love being cared for\nI love caring for others\nI feel like that's kinda like what love is\n\n\n[Chorus]\nAnd lately I've been wondering how it feels from a woman's perspective\nTo lose someone you love 'cause they feeling neglected\nYes, you gave them your all so you never expected\nThat they find another love with a different directive\n\nYour phone been off, screaming \"do not disturb me\"\nI know I did you wrong, tell me what would the terms be\nTo regain all of the trust that I threw out the window\nI still hope that my mistake\u2014"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401373",
+   "artist_names": "Millkzy",
+   "full_title": "THE NOTEBOOK by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401373,
+   "lyrics_owner_id": 17334412,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-the-notebook-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-the-notebook-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 1,
+    "day": 2
+   },
+   "release_date_for_display": "January 2, 2025",
+   "release_date_with_abbreviated_month_for_display": "Jan. 2, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "THE NOTEBOOK",
+   "title_with_featured": "THE NOTEBOOK",
+   "url": "https://genius.com/Millkzy-the-notebook-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Intro]\n(Hey, I'm ready for you)\nDon't be afraid for what's to come, yeah\nHe'll carve out a path for you to run\nRun into the open arms\nYou'll find peace\nYou'll find the peace of God, ooh, oh, oh (Yeah, look)\n\n[Chorus]\nAnd all I ever wanted was a pretty love story\nLike the ones you see on TV, those the ones worth adoring\nBut I done different things with women, petty fights and stupid conversations\nThings like, \"Do you love me, Dev?\" Tell me what you're real concerned with\nMy m\u0435ntal or the things I deal with\nPleas\u0435 tell me, what's your own infatuation with concealment?\nDon't blame your actions on the reasoning that you was healing\nWho was the other nigga that you told you can't be real with?\n\n[Verse]\nIt's different ways to say I love you, thanks for being patient\nOr maybe I apologize for complications\nI only did it back to gain clarifications\nThat you got the same interest since my application\nA devil in disguise, that was hereditary\nThe things you hid with lies that wasn't necessary\nI hope that we rewind and find a different answer\nAnd another one was thank you, love, for being mannered\nAnd lately I've been understanding things, but you ain't been the same (Don't be afraid for what's to come, yeah)\nWishing we could talk again so I could get your reasoning\nAll these different conversations 'bout if I'm auditioning (He'll carve out a path for you to run)\nTo be your one true lover boy, but that won't happen easily\nTwo can play this petty game of nonchalant abandoning (Run into the open arms)\nSaying we don't care but looks we're more like we're imagining (You'll find peace)\nCrazy it's so easy to say hi but not goodbye again (You'll find the peace of God, ooh, oh, oh)\nHate that I'll just sit here and re-listen to your lies again\nA serenade for love with you and pretty roses\nA multi full of lies you made with different doses\nI question why I'm here with you while I was chosen\nTo play amongst the strings you use with no emotion\n\n[Bridge]\nYeah\nLook\nAnd\nYeah\n\n[Chorus]\nAnd all I ever wanted was a pretty love story\nLike the ones you see on TV, those the ones worth adoring\nBut I done different things with women, petty fights and stupid conversations\nThings like, \"Do you love me, Dev?\" Tell me what you're real concerned with\nMy mental or the things I deal with\nPlease tell me, what's your own infatuation with concealment?\nDon't blame your actions on the reasoning that you was healing\nWho was the other nigga that you told you can't be real with? Yeah\n\n[Outro]\nDon't be afraid for what's to come, yeah\nHe'll carve out a path for you to run\nRun into the open arms\nYou'll find peace\nYou'll find the peace of God, ooh, oh"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10675455",
+   "artist_names": "Millkzy",
+   "full_title": "Floetry by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/05eced7070de7bbc8ed6b9699543e0d2.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/05eced7070de7bbc8ed6b9699543e0d2.600x600x1.jpg",
+   "id": 10675455,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-floetry-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-floetry-sample",
+   "release_date_components": {
+    "year": 2023,
+    "month": 8,
+    "day": 30
+   },
+   "release_date_for_display": "August 30, 2023",
+   "release_date_with_abbreviated_month_for_display": "Aug. 30, 2023",
+   "song_art_image_thumbnail_url": "https://images.genius.com/05eced7070de7bbc8ed6b9699543e0d2.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/05eced7070de7bbc8ed6b9699543e0d2.600x600x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "Floetry",
+   "title_with_featured": "Floetry",
+   "url": "https://genius.com/Millkzy-floetry-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[editing]"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10597228",
+   "artist_names": "Millkzy",
+   "full_title": "AS FRIENDS by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+   "id": 10597228,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-as-friends-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-as-friends-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "AS FRIENDS",
+   "title_with_featured": "AS FRIENDS",
+   "url": "https://genius.com/Millkzy-as-friends-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "We used to do some things that we claimed only friends would\nWe used to plan out days that they thought only pairs would\nBut now I'm stuck here, lost with hella information\n'Bout a person that I lost to their own vindication\n\nMama told me, \"Dev, don't ever talk to strangers\"\nBut lately I'm attached; that makes it even stranger\nTo think that I had listened to her every say-so\nI just wished I had the time to know the things that they know\n\nMaybe I'm just stuck between my own emotions\nHate that I'm still lost and never got the notion\nMad that all my love was taken just for granted\nAnd the reason why she left was 'cause she couldn't manage\n\nA man who always loved and gave her all the praises\nA man who'd always trust and make her feel amazing\nA man who understood in a misunderstanding\nSo tell me why you had to leave when all you did was damage\n\nCrazy how you blame me for your own reactions\nI never had control over your interactions\nSo now you loving him; I'm glad, I hope you stay there\n'Cause it's things l've always done that you cannot obtain there\n\n[Instrumental]\n\nBetter of as friends, I hope you understand me\nOr maybe we'd be better if it was an ending\nI'm sorry if you miss the things we did as strangers\nBut I think it's better off if we remain as strangers"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10597201",
+   "artist_names": "Millkzy",
+   "full_title": "CRY ME A RIVER by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+   "id": 10597201,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-cry-me-a-river-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-cry-me-a-river-sample",
+   "release_date_components": {
+    "year": 2023,
+    "month": 11,
+    "day": 15
+   },
+   "release_date_for_display": "November 15, 2023",
+   "release_date_with_abbreviated_month_for_display": "Nov. 15, 2023",
+   "song_art_image_thumbnail_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "CRY ME A RIVER",
+   "title_with_featured": "CRY ME A RIVER",
+   "url": "https://genius.com/Millkzy-cry-me-a-river-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[editing]\nIntrinsically created with delicacy and fragility\nLike a potter, sculpting clay\nHardening the decorative art through heat shaping the beautifully evil pandora's box\nBut see our love is not pandora's box\nAlthough it is art hardened through the heat of our intensity when our eyes meet and there is a sense of familiarity our love is not pandora's box\nIt is not alluring yet filled with the sounds--\n\nIt's sweet and overflowing with pleasure exceeding my expectations from our first encounter\nCuriosity ushered me towards unraveling your lay\u0435rs and finding what you keep boxed up within\nAnd what lies ther\u0435in, what you keep unseen is far more enchanting\nIt yields emotional and [] food for the soul you keep []\nOur love is not pandora's box\n[editing]\n\nI know we ended things in terms we can't come back from\nWe argued 'bout emotions, things we both would lack of\nNow recently deleteds make me feel more homesick\nBut I wonder why I call you when I don't condone it\n\nMore beautiful in person, My own Monte Carlo\nYou said, \"I'll see you soon,\" I wish it was tomorrow\nBut now my hearts grown colder than nights in Chicago\n'Cause you found somebody new that knows the things that I know\n\nOne night without you in my own oasis\nWhy would I think restart if I don't want new faces?\nYes, leaving you alone is more than just persuasive\nBut I know if I'm too late then you will find replacements\n\nMy keeper of my keeper, hope you overheard me\nI still got things I think of, things that still concern me\nI know I played with fire; tell me how it burned me\nOr tell me how her feelings wasn't worth returning\n\nCongratulations, you've been granted patience\nA nursery of love, and I became your patient\nRegardless of the signs, my heart is very vacant\nAnd you brought up my red flags but, since the last, I've changed it\n\n[Instrumental]\n\nSo, cry amongst this river 'til you understand me\nI know that loving right isn't your understanding\nAnd when I didn't leave, it wasn't part of planning\nBut I'd rather see it through than makeup for an ending\n\nSo, cry amongst this river 'til you understand me, yeah"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10597323",
+   "artist_names": "Millkzy (Ft. Jalani\u200eii)",
+   "full_title": "Jalani's Perspective (Bonus Track) by\u00a0Millkzy (Ft.\u00a0Jalani\u200eii)",
+   "header_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "id": 10597323,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-jalanis-perspective-bonus-track-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-jalanis-perspective-bonus-track-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "Jalani\u2019s Perspective (Bonus Track)",
+   "title_with_featured": "Jalani's Perspective (Bonus Track) (Ft.\u00a0Jalani\u200eii)",
+   "url": "https://genius.com/Millkzy-jalanis-perspective-bonus-track-lyrics",
+   "featured_artists": [
+    {
+     "api_path": "/artists/4014580",
+     "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1741206988",
+     "id": 4014580,
+     "image_url": "https://assets.genius.com/images/default_avatar_300.png?1741206988",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Jalani\u200eii",
+     "url": "https://genius.com/artists/Jalaniii"
+    }
+   ],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Intro: Millkzy, Millkzy & Jalanii]\nBy you\nLoved by you\nLoved by you\n\nI wanna be loved by you\nLoved by you\nLoved by you\n\nI wanna be loved by you\nLoved by you\nLoved by you\n\n[Verse: Jalanii]\nIn a world full of mistrust and lust I wanna be the one you love\nThe one you thinking of when it's late and you can't sleep\nThe first thing on your mind when you wake before your feet\nHit the floor 'cause I've been yearning for more of you\n\nI'm tryna take over your mind the way that you take over mine\nJust set aside for me some time\nI really need the chance to make you understand that everybody ain't tryna play you, that was never in my plan\nWanna introduce you to real, but you won't take my hand\n\nWhat I gotta do for you to be my man? I ain't gon' beg\nYes, I am too proud for that, but this the realest it gets\nI ain't of this generation, want that agape love\nWant you to love me regardless of what the world does\nAnd once ain't enough\nCupid done lost his touch\nThis is deeper than me making you blush\nI want your soul but I won't rush\n\nAin't lookin' at you for your books, your heart will do\nJust as long as I'm loved by you\n\n[Outro: Millkzy]\nI wanna be loved by you\nLoved by you\nLoved by you"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10597321",
+   "artist_names": "Millkzy",
+   "full_title": "JOYFUL INTERACTION by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "id": 10597321,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-joyful-interaction-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-joyful-interaction-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "JOYFUL INTERACTION",
+   "title_with_featured": "JOYFUL INTERACTION",
+   "url": "https://genius.com/Millkzy-joyful-interaction-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "Look, so baby, it is me again\nI had to set aside for my own isolation\nSo that answers your main questions to our separation\nAnd I promise to our God there won't be fabrications\nSo when we come back, try again, let's try communication\n\nOr maybe we'd be better off with new foundation\nDifferent love or different lovers with new conversations\nOr a lover you can trust without new expectations\nOr a compromise of love without negotiations\n\nA test of time, I hope you get the memo\nWays we fell into this thing without a cupid's arrow\nAye, you always been my right, you always been guerrero\nBut, unfortunately, this hallway with you getting narrow\n\nAnd know I leave my love with you, it's everlasting\nBut the part I hate the most with you is interacting\nAnd my problem with you now is you became distracting\n'Cause you call when you unwanted, just to state your bragging\n\n[Instrumental]\n\nSadly, I still question my own intuition\nThat I'm still gon' put you first [?] old condition\nEven though I still have questions on my new position\nI still understand that loving you is my tradition, yeah"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/10675449",
+   "artist_names": "Millkzy",
+   "full_title": "From chi to saint mary by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+   "id": 10675449,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-from-chi-to-saint-mary-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-from-chi-to-saint-mary-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 3,
+    "day": 8
+   },
+   "release_date_for_display": "March 8, 2024",
+   "release_date_with_abbreviated_month_for_display": "Mar. 8, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "From chi to saint mary",
+   "title_with_featured": "From chi to saint mary",
+   "url": "https://genius.com/Millkzy-from-chi-to-saint-mary-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[editing]"
+  },
+  {
+   "annotation_count": 1,
+   "api_path": "/songs/10597322",
+   "artist_names": "Millkzy",
+   "full_title": "ANONYMOUS CALLER (OUTRO) by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "id": 10597322,
+   "lyrics_owner_id": 21531435,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-anonymous-caller-outro-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-anonymous-caller-outro-sample",
+   "release_date_components": {
+    "year": 2024,
+    "month": 1,
+    "day": 20
+   },
+   "release_date_for_display": "January 20, 2024",
+   "release_date_with_abbreviated_month_for_display": "Jan. 20, 2024",
+   "song_art_image_thumbnail_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/455f69d5d85440a2aefcbfdeec1bfe11.350x350x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 1,
+    "hot": false
+   },
+   "title": "ANONYMOUS CALLER (OUTRO)",
+   "title_with_featured": "ANONYMOUS CALLER (OUTRO)",
+   "url": "https://genius.com/Millkzy-anonymous-caller-outro-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Voicemail System]\nThe person you are calling is unable to take your call, please leave your message at the tone\n\n[Anonymous Caller]\nI've seen love be taken in the sense of a loved one\nI've seen love be tarnished, corrupted, bitter, spiteful\nBut, at the end of the day, it's always to love\nAnd love is really the only thing that can truly cure hate and suffering\nAnd, when you're loving somebody \u0435lse\nIt's the one thing that can mak\u0435 you keep going\nMake you do things you wouldn't see yourself doing\nAnd, as people, we all get so confused and have mixed emotions about love and what it is and what it can be\nBut love, truly, is something that can just never be taken from you because it's always gonna be a part of you\nAnd, because it's always a part of you, you can only give love; you can never truly take it\nIt's why we must always put forth the effort of a conscious mind and love one another"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401352",
+   "artist_names": "Millkzy (Ft. KidTokio)",
+   "full_title": "ALTER EGO by\u00a0Millkzy (Ft.\u00a0KidTokio)",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401352,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-alter-ego-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-alter-ego-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "ALTER EGO",
+   "title_with_featured": "ALTER EGO (Ft.\u00a0KidTokio)",
+   "url": "https://genius.com/Millkzy-alter-ego-lyrics",
+   "featured_artists": [
+    {
+     "api_path": "/artists/4217317",
+     "header_image_url": "https://images.genius.com/e8bfaa56f2e6d8d4b71dee1e2cffc40b.200x200x1.jpg",
+     "id": 4217317,
+     "image_url": "https://images.genius.com/e8bfaa56f2e6d8d4b71dee1e2cffc40b.200x200x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "KidTokio",
+     "url": "https://genius.com/artists/Kidtokio"
+    }
+   ],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Intro]:\nYeah, look\n\n[Verse]:\nAnd I know my problem is my alter ego\nI still got problems with my brain, I do things differently\nFrom another nigga who wants a chance\nI got more feelings of resentment in me\nCouldn\u2032t get rid of the last\nThat's why you treat me different\nWas it harder to lie to my face while you holding my hand?\nOr easy to believe in me then when I told you my plans?\nYou never cared about my future when I told you, did you?\nYou only cared about it then if I could see you in it\n\n[Hook]:\nYeah\nLook\nAnd\nYeah\n\n[Verse]:\nCan you hear me now?\nMy alter ego, screaming and scraping, eager to leave\nHe\u2032s a captain made with lies and deception\nTold by a few, a woman disregarded in my past life\nShe told me, love me here and now, get you some act right\nBut I've been a victim to the valley of shadows\nDue to eviction, I've seen reasoning of all of your lies\nTold in a, I tried to tell you in a tone that won\u2032t just hurt your feelings\nBut he won\u2032t be as nice as me to get you sugar coated\nYeah\n\n[Pre-Chorus]:\nWake up, wake up, wake up, wake up\nYou can't sleep yet, wake up, wake up, wake up\nWake up, wake up, wake up, wake up, wake up\n\n[Chorus]:\nThe truth is, I ain\u2032t big about love\nI ain't big about trust\nYou ain\u2032t shit but a, ego banging on the dust\nBack to back, to back, to back again\nCorner blocks I watch you holding hands\nBack when you would tell me that's your brother\nBack when you would tell me he\u2032s a friend\nBack when I would try to give a fuck\nEmotions started pushing out the end\nBack when you were actually in love\nBack when lovin' wasn't for a trend\nBack when I could trust you for the night\nBack when I could trust you for the run\nBack when I reacted and relaxed\nNow I started shooting for the fun\n\n[Verse]:\nGetting sick of trusting in my ego\nSick of niggas telling me relax\nSick of niggas doubting my belief\nSick of love been weighing on my back\nSick of mental draining down my part\nMy ego pen is running out of ink\nShe don\u2032t know that I\u2032ve been playing parts\nLets see what niggas really think of me\nI'm sick, I\u2032m sick, I'm sick but I don\u2032t fall\nI'm sick, I\u2032m sick, I'm sick but I don't fall\nI\u2032m sick, I\u2032m sick, I'm sick but I don\u2032t fall\nI'm sick but I don\u2032t fall\n\n[Chorus]:\nThe truth is, I ain't big about love\nI ain\u2032t big about trust\nYou ain't shit but a, ego banging on the dust\nBack to back, to back, to back again\nCorner blocks i watched you holding hands\nBack when you would tell me that's your brother\nBack when you would tell me he\u2032s a friend\nBack when I would try to give a fuck\nEmotions started pushing out the air\nBack when you were actually in love\nBack when lovin\u2032 wasn't for a trend\nBack when I could trust you for the night\nBack when I could trust you for the run\nBack when I reacted and relaxed\nNow I started shooting for the fun\n\n[Outro]:\nYeah\nYeah, I, uh\nI can\u2032t control my\nI, uh, okay\nFuck"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401348",
+   "artist_names": "Millkzy",
+   "full_title": "INTRODUCTION TO DEV by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401348,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-introduction-to-dev-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-introduction-to-dev-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 2,
+    "day": 1
+   },
+   "release_date_for_display": "February 1, 2025",
+   "release_date_with_abbreviated_month_for_display": "Feb. 1, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "INTRODUCTION TO DEV",
+   "title_with_featured": "INTRODUCTION TO DEV",
+   "url": "https://genius.com/Millkzy-introduction-to-dev-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse]\nYeah, look, and pardon my intrusion for this introduction\nBattled through accusing them of their assumptions\nThough I\u2032m just a man among my situation\nI believe it's time to change and make evaluations\nThey ask me why my songs are introducing heartache\n\u2032Cause those are things I felt the most regarding heartbreaks\nI hope one day I stop and speak about the good things\nBut for now, I'll still remain and speak about what would be\nOr what could be as a valley paved by your emotions\nOr what should be as a livelihood of your devotion\nWhat's the issue is we never made the conversation\nWhat we did and didn\u2032t do was give an explanation\nA reasoning of why we couldn\u2032t fix our problems\nWe'd rather find an issue than instead just solve them\nAlternative was leaving, find a shelter elsewhere\nI still wonder what you do among your useless healthcare\nI promise you I still stay on the streets of Dogwood\nThat girl gon\u2032 love you, Dev, I really think they all should\nBut sadly I just have this certain fear of losing\nLosing girls who get the man they want 'cause they\u2032re who's choosing\n\n[Outro]\nYeah"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401351",
+   "artist_names": "Millkzy",
+   "full_title": "MAJORING IN MIRAGE by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401351,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-majoring-in-mirage-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-majoring-in-mirage-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "MAJORING IN MIRAGE",
+   "title_with_featured": "MAJORING IN MIRAGE",
+   "url": "https://genius.com/Millkzy-majoring-in-mirage-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Chorus]:\nYeah, look, and I can\u2032t relate to these other niggas\nI'm majoring in minor things\nBabe, tell me what\u2032s the reason you lied to me\nI'm tryna grasp the problem with your mental\nBut you keep saying that it ain't that simple\nSo tell me what\u2032s the problem with all your problems\nHow you got rid of your ex and say he\u2032s still gonna follow\nLoving me or loving him, which pill is hard to swallow?\nJust make sure that you don't hurt the very\n\n[Verse]:\nI\u2032m graduating from a university of it-gets-better\nBut you lay the curse on me of don't-love-ever\nIf you come across this v\u0435ry message\nI hope you see m\u0435 and hopefully you don\u2032t have time to be me\nForget about the FaceTime and love cottage\nI should've noticed you don\u2032t love me but you love pockets\n'Cause it's the, not the pockets but what\u2032s sealed inside\nYou went as far as just to seal your lies\nYou a mirage artist\nTried to get me to delude in your very illusion\nAnd told me that my proof is just based on assumptions\nYour attitude is based on the person you loving\nSo currently you sad, he amounted to nothing\n\n[Chorus]:\nYeah, look\nI can\u2032t relate to these other niggas\nI'm majoring in minor things\nBabe, tell me what\u2032s the reason that you lied to me\nI'm tryna grasp the problems with your mental\nBut you keep saying that it ain\u2032t that simple\nSo tell me what's the problem with all your problems\nHow you got rid of your ex and say he still gon\u2032 follow\nLoving me or loving him, which pill is hard to swallow?\nJust make sure that you don't hurt the very heart that's hollow\n\n[Outro]:\nYeah\nLook\nYeah\nYeah"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401375",
+   "artist_names": "Millkzy",
+   "full_title": "I DO by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401375,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-i-do-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-i-do-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "I DO",
+   "title_with_featured": "I DO",
+   "url": "https://genius.com/Millkzy-i-do-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Intro]\nYeah\nLook\nYeah\n\n[Verse]\nYou never ask for much but love, care, and my hand\nI'm scared to be your man\n\u2032Cause what if I don't reach your main demands\nLike no matter what we'll always tell the truth\nIf death presents itself to two\nBut babe I\u2032m terrified of uttering \"I do\"\nLove and anguish won\u2032t divide us at the altar\nBut what if it may alter all the time we spent to make our love the offer\nAnd angels watch over the time I called you honey and off\u0435red you the moon\nI hate a world wh\u0435re we can't have our honeymoon\nWouldn\u2032t be mad if we had three to crowd the room\nA little me who cling to you but babe I'm terrified of uttering \"I do\"\nOnly to you, I swear it\u2032s true\nHook\nI hate to utter, yeah, I do\nYeah\n\n[Outro]\nMe and Sonny said call us immediately, 'cause we\u2032re missing you\nSo that means call us immediately 'cause we're missing you\nSo that means now, if you\u2032re not understanding\nBye"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401347",
+   "artist_names": "Millkzy",
+   "full_title": "BREAKING NEWS by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401347,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-breaking-news-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-breaking-news-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 2,
+    "day": 1
+   },
+   "release_date_for_display": "February 1, 2025",
+   "release_date_with_abbreviated_month_for_display": "Feb. 1, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "BREAKING NEWS",
+   "title_with_featured": "BREAKING NEWS",
+   "url": "https://genius.com/Millkzy-breaking-news-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse]\nBreaking news\nAn upcoming artist named Millkzy has gone missing\nDue to recent controversy regarding his bodies\u2005of\u2005work\nAnd status as\u2005a poet\nHis controversial opinions have sparked\u2005conversation\nWithin the world of flowetry\nGiven the recent backlash\nHe has taken the executive decision to go MIA\n\n[Hook]\nHis recent whereabouts are currently unknown\nAlthough Millkzy has had tremendous success as of recent\nIt begs the question\nAr\u0435 we witnessing an author's demis\u0435?"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401378",
+   "artist_names": "Millkzy",
+   "full_title": "FAILED AUTHOR by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401378,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-failed-author-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-failed-author-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "FAILED AUTHOR",
+   "title_with_featured": "FAILED AUTHOR",
+   "url": "https://genius.com/Millkzy-failed-author-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse 1]\nLook\nYeah (come on, man, the kids listen to you)\nTo see\nSometimes I do think that they never cared\nOr needed reasons to be given a damn\nI gave you my all and what's in return?\nIt's comments asking when I\u2032m switching my style\nJust leave me alone, don't tell me I'm great\nJust heed the lyrics that I'm giving you now\nDon't say you agree with all of my statements\nDon't tell me they're, they're relatable now\nI'm telling you, maybe I failed as a, a poet or author\nOr maybe I never turned 30 or carried a worry\nOr raising a child at 20\nMaybe I quit as a rookie and played\nI've been bullied and never relayed for a while\nYou niggas keep begging me, change up the style\nBut maybe that's what's helping keep me alive\n\n[Hook]\nI promise you\nMaybe I\nI failed as an author\nI failed as a- (come on, man, the kids listen to you)\nYeah\n\n[Verse 2]\nI love but I try not to love too hard\nBecause if you put everything in and then once that end\nThen you can find yourself not knowing where you are\nSo don't put all your chips in one basket\nYou know, love, but don't give your whole heart, whole drum bag\nYou know what I'm saying?\nSo if something happened, happened then you won't fall all the way\nYou know what I'm saying? Because you still got some of that heart left\nSo you can be able to pull yourself together and go on with life\n\n[Outro]\nBut love is a muster, you know that, that love\nSome love I wish I had me some love right now"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401377",
+   "artist_names": "Millkzy",
+   "full_title": "HATE JONES - poem by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401377,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-hate-jones-poem-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-hate-jones-poem-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "HATE JONES - poem",
+   "title_with_featured": "HATE JONES - poem",
+   "url": "https://genius.com/Millkzy-hate-jones-poem-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse]\nIf I was you, I'd hate me too\nHate the way I traded love for selfish thrills\nI left you piecing together the glass of every broken promise\nI became the reason you stopped trusting\nThe shadow you searched for in every room\nAnd the regrets you carried every day from trusting me\nI kept cheating. I admit it\nMoments stolen in dim rooms\nWhispers shared with other women when they should've been shared with you\nAnd I hid it all\nEvery trace, every message erased\nLike pressing delete could clean my hands\nEvery glance that wasn't meant for you\nEvery laugh, every name I forgot to mention\nI made you feel small while I played big\nPretending that I could have it all\nAnd still keep you waiting\nYes, I lie to you again and again\nUntil it was second nature, until the truth was just an echo\nI buried beneath all the noise of my own excuses\nI know I turned love into a game\nI placed you in a race you never agreed to run\nYou were never in competition, but I made it feel that way\nAs if love was a prize you had to earn\nAs if I was worth the hurt and the hope\nTwo years of breaking every promise while you held on\nWaiting for something real\nTwo years of half-truth and hollow words\nYou wanted honesty and I gave you theater\nI played the role of someone good while slipping further to someone I can't defend\n\nNow I'm left with the pieces of my own making\nThe story of why I was never enough\nWhy I was always falling short\nAnd I don't blame you for the anger, the bitterness\nBecause if I could step outside myself and see me the way you do\nHell, maybe y'all would hate me too"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401374",
+   "artist_names": "Millkzy",
+   "full_title": "ALICE IN WONDERLAND by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401374,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-alice-in-wonderland-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-alice-in-wonderland-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "ALICE IN WONDERLAND",
+   "title_with_featured": "ALICE IN WONDERLAND",
+   "url": "https://genius.com/Millkzy-alice-in-wonderland-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Chorus]\nWhere is Miss Alice now?\nWhere is Miss Alice now, Alice now? Where is Miss Alice\u2005now?\nWhere\u2005is Miss Alice\u2005now?\nWhere is Miss Alice now, Alice\u2005now? Where is Miss Alice now?\n\n[Verse 1]\nYeah, look\nMaybe I\u2032ve been attached to you for all this time\nAnd I never thought about how much of me I was providing\nYou always phrase we living life but babe I been surviving\nBaby it stings you should take time to give some redefining\nDon't come around and text a nigga when you\u2032re lonely\nSending me snaps that say hey look how you will always hold me\nRemember when you're posting niggas on your pages\nI delete messages and memories that we were saving\n\n[Hook]\nYeah\nLook\nAnd\n\n[Verse 2]\nAnd let me disassociate\nBecause you think it stings to fits when it was non-negotiable\nBaby don't get emotional because your status\nNo need to pitch ideas with me, you re-established\nYou and your wonderland again, Mrs. Miss Alice\nAnd\nAnd it starts to feel like home again so I\u2032ll be leaving\nLast time I got away, I was barely breathing\nSo maybe isolation is what I was needing\n\n[Chorus]\nWhere is Miss Alice now?\nWhere is Miss Alice now, Alice now? Where is Miss Alice now?\nWhere is Miss Alice now?\nWhere is Miss Alice now, Alice now? Where is Miss Alice now?\n\n[Hook]\nDear Miss, uh\nDear Miss, Mrs. Alice\nThis love affair\u2032s a challenge\nSend my emotions at motion's notice\nYet you\u2032re combative\n\n[Verse 3]\nYou break me up and build me down but should I let it happen\nYour crimes I tend to pardon as I lay inside your palace\nA place I'd rather be than see you mad at me\nYou\u2032re stuck in wonderland I wonder then if you could see\nThat we'd be broken I\u2032m taking notice like an eviction\nYou kick me out your wonderland I wonder if it's written\nTo be this fake I guess that's the fictional way we written\nThe tale we break when the story aligning pretty different\nI love your waist and I love your face it\u2032s a pretty difference\nI love the way how I used to say I will really miss it\n\n[Outro]\nI think the time has changed you fell into a hole\nThat ain\u2032t the way that life will change you're missing now\nThere ain\u2032t no way my Alice ran away\nI hope I find you in this moment, please don't cast away\nTo Wonderland\nWonderland"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401350",
+   "artist_names": "Millkzy",
+   "full_title": "BEAUTY WITHIN A BEAST - poem by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401350,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-beauty-within-a-beast-poem-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-beauty-within-a-beast-poem-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 2,
+    "day": 1
+   },
+   "release_date_for_display": "February 1, 2025",
+   "release_date_with_abbreviated_month_for_display": "Feb. 1, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "BEAUTY WITHIN A BEAST - poem",
+   "title_with_featured": "BEAUTY WITHIN A BEAST - poem",
+   "url": "https://genius.com/Millkzy-beauty-within-a-beast-poem-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse]\nYou\u2032ve sketched a page that only has one shade of a story\nColoured in half a line, spilled half a tray of paint\nDrew up half a truth\nCan I offer my canvas to you?\nMy knight in rusting armour\nSomewhere between the folds you decided I was sublime\nA fine line between heaven and real time\nChoosing to see the fragile image on stained-glass windows is what you would rather\nTo perceive fragile and desire to notice only the gorgeous\nLosing sight of the thorns pressing through the window drawing\nDisguising the vines that confuse\nStrangling my pretty picture with coddling\nAttempting to blend in the violence\nWith selected shades of violet\nTo keep honesty silent\nAnd your rusting armour shining\nCome back to life\nFires burn hotter when you're distracted by its glow\nI don\u2032t wish you wrong\nSo next time approach with caution\nSteady and slow\nAnd maybe we'll both notice when the room's scorching\nImages melting from our true embers boiling\nRather than passion sparking from masks up\nRather than veils down\nNow the picture\u2032s contorted\nAnd it\u2032s always he did, never he does\nFrom beautiful pictures of my knight shining\nRather than genuine exhibitions of your rusting armour\n\n[Outro]\nI hope the bigger picture shows you\nI could have loved him further"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401349",
+   "artist_names": "Millkzy",
+   "full_title": "WHAT DEV MEANT TO SAY - poem by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401349,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-what-dev-meant-to-say-poem-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-what-dev-meant-to-say-poem-sample",
+   "release_date_components": {
+    "year": 2025,
+    "month": 2,
+    "day": 1
+   },
+   "release_date_for_display": "February 1, 2025",
+   "release_date_with_abbreviated_month_for_display": "Feb. 1, 2025",
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "WHAT DEV MEANT TO SAY - poem",
+   "title_with_featured": "WHAT DEV MEANT TO SAY - poem",
+   "url": "https://genius.com/Millkzy-what-dev-meant-to-say-poem-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Spoken]\nI don\u2032t write for you\nI write for what my soul can no longer hold\nAnd humans are a little bit narcissistic\nSo before you switch to the next track\nI don't mean for that to sound like I\u2032m bitin' you in the back, rah\nOr like feelings are somethin' that I lack, no, in fact\nFeelings are somethin\u2032 that I have in surplus\nSo much so that I\u2032ve gotta have a way\nTo free the voices among us\nSo I write, and I write, and I write\nAnd I write in surplus\nThese intrusions can't also be distortions\nHavin\u2032 these conversations on a page is a must\nAnd they kind of sound pretty\nWhen they're comin\u2032 out one by one\nAnd so these thoughts that us\u0435d to claw at each other\nGive way on a pag\u0435\nLetters clung together\nLeanin', containin\u2032 rage but together\nSo it kind of sounds like faith\nFaith sprung from a mind that spun\nLeft spewin' sickly thoughts\nThat have somehow been caught\nWiped and turned into recreational fun\nCalmin' poems that used to be thoughts on the run"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401376",
+   "artist_names": "Millkzy",
+   "full_title": "LOVE JONES by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401376,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-love-jones-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-love-jones-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "LOVE JONES",
+   "title_with_featured": "LOVE JONES",
+   "url": "https://genius.com/Millkzy-love-jones-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse 1]\nIf I knew I had another chance, I\u2032d leave it all behind\nThe late night liquor runs would gradually decline\nI contemplate the fact that I'll just never get your love\nFrom another girl I rushed it with to cope from losing yours\nI hope it\u2032s not my relevance that made you hit my line\nBut I apologise for wasting all your time\nI never thought a ten would love a one and they'd be mine\nBut reality didn't struck \u2032cause she had ten when she\u2032s my one\nYou told me I was overthinking\nAnd told me everything that's said has alternative meanings\nBut tell me why I only felt your alternative feelings?\nAnd the ones you had for me was the ones you weren\u2032t keeping\n\n[Hook]\nYeah\nLook\nAnd\nYeah\n\n[Verse 2]\nPlease tell me you can love Jones and\nPlease tell me that you've never heard of dull moments\nYou found another man but others can\u2032t do what Jones did\nYou told me mention all your flaws and one is loving longer\n\n[Outro]\nYeah\nLook, and"
+  },
+  {
+   "annotation_count": 0,
+   "api_path": "/songs/11401372",
+   "artist_names": "Millkzy",
+   "full_title": "EGO AFTER EFFECTS - poem by\u00a0Millkzy",
+   "header_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "header_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "id": 11401372,
+   "lyrics_owner_id": 21415775,
+   "lyrics_state": "complete",
+   "path": "/Millkzy-ego-after-effects-poem-lyrics",
+   "primary_artist_names": "Millkzy",
+   "pyongs_count": null,
+   "relationships_index_url": "https://genius.com/Millkzy-ego-after-effects-poem-sample",
+   "release_date_components": null,
+   "release_date_for_display": null,
+   "release_date_with_abbreviated_month_for_display": null,
+   "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+   "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+   "stats": {
+    "unreviewed_annotations": 0,
+    "hot": false
+   },
+   "title": "EGO AFTER EFFECTS - poem",
+   "title_with_featured": "EGO AFTER EFFECTS - poem",
+   "url": "https://genius.com/Millkzy-ego-after-effects-poem-lyrics",
+   "featured_artists": [],
+   "primary_artist": {
+    "api_path": "/artists/4013925",
+    "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+    "id": 4013925,
+    "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+    "is_meme_verified": false,
+    "is_verified": false,
+    "name": "Millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+   },
+   "primary_artists": [
+    {
+     "api_path": "/artists/4013925",
+     "header_image_url": "https://images.genius.com/32633d86d8508904cbe8d414ea21b307.350x350x1.jpg",
+     "id": 4013925,
+     "image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+     "is_meme_verified": false,
+     "is_verified": false,
+     "name": "Millkzy",
+     "url": "https://genius.com/artists/Millkzy"
+    }
+   ],
+   "artist": "Millkzy",
+   "lyrics": "[Verse]:\nHow am I supposed to hear you when every sentence you speak\nIs cut through my flesh?\nYou try to justify by saying it\u2032s only a butter knife\nAs you continue to saw at my being, but you love me\nMaybe you love that I stick around even when you forget who you are\nAnd start caressing my ear with harmonies\nOf false prophecies, narratives of unrealistic truths\nYou are gentle with my mental but rough with my roots\nStroking my heart with despair as you please my visions of us\nPleas\u0435 this vision is lust, I can't trust\nYou\u2032ve been anything but a man to me\nWhy can't we just l\u0435t this be again?\nIt's our reality manipulated into a nightmare"
+  }
+ ]
+}
