@@ -186,6 +186,9 @@ def _song_tooltip_attrs(song: dict[str, Any]) -> str:
     album = song.get("album")
     if album:
         attrs.append(f'data-album="{_esc(album)}"')
+    overview = (summary or {}).get("overview")
+    if isinstance(overview, str) and overview.strip():
+        attrs.append(f'data-overview="{_esc(overview.strip())}"')
     for dimension in DIMENSIONS:
         tags = ", ".join(normalize_tags(summary, dimension))
         attrs.append(f'data-{dimension.replace("_", "-")}="{_esc(tags)}"')
@@ -506,6 +509,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   .tooltip[hidden] {{ display: none; }}
   .tooltip .t-title {{ font-weight: 600; }}
   .tooltip .t-album {{ color: #c3cad8; }}
+  .tooltip .t-overview {{ margin-top: 4px; color: #c3cad8; }}
   .tooltip .t-dim {{ margin-top: 4px; color: #c3cad8; }}
   .tooltip .t-dim.active {{ color: #ffffff; }}
 </style>
@@ -556,6 +560,13 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
       albumRow.className = "t-album";
       albumRow.textContent = album;
       tooltip.appendChild(albumRow);
+    }}
+    var overview = song.getAttribute("data-overview");
+    if (overview) {{
+      var overviewRow = document.createElement("div");
+      overviewRow.className = "t-overview";
+      overviewRow.textContent = overview;
+      tooltip.appendChild(overviewRow);
     }}
     Array.prototype.forEach.call(dimensionSelect.options, function (option) {{
       var tags = song.getAttribute(

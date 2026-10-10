@@ -65,8 +65,9 @@ network.
 - **Labels per era** = top tags for the selected dimension, by frequency
   (counts are not shown).
 - **Hover tooltip** — a JS-driven tooltip on each song shape shows the song
-  title, its album name (when available), plus its tags for **all three**
-  dimensions, with the currently selected dimension highlighted.
+  title, its album name (when available), its `overview` summary text (when
+  available), plus its tags for **all three** dimensions, with the currently
+  selected dimension highlighted.
 - **Dropdown** toggles visibility of the pre-rendered SVG layers, so no chart
   code runs in the browser. Album art is embedded once per song (in the shared
   base layer), keeping multi-artist pages small.

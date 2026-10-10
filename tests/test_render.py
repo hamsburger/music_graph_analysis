@@ -10,8 +10,9 @@ from music_graph_analysis.render import (
 )
 
 
-def make_summary(themes=None, imagery=None, tone=None):
+def make_summary(themes=None, imagery=None, tone=None, overview=None):
     return {
+        "overview": overview,
         "themes": themes or [],
         "key_imagery": imagery or [],
         "emotional_tone": tone,
@@ -171,6 +172,20 @@ def test_build_chart_svg_adds_tooltip_attributes():
 def test_build_chart_svg_omits_album_when_missing():
     svg = build_chart_svg(make_result(), {})
     assert svg.count("data-album=") == 1
+
+
+def test_build_chart_svg_emits_overview_attribute():
+    result = make_result()
+    result["eras"][0]["songs"][0]["summary"] = make_summary(
+        ["love"], ["rain"], "melancholic", overview="A song about yearning."
+    )
+    svg = build_chart_svg(result, {})
+    assert 'data-overview="A song about yearning."' in svg
+
+
+def test_build_chart_svg_omits_overview_when_missing():
+    svg = build_chart_svg(make_result(), {})
+    assert "data-overview=" not in svg
 
 
 def test_build_chart_svg_tag_labels_omit_counts():

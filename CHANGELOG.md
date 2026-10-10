@@ -3,6 +3,11 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
+## 021935d — 2026-10-10
+
+**Added** the song's `overview` summary text to the chart hover tooltip (shown
+when a summary is present), alongside the title, album, and per-dimension tags.
+
 ## 2c7ecf2 — 2026-10-10
 
 **Added** Phase 4: `render_report.py` and the `render`/`images` modules turn
