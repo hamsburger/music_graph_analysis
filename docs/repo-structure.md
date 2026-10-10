@@ -41,8 +41,11 @@ network access.
 - `GeniusClient` — auth via `GENIUS_ACCESS_TOKEN`, request timeout, retry with
   exponential backoff, and an optional client-side throttle (`min_interval`).
 - `get_song` / `get_song_detail` — fetch a song and its detailed object.
-- `get_relationships` / `get_sampled_in` — read `song_relationships` and return
-  the songs that sampled a track (`sampled_in`).
+- `get_relationships` / `get_all_relationships` — read `song_relationships`.
+  `get_all_relationships` fetches a song once and groups its related songs by
+  type (`samples`, `sampled_in`, `interpolates`, `interpolated_by`); the
+  `get_samples` / `get_sampled_in` / `get_interpolates` / `get_interpolated_by`
+  helpers return a single direction.
 - `search` / `find_artist` — look up an artist by an exact name match.
 - `get_artist_songs` — one page of an artist's songs.
 - `iter_artist_songs` — generator that pages through the full discography
@@ -74,7 +77,8 @@ Orchestration layer that ties the client, cache, and era logic together.
 
 - `ArtistAnalyzer` — resolves the artist, pulls the full discography, keeps only
   songs where the artist is the `primary_artist`, computes era bounds, selects
-  top songs per era, fetches `sampled_in` for each, and aggregates results.
+  top songs per era, fetches each song's sample/interpolation relationships
+  (both what it drew from and what drew from it), and aggregates results.
 - `format_report(result)` — renders a readable console summary.
 
 ### `music_graph_analysis/__init__.py`
@@ -107,7 +111,7 @@ artist id ──► iter_artist_songs (paged, cached)
    │        select_top_songs_per_era (top-K + unknown bucket)
    │              │
    │              ▼
-   └──────► get_sampled_in (per song, cached)
+   └──────► get_all_relationships (per song, cached)
                   │
                   ▼
           aggregated JSON + console report
@@ -132,5 +136,7 @@ Tests never hit the network: the Genius client tests monkeypatch
   are analysed.
 - **Unknown bucket** — songs missing a usable release date are grouped under
   `unknown` rather than being dropped.
-- **Sampled-in** — the songs that sampled a given track, read from
-  `song.song_relationships` where `type == "sampled_in"`.
+- **Sampled-in / interpolated-by** — the songs that sampled or interpolated a
+  given track, read from `song.song_relationships` where `type == "sampled_in"`
+  or `"interpolated_by"`. The reverse directions (`samples`, `interpolates`)
+  capture what the song itself drew from.

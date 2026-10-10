@@ -110,6 +110,53 @@ def test_get_sampled_in_returns_empty_when_absent():
     assert client.get_sampled_in(9) == []
 
 
+def _client_with_relationships(relationships):
+    client = GeniusClient(access_token="test-token")
+    client.get_song = lambda song_id: {"song": {"song_relationships": relationships}}
+    return client
+
+
+def test_get_all_relationships_groups_by_type_and_defaults_empty():
+    client = _client_with_relationships(
+        [
+            {"type": "samples", "songs": [{"id": 1}]},
+            {"type": "sampled_in", "songs": [{"id": 2}, {"id": 3}]},
+            {"type": "interpolated_by", "songs": [{"id": 4}]},
+        ]
+    )
+    result = client.get_all_relationships(9)
+    assert [s["id"] for s in result["samples"]] == [1]
+    assert [s["id"] for s in result["sampled_in"]] == [2, 3]
+    assert [s["id"] for s in result["interpolated_by"]] == [4]
+    assert result["interpolates"] == []
+
+
+def test_get_all_relationships_concatenates_repeated_types():
+    client = _client_with_relationships(
+        [
+            {"type": "sampled_in", "songs": [{"id": 2}]},
+            {"type": "sampled_in", "songs": [{"id": 3}]},
+        ]
+    )
+    result = client.get_all_relationships(9)
+    assert [s["id"] for s in result["sampled_in"]] == [2, 3]
+
+
+def test_relationship_convenience_methods():
+    client = _client_with_relationships(
+        [
+            {"type": "samples", "songs": [{"id": 1}]},
+            {"type": "sampled_in", "songs": [{"id": 2}]},
+            {"type": "interpolates", "songs": [{"id": 3}]},
+            {"type": "interpolated_by", "songs": [{"id": 4}]},
+        ]
+    )
+    assert [s["id"] for s in client.get_samples(9)] == [1]
+    assert [s["id"] for s in client.get_sampled_in(9)] == [2]
+    assert [s["id"] for s in client.get_interpolates(9)] == [3]
+    assert [s["id"] for s in client.get_interpolated_by(9)] == [4]
+
+
 def test_get_cached_returns_none_on_miss(tmp_path):
     from music_graph_analysis.cache import JsonCache
 

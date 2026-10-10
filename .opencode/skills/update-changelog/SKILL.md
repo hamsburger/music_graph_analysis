@@ -13,8 +13,8 @@ human-readable entry keyed by its hash.
 
 ## When to run
 
-- Immediately **after** you successfully create a commit (`git commit ...`) on
-  the user's behalf.
+- When you intend to and before you create a commit (`git commit ...`) on
+  the user's behalf. Also fold this CHANGELOG into the same commit.
 - When the user explicitly asks to update or backfill the changelog.
 
 Do **not** run this for commits the user made outside the current session unless

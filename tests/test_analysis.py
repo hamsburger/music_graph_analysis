@@ -5,13 +5,13 @@ from music_graph_analysis.cache import JsonCache
 
 
 class FakeClient:
-    def __init__(self, songs, samplers=None, artist_id=42, name="Test Artist"):
+    def __init__(self, songs, relationships=None, artist_id=42, name="Test Artist"):
         self._songs = songs
-        self._samplers = samplers or {}
+        self._relationships = relationships or {}
         self.artist_id = artist_id
         self.name = name
         self.discography_calls = 0
-        self.sampled_in_calls = 0
+        self.relationships_calls = 0
 
     def find_artist(self, name):
         if name != self.name:
@@ -26,9 +26,20 @@ class FakeClient:
         self.discography_calls += 1
         return list(self._songs)
 
+    def get_all_relationships(self, song_id):
+        self.relationships_calls += 1
+        return self._relationships.get(
+            song_id,
+            {
+                "samples": [],
+                "sampled_in": [],
+                "interpolates": [],
+                "interpolated_by": [],
+            },
+        )
+
     def get_sampled_in(self, song_id):
-        self.sampled_in_calls += 1
-        return self._samplers.get(song_id, [])
+        return self.get_all_relationships(song_id).get("sampled_in", [])
 
 
 def make_song(song_id, title, year, views, primary_id=42, month=1, day=1):
@@ -64,15 +75,19 @@ def build_client():
         make_song(4, "Undated", None, views=50),
         make_song(5, "Not Ours", 2001, views=999, primary_id=7),
     ]
-    samplers = {
-        1: [make_sampler(101, "Sample One", "Artist A")],
-        3: [
-            make_sampler(102, "Sample Two", "Artist B"),
-            make_sampler(103, "Sample Three", "Artist B"),
-        ],
-        4: [],
+    relationships = {
+        1: {"sampled_in": [make_sampler(101, "Sample One", "Artist A")]},
+        3: {
+            "sampled_in": [
+                make_sampler(102, "Sample Two", "Artist B"),
+                make_sampler(103, "Sample Three", "Artist B"),
+            ],
+            "interpolated_by": [make_sampler(104, "Interp One", "Artist C")],
+            "samples": [make_sampler(105, "Source One", "Artist D")],
+        },
+        4: {},
     }
-    return FakeClient(songs, samplers)
+    return FakeClient(songs, relationships)
 
 
 def test_analyze_filters_to_primary_artist_songs():
@@ -92,6 +107,23 @@ def test_analyze_reports_sample_counts_and_samplers():
     assert songs[1]["sample_count"] == 1
     assert songs[1]["sampled_by"][0]["artist"] == "Artist A"
     assert songs[3]["sample_count"] == 2
+    assert songs[3]["sampled_by"][0]["title"] == "Sample Two"
+    assert songs[3]["interpolated_by"][0]["artist"] == "Artist C"
+    assert songs[3]["samples"][0]["title"] == "Source One"
+    assert {s["id"] for s in songs[3]["inspired_by"]} == {105}
+
+
+def test_analyze_reports_era_totals_per_relationship():
+    analyzer = ArtistAnalyzer(build_client())
+    result = analyzer.analyze("Test Artist", n_eras=5, top_k=5)
+    totals = {
+        kind: sum(era["totals"][kind] for era in result["eras"])
+        for kind in ("samples", "sampled_in", "interpolates", "interpolated_by")
+    }
+    assert totals["sampled_in"] == 3
+    assert totals["samples"] == 1
+    assert totals["interpolated_by"] == 1
+    assert totals["interpolates"] == 0
 
 
 def test_analyze_places_undated_song_in_unknown_era():
@@ -118,11 +150,11 @@ def test_analyze_uses_cache_on_second_run(tmp_path):
 
     analyzer.analyze("Test Artist")
     first_discography = client.discography_calls
-    first_sampled = client.sampled_in_calls
+    first_relationships = client.relationships_calls
 
     analyzer.analyze("Test Artist")
     assert client.discography_calls == first_discography
-    assert client.sampled_in_calls == first_sampled
+    assert client.relationships_calls == first_relationships
 
 
 def test_analyze_raises_for_unknown_artist():

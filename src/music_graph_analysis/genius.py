@@ -18,7 +18,18 @@ GENIUS_API_BASE_URL = "https://api.genius.com"
 MAX_PER_PAGE = 50
 
 # Relationship types exposed by ``song.song_relationships``.
+# ``samples``/``interpolates`` describe what a song drew from; the
+# ``*_in``/``*_by`` variants describe the songs that drew from it.
+RELATIONSHIP_SAMPLES = "samples"
 RELATIONSHIP_SAMPLED_IN = "sampled_in"
+RELATIONSHIP_INTERPOLATES = "interpolates"
+RELATIONSHIP_INTERPOLATED_BY = "interpolated_by"
+RELATIONSHIP_TYPES = (
+    RELATIONSHIP_SAMPLES,
+    RELATIONSHIP_SAMPLED_IN,
+    RELATIONSHIP_INTERPOLATES,
+    RELATIONSHIP_INTERPOLATED_BY,
+)
 
 
 class GeniusAPIError(RuntimeError):
@@ -151,9 +162,41 @@ class GeniusClient:
                 return relationship.get("songs", [])
         return []
 
+    def get_all_relationships(
+        self,
+        song_id: int,
+        relationship_types: tuple[str, ...] | None = None,
+    ) -> dict[str, list[dict[str, Any]]]:
+        """Return every requested relationship type for ``song_id``.
+
+        Fetches ``GET /songs/{id}`` once and groups the ``song_relationships``
+        entries by type. The result maps each requested type to its list of
+        songs, defaulting to an empty list when the relationship is absent.
+        """
+        types = relationship_types or RELATIONSHIP_TYPES
+        result: dict[str, list[dict[str, Any]]] = {t: [] for t in types}
+        song = self.get_song_detail(song_id)
+        for relationship in song.get("song_relationships", []):
+            rtype = relationship.get("type") or relationship.get("relationship_type")
+            if rtype in result:
+                result[rtype].extend(relationship.get("songs") or [])
+        return result
+
     def get_sampled_in(self, song_id: int) -> list[dict[str, Any]]:
         """Return the songs that sampled the song with ``song_id``."""
         return self.get_relationships(song_id, RELATIONSHIP_SAMPLED_IN)
+
+    def get_samples(self, song_id: int) -> list[dict[str, Any]]:
+        """Return the songs that the song with ``song_id`` sampled."""
+        return self.get_relationships(song_id, RELATIONSHIP_SAMPLES)
+
+    def get_interpolates(self, song_id: int) -> list[dict[str, Any]]:
+        """Return the songs that the song with ``song_id`` interpolated."""
+        return self.get_relationships(song_id, RELATIONSHIP_INTERPOLATES)
+
+    def get_interpolated_by(self, song_id: int) -> list[dict[str, Any]]:
+        """Return the songs that interpolated the song with ``song_id``."""
+        return self.get_relationships(song_id, RELATIONSHIP_INTERPOLATED_BY)
 
     def search(self, query: str) -> dict[str, Any]:
         """Call ``GET /search`` and return the ``response`` body."""

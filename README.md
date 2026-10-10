@@ -19,8 +19,12 @@ See [docs/repo-structure.md](docs/repo-structure.md) for a map of the codebase.
 # Project Phases
 
 - **Phase 1 (Complete)**: Divide songs into eras and pick top 5 most popular songs in each era
-- **Phase 2**: For each song, find out song relationships: samples, sampled_in, interpolates, interpolated_by/interpolated_in
+- **Phase 2 (Complete)**: For each song, find out song relationships: samples, sampled_in, interpolates, interpolated_by
 - **Phase 3**: LLM Summary of lyrics for each song, then another LLM to summarize the lineage of the song (how it was created, who sampled it)
+
+## Improvements
+- Add CLAUDE/AGENT.md so you can be more confident in the data your coding agent is using as context for making decisions
+- Add skills for automations you're sure about, such as changelog generation on every commit
 
 # Data Source
 
@@ -76,7 +80,9 @@ The script prints the raw `/songs/{id}` response as JSON.
 Analyse how often an artist's most popular songs in each career "era" were
 sampled. The artist's release dates are split into 5 equal time-length buckets
 (songs with no date go into an `unknown` bucket), the top 5 songs per bucket are
-selected by pageviews, and the songs that sampled each one are collected:
+selected by pageviews, and each song's relationships are collected: what it
+`sampled`/`interpolated` (its inspirations) and the songs that `sampled_in`/
+`interpolated_by` it (its influence).
 
 ```bash
 python src/analyze_artist.py "SWV"

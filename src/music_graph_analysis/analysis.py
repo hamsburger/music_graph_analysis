@@ -24,7 +24,14 @@ from .eras import (
     select_top_songs_per_era,
     song_pageviews,
 )
-from .genius import GeniusClient, GeniusAPIError
+from .genius import (
+    RELATIONSHIP_INTERPOLATED_BY,
+    RELATIONSHIP_INTERPOLATES,
+    RELATIONSHIP_SAMPLES,
+    RELATIONSHIP_SAMPLED_IN,
+    GeniusClient,
+    GeniusAPIError,
+)
 
 
 def _primary_artist_id(song: dict[str, Any]) -> int | None:
@@ -47,6 +54,17 @@ def _date_label(song: dict[str, Any]) -> str | None:
     if month and day:
         return f"{year:04d}-{month:02d}-{day:02d}"
     return f"{year:04d}"
+
+
+def _related_song(song: dict[str, Any]) -> dict[str, Any]:
+    """Normalise a related song into the fields used across the report."""
+    return {
+        "id": song.get("id"),
+        "title": song.get("title"),
+        "artist": song.get("artist_names")
+        or (song.get("primary_artist") or {}).get("name"),
+        "release_date": _date_label(song),
+    }
 
 
 class ArtistAnalyzer:
@@ -80,6 +98,29 @@ class ArtistAnalyzer:
             lambda: list(self.client.iter_artist_songs(artist_id)),
         )
 
+    def relationships(
+        self,
+        song_id: int,
+        *,
+        artist_id: int | None = None,
+        artist_name: str | None = None,
+        song_title: str | None = None,
+    ) -> dict[str, list[dict[str, Any]]]:
+        """Return (and cache) all sample/interpolation relationships for a song.
+
+        Fetches a single ``GET /songs/{id}`` and groups the result by
+        relationship type (``samples``, ``sampled_in``, ``interpolates`` and
+        ``interpolated_by``). When artist context is supplied the response is
+        nested under a per-artist folder, otherwise it falls back to a shared
+        ``songs`` folder.
+        """
+        folder = _artist_folder(artist_name, artist_id) if artist_id else "songs"
+        label = f"{song_title}-{song_id}" if song_title else f"song-{song_id}"
+        return self._cached(
+            f"{folder}/relationships/{label}",
+            lambda: self.client.get_all_relationships(song_id),
+        )
+
     def sampled_in(
         self,
         song_id: int,
@@ -88,17 +129,14 @@ class ArtistAnalyzer:
         artist_name: str | None = None,
         song_title: str | None = None,
     ) -> list[dict[str, Any]]:
-        """Return (and cache) the songs that sampled ``song_id``.
-
-        When artist context is supplied the response is nested under a
-        per-artist folder, otherwise it falls back to a shared ``songs`` folder.
-        """
-        folder = _artist_folder(artist_name, artist_id) if artist_id else "songs"
-        label = f"{song_title}-{song_id}" if song_title else f"song-{song_id}"
-        return self._cached(
-            f"{folder}/sampled_in/{label}",
-            lambda: self.client.get_sampled_in(song_id),
+        """Return (and cache) the songs that sampled ``song_id``."""
+        relations = self.relationships(
+            song_id,
+            artist_id=artist_id,
+            artist_name=artist_name,
+            song_title=song_title,
         )
+        return relations.get(RELATIONSHIP_SAMPLED_IN, [])
 
     def analyze(
         self,
@@ -169,12 +207,13 @@ class ArtistAnalyzer:
 
         era_songs = []
         for song in songs:
-            samplers = self.sampled_in(
+            relations = self.relationships(
                 song["id"],
                 artist_id=artist.get("id"),
                 artist_name=artist.get("name"),
                 song_title=song.get("title"),
             )
+            sampled_in = relations.get(RELATIONSHIP_SAMPLED_IN, [])
             era_songs.append(
                 {
                     "id": song["id"],
@@ -182,26 +221,49 @@ class ArtistAnalyzer:
                     "artist_names": song.get("artist_names"),
                     "release_date": _date_label(song),
                     "pageviews": song_pageviews(song),
-                    "sample_count": len(samplers),
-                    "sampled_by": [
-                        {
-                            "id": sampler.get("id"),
-                            "title": sampler.get("title"),
-                            "artist": sampler.get("artist_names")
-                            or (sampler.get("primary_artist") or {}).get("name"),
-                            "release_date": _date_label(sampler),
-                        }
-                        for sampler in samplers
+                    "sample_count": len(sampled_in),
+                    "sampled_by": [_related_song(s) for s in sampled_in],
+                    "samples": [
+                        _related_song(s)
+                        for s in relations.get(RELATIONSHIP_SAMPLES, [])
+                    ],
+                    "interpolates": [
+                        _related_song(s)
+                        for s in relations.get(RELATIONSHIP_INTERPOLATES, [])
+                    ],
+                    "interpolated_by": [
+                        _related_song(s)
+                        for s in relations.get(RELATIONSHIP_INTERPOLATED_BY, [])
+                    ],
+                    "inspired_by": [
+                        _related_song(s)
+                        for s in relations.get(RELATIONSHIP_SAMPLES, [])
+                    ]
+                    + [
+                        _related_song(s)
+                        for s in relations.get(RELATIONSHIP_INTERPOLATES, [])
                     ],
                 }
             )
+
+        totals = {
+            RELATIONSHIP_SAMPLES: sum(len(s["samples"]) for s in era_songs),
+            RELATIONSHIP_SAMPLED_IN: sum(len(s["sampled_by"]) for s in era_songs),
+            RELATIONSHIP_INTERPOLATES: sum(
+                len(s["interpolates"]) for s in era_songs
+            ),
+            RELATIONSHIP_INTERPOLATED_BY: sum(
+                len(s["interpolated_by"]) for s in era_songs
+            ),
+        }
 
         return {
             "era": era,
             "label": label,
             "start": start,
             "end": end,
-            "total_samples": sum(s["sample_count"] for s in era_songs),
+            "total_samples": totals[RELATIONSHIP_SAMPLED_IN],
+            "totals": totals,
             "songs": era_songs,
         }
 
@@ -223,11 +285,23 @@ def format_report(result: dict[str, Any]) -> str:
         if not era["songs"]:
             lines.append("  (no songs)")
         for song in era["songs"]:
+            parts = [f"sampled {song['sample_count']}x"]
+            if song["interpolated_by"]:
+                parts.append(f"interpolated {len(song['interpolated_by'])}x")
+            if song["samples"]:
+                parts.append(f"sampled from {len(song['samples'])}")
+            if song["interpolates"]:
+                parts.append(f"interpolates {len(song['interpolates'])}")
             lines.append(
                 f"  - {song['title']} "
                 f"({song['release_date']}, {song['pageviews']:,} views) "
-                f"sampled {song['sample_count']}x"
+                + ", ".join(parts)
             )
+            for source in song["inspired_by"][:5]:
+                lines.append(
+                    f"      < inspired by {source['title']} "
+                    f"({source['artist']}, {source['release_date']})"
+                )
             artists: dict[str, int] = {}
             for sampler in song["sampled_by"]:
                 key = sampler.get("artist") or "Unknown"
