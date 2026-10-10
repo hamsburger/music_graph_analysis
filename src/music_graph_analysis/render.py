@@ -474,7 +474,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   .controls {{ display: flex; flex-wrap: wrap; gap: 20px; }}
   .control {{ font-size: 13px; color: #5b6270; }}
   select {{ margin-left: 6px; padding: 4px 8px; font-size: 13px; }}
-  main {{ padding: 8px 20px 40px; }}
+  main {{ padding: 8px 20px 120px; }}
   .chart {{ display: none; }}
   .song {{ cursor: pointer; }}
   .tooltip {{
@@ -528,8 +528,14 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     }});
   }}
   function moveTooltip(event) {{
-    var x = Math.min(event.clientX + 14, window.innerWidth - 300);
-    var y = event.clientY + 14;
+    var margin = 14;
+    var x = Math.min(event.clientX + margin, window.innerWidth - 300);
+    var height = tooltip.offsetHeight;
+    var y = event.clientY + margin;
+    if (y + height > window.innerHeight - 8) {{
+      y = event.clientY - height - margin;
+    }}
+    y = Math.max(8, y);
     tooltip.style.left = x + "px";
     tooltip.style.top = y + "px";
   }}

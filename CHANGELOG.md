@@ -3,7 +3,13 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
-## 7110b6e — 2026-10-10
+## 5c675b1 — 2026-10-10
+
+**Changed** the report page to add extra bottom spacing and clamp the hover
+tooltip within the viewport (flipping it above the cursor near the bottom edge)
+so tooltips are no longer cut off.
+
+## b0c894b — 2026-10-10
 
 **Changed** the chart layout so songs spread evenly down each era (staggered
 between adjacent eras) with a small deterministic x-jitter, dropping the

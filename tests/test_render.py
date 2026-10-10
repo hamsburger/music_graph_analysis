@@ -245,6 +245,17 @@ def test_render_html_includes_tooltip_element():
     assert 'class="song"' in page
 
 
+def test_render_html_adds_bottom_space_for_tooltips():
+    page = render_html([make_result()], {})
+    assert "padding: 8px 20px 120px" in page
+
+
+def test_render_html_clamps_tooltip_vertically():
+    page = render_html([make_result()], {})
+    assert "tooltip.offsetHeight" in page
+    assert "window.innerHeight" in page
+
+
 class FakeResponse:
     def __init__(self, content=b"abc", content_type="image/png"):
         self.content = content
