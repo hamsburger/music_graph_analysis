@@ -1,0 +1,8 @@
+Seems like this is hard to achieve through the Genius API since we cannot search by producer name.
+So I think the better idea here is to understand how many times an artists' most popular songs in 
+each era was "sampled_in". I'd say we find the artist's most recent and earliest song, using that 
+range, divide into 5 equal time-length buckets, we'll call these era buckets. 
+The top 5 most popular songs in each era are picked, and 
+we find out how many times they've been sampled and which songs/artists sampled them. 
+
+Improvement: I also want to know what the songs sampled (samples), not just sampled_in relationship
