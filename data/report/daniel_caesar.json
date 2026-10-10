@@ -1,0 +1,421 @@
+{
+  "artist": {
+    "id": 161892,
+    "name": "Daniel Caesar",
+    "url": "https://genius.com/artists/Daniel-caesar"
+  },
+  "span": {
+    "start": "2014-09-22",
+    "end": "2025-10-24",
+    "n_eras": 5
+  },
+  "eras": [
+    {
+      "era": 0,
+      "label": "Era 1 (2014-09-22 to 2016-12-10)",
+      "start": "2014-09-22",
+      "end": "2016-12-10",
+      "total_samples": 10,
+      "songs": [
+        {
+          "id": 2887594,
+          "title": "Get You",
+          "artist_names": "Daniel Caesar (Ft. Kali Uchis)",
+          "release_date": "2016-10-21",
+          "pageviews": 2281313,
+          "sample_count": 10,
+          "sampled_by": [
+            {
+              "id": 10056864,
+              "title": "deadwithoutlove",
+              "artist": "TBD (Compilation Albums) (Ft. leumas (musician))",
+              "release_date": "2024-02-14"
+            },
+            {
+              "id": 9250682,
+              "title": "Salada Caesar 28",
+              "artist": "Nader",
+              "release_date": "2023-05-28"
+            },
+            {
+              "id": 5036114,
+              "title": "All for You",
+              "artist": "Wade (rapper)",
+              "release_date": "2018-04-03"
+            },
+            {
+              "id": 6463677,
+              "title": "Thankful for You This New Year, Pt. 2",
+              "artist": "Millz Davis",
+              "release_date": "2018-08-16"
+            },
+            {
+              "id": 3820110,
+              "title": "Thankful for You This New Year",
+              "artist": "Millz Davis",
+              "release_date": "2017-12-31"
+            },
+            {
+              "id": 3972490,
+              "title": "Hell Talk",
+              "artist": "Tsu Surf (Ft. Mozzy)",
+              "release_date": "2018-09-20"
+            },
+            {
+              "id": 5357317,
+              "title": "Bullet Sun",
+              "artist": "Renz Azores",
+              "release_date": "2020-03-15"
+            },
+            {
+              "id": 4134470,
+              "title": "Nagrania (00:37)",
+              "artist": "Otsochodzi (Ft. Rosalie.)",
+              "release_date": "2018-12-03"
+            },
+            {
+              "id": 4050088,
+              "title": "THE ELECTRIC FREESTYLE",
+              "artist": "Jevon",
+              "release_date": "2018-10-24"
+            },
+            {
+              "id": 3676546,
+              "title": "Oasis",
+              "artist": "Mister JT",
+              "release_date": null
+            }
+          ]
+        },
+        {
+          "id": 2887597,
+          "title": "Japanese Denim",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2016-10-19",
+          "pageviews": 1325442,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 2368028,
+          "title": "Streetcar",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2015-11-12",
+          "pageviews": 608119,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 587896,
+          "title": "Violet",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2014-09-22",
+          "pageviews": 252677,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 2342929,
+          "title": "Death & Taxes",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2015-10-11",
+          "pageviews": 210003,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 1,
+      "label": "Era 2 (2016-12-10 to 2019-02-28)",
+      "start": "2016-12-10",
+      "end": "2019-02-28",
+      "total_samples": 9,
+      "songs": [
+        {
+          "id": 3183199,
+          "title": "Best Part",
+          "artist_names": "Daniel Caesar (Ft. H.E.R.)",
+          "release_date": "2017-08-25",
+          "pageviews": 6988433,
+          "sample_count": 5,
+          "sampled_by": [
+            {
+              "id": 7684141,
+              "title": "We Don’t Gotta Worry No More",
+              "artist": "Snoop Dogg (Ft. Wiz Khalifa)",
+              "release_date": "2022-02-11"
+            },
+            {
+              "id": 5169997,
+              "title": "Jump the Broom",
+              "artist": "Add-2 (Ft. Andy Allo)",
+              "release_date": "2019-11-26"
+            },
+            {
+              "id": 3984168,
+              "title": "Written In The Stars",
+              "artist": "John Legend & WENDY",
+              "release_date": "2018-10-19"
+            },
+            {
+              "id": 3408530,
+              "title": "CREEP",
+              "artist": "ENI (IAMENI)",
+              "release_date": "2017-12-16"
+            },
+            {
+              "id": 12038803,
+              "title": "Dear BB",
+              "artist": "TotallyReeeaaal",
+              "release_date": "2026-03-15"
+            }
+          ]
+        },
+        {
+          "id": 3116797,
+          "title": "Blessed",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2017-06-09",
+          "pageviews": 881608,
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 3455945,
+              "title": "ARTIC",
+              "artist": "j. sula",
+              "release_date": "2018-01-28"
+            }
+          ]
+        },
+        {
+          "id": 3183200,
+          "title": "Hold Me Down",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2017-08-25",
+          "pageviews": 836536,
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 11030441,
+              "title": "All I Ask",
+              "artist": "Yatta Bandz",
+              "release_date": "2024-11-08"
+            }
+          ]
+        },
+        {
+          "id": 3116785,
+          "title": "We Find Love",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2017-06-09",
+          "pageviews": 493680,
+          "sample_count": 2,
+          "sampled_by": [
+            {
+              "id": 7030006,
+              "title": "We Find Love - (Daniel Caesar Cover)",
+              "artist": "grentperez",
+              "release_date": "2021-05-08"
+            },
+            {
+              "id": 4661495,
+              "title": "Rolls Royce",
+              "artist": "Rylo Rodriguez",
+              "release_date": "2019-06-27"
+            }
+          ]
+        },
+        {
+          "id": 3183202,
+          "title": "Loose",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2017-08-25",
+          "pageviews": 476802,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 2,
+      "label": "Era 3 (2019-02-28 to 2021-05-18)",
+      "start": "2019-02-28",
+      "end": "2021-05-18",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 4660975,
+          "title": "CYANIDE",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2019-06-28",
+          "pageviews": 352223,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 4660980,
+          "title": "SUPERPOSITION",
+          "artist_names": "Daniel Caesar (Ft. John Mayer)",
+          "release_date": "2019-06-28",
+          "pageviews": 285004,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 4660974,
+          "title": "ENTROPY",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2019-06-28",
+          "pageviews": 199476,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 4660981,
+          "title": "TOO DEEP TO TURN BACK",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2019-06-28",
+          "pageviews": 192856,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 4660983,
+          "title": "ARE YOU OK?",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2019-06-28",
+          "pageviews": 138375,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 3,
+      "label": "Era 4 (2021-05-18 to 2023-08-06)",
+      "start": "2021-05-18",
+      "end": "2023-08-06",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 8938966,
+          "title": "Always",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2023-04-07",
+          "pageviews": 600115,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 8938996,
+          "title": "Superpowers",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2023-04-07",
+          "pageviews": 258148,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 8938965,
+          "title": "Toronto 2014",
+          "artist_names": "Daniel Caesar & Mustafa",
+          "release_date": "2023-04-07",
+          "pageviews": 167109,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 8419244,
+          "title": "Horsepower",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2022-08-25",
+          "pageviews": 152109,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 8938968,
+          "title": "Disillusioned",
+          "artist_names": "Daniel Caesar & serpentwithfeet",
+          "release_date": "2023-04-07",
+          "pageviews": 142247,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 4,
+      "label": "Era 5 (2023-08-06 to 2025-10-24)",
+      "start": "2023-08-06",
+      "end": "2025-10-24",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 12316978,
+          "title": "Who Knows",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2025-10-24",
+          "pageviews": 841587,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11485087,
+          "title": "Have a Baby (With Me)",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2025-07-25",
+          "pageviews": 207283,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11466383,
+          "title": "Rearrange My World",
+          "artist_names": "Daniel Caesar & Rex Orange County",
+          "release_date": "2025-02-14",
+          "pageviews": 188399,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12316981,
+          "title": "Emily’s Song",
+          "artist_names": "Daniel Caesar",
+          "release_date": "2025-10-24",
+          "pageviews": 142735,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12015760,
+          "title": "Moon",
+          "artist_names": "Daniel Caesar (Ft. Bon Iver)",
+          "release_date": "2025-09-23",
+          "pageviews": 112738,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": "unknown",
+      "label": "Unknown era (no release date)",
+      "start": null,
+      "end": null,
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 9035196,
+          "title": "innocence*",
+          "artist_names": "Daniel Caesar (Ft. Sean Leon)",
+          "release_date": null,
+          "pageviews": 374714,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    }
+  ]
+}

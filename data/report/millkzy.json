@@ -1,0 +1,284 @@
+{
+  "artist": {
+    "id": 4013925,
+    "name": "millkzy",
+    "url": "https://genius.com/artists/Millkzy"
+  },
+  "span": {
+    "start": "2022-01-01",
+    "end": "2026-04-10",
+    "n_eras": 5
+  },
+  "eras": [
+    {
+      "era": 0,
+      "label": "Era 1 (2022-01-01 to 2022-11-09)",
+      "start": "2022-01-01",
+      "end": "2022-11-09",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 11619082,
+          "title": "book full of butterflies",
+          "artist_names": "millkzy",
+          "release_date": "2022-01-01",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12811410,
+          "title": "to whom it may concern",
+          "artist_names": "millkzy (Ft. yungcapi)",
+          "release_date": "2022-04-24",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 1,
+      "label": "Era 2 (2022-11-09 to 2023-09-17)",
+      "start": "2022-11-09",
+      "end": "2023-09-17",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 11619070,
+          "title": "far from innocence",
+          "artist_names": "millkzy",
+          "release_date": "2023-01-26",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675482,
+          "title": "Floem",
+          "artist_names": "millkzy",
+          "release_date": "2023-08-30",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675455,
+          "title": "Floetry",
+          "artist_names": "millkzy",
+          "release_date": "2023-08-30",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675485,
+          "title": "Slik Therapy",
+          "artist_names": "millkzy",
+          "release_date": "2023-08-30",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675486,
+          "title": "The Couplet(outro)",
+          "artist_names": "millkzy",
+          "release_date": "2023-08-30",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 2,
+      "label": "Era 3 (2023-09-17 to 2024-07-25)",
+      "start": "2023-09-17",
+      "end": "2024-07-25",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 10595643,
+          "title": "RUSSIAN ROULETTE(I ADORE U)",
+          "artist_names": "millkzy",
+          "release_date": "2024-01-20",
+          "pageviews": 25499,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675452,
+          "title": "CINDERELLA",
+          "artist_names": "millkzy",
+          "release_date": "2024-05-17",
+          "pageviews": 8731,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10597322,
+          "title": "ANONYMOUS CALLER (OUTRO)",
+          "artist_names": "millkzy",
+          "release_date": "2024-01-20",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10597228,
+          "title": "AS FRIENDS",
+          "artist_names": "millkzy",
+          "release_date": "2024-01-20",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10597201,
+          "title": "CRY ME A RIVER",
+          "artist_names": "millkzy",
+          "release_date": "2023-11-15",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 3,
+      "label": "Era 4 (2024-07-25 to 2025-06-02)",
+      "start": "2024-07-25",
+      "end": "2025-06-02",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 11984612,
+          "title": "Yin & Yang",
+          "artist_names": "millkzy & Leandra Dielle",
+          "release_date": "2024-09-03",
+          "pageviews": 5922,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11336940,
+          "title": "7 MINUTES IN HEAVEN",
+          "artist_names": "millkzy",
+          "release_date": "2025-01-31",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11273807,
+          "title": "A BEAST WITH BEAUTY",
+          "artist_names": "millkzy",
+          "release_date": "2025-01-31",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 10675422,
+          "title": "a woman is",
+          "artist_names": "millkzy",
+          "release_date": "2024-07-26",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11401374,
+          "title": "ALICE IN WONDERLAND",
+          "artist_names": "millkzy",
+          "release_date": "2025-01-31",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": 4,
+      "label": "Era 5 (2025-06-02 to 2026-04-10)",
+      "start": "2025-06-02",
+      "end": "2026-04-10",
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 13360831,
+          "title": "A Woman Written By God",
+          "artist_names": "millkzy",
+          "release_date": "2026-04-10",
+          "pageviews": 15345,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 13360855,
+          "title": "A Baby Boy’s Lady Joy",
+          "artist_names": "millkzy",
+          "release_date": "2026-04-10",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12022784,
+          "title": "aseverancesickness",
+          "artist_names": "millkzy",
+          "release_date": "2025-06-13",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12824806,
+          "title": "Asmita The Prideful",
+          "artist_names": "millkzy",
+          "release_date": "2025-12-12",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 12160513,
+          "title": "blckswan",
+          "artist_names": "millkzy",
+          "release_date": "2025-07-18",
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    },
+    {
+      "era": "unknown",
+      "label": "Unknown era (no release date)",
+      "start": null,
+      "end": null,
+      "total_samples": 0,
+      "songs": [
+        {
+          "id": 14073505,
+          "title": "#nohardfeelings",
+          "artist_names": "millkzy",
+          "release_date": null,
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        },
+        {
+          "id": 11919188,
+          "title": "Frank’s interlude",
+          "artist_names": "millkzy",
+          "release_date": null,
+          "pageviews": 0,
+          "sample_count": 0,
+          "sampled_by": []
+        }
+      ]
+    }
+  ]
+}
