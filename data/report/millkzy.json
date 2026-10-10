@@ -16,6 +16,12 @@
       "start": "2022-01-01",
       "end": "2022-11-09",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 11619082,
@@ -23,8 +29,30 @@
           "artist_names": "millkzy",
           "release_date": "2022-01-01",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/3e9a60f770dd6624b7c87e97c69f91e7.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/3e9a60f770dd6624b7c87e97c69f91e7.300x300x1.jpg",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a 'book full of butterflies,' symbolizing memories or moments that are delicate and fleeting. They describe these moments as 'fragile' and 'beautiful,' suggesting a sense of nostalgia and appreciation. The speaker acknowledges that these memories are 'gone,' yet they remain cherished, as they 'still remember' them vividly.",
+            "themes": [
+              "memory",
+              "nostalgia",
+              "transience"
+            ],
+            "emotional_tone": "reflective and wistful",
+            "key_imagery": [
+              "book full of butterflies",
+              "fragile",
+              "beautiful",
+              "gone"
+            ]
+          }
         },
         {
           "id": 12811410,
@@ -32,8 +60,30 @@
           "artist_names": "millkzy (Ft. yungcapi)",
           "release_date": "2022-04-24",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+          "album": "book full of butterflies",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses frustration and disappointment in a one-sided romantic relationship. They repeatedly tried to give love and affection ('I tried to give that girl my love', 'And I tried to to give that girl my heart') but felt unreciprocated ('she ain't showing me love'). The speaker feels undervalued, noting that love seems conditional ('Only time they love a nigga is when they see doves'). They describe the relationship as unhealthy ('it ain't feeling healthy') and express skepticism about future love ('The only time I feel ill love again is January'). The speaker also acknowledges the partner's dishonesty ('She had told me that she loved me when she didn’t') and lack of commitment ('it's always been commitment'). Despite the pain ('N it hurt the way you hurt me'), the speaker resolves to move on ('You can tell her it's good riddance').",
+            "themes": [
+              "unrequited love",
+              "relationship struggles",
+              "emotional pain",
+              "moving on"
+            ],
+            "emotional_tone": "frustrated, hurt, resigned",
+            "key_imagery": [
+              "'Only time they love a nigga is when they see doves'",
+              "'Tryna love yo love is getting scary'",
+              "'The only time I feel ill love again is January'"
+            ]
+          }
         }
       ]
     },
@@ -43,6 +93,12 @@
       "start": "2022-11-09",
       "end": "2023-09-17",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 11619070,
@@ -50,8 +106,33 @@
           "artist_names": "millkzy",
           "release_date": "2023-01-26",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/87d1c3cdb482949f0e475cec0342973a.640x640x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/87d1c3cdb482949f0e475cec0342973a.300x300x1.jpg",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a toxic relationship filled with deception and emotional pain. They describe how their partner lied and manipulated them, hiding true intentions ('Those pretty lies you tell / How you hide yo lies so well'). The speaker gave love and loyalty but was met with betrayal ('I gave you things you always wanted / A man who always loved / And never once departed'). The partner is portrayed as selfish and disloyal ('You only ever called when you need a favor'), even playing the victim despite their wrongdoing ('how you were the worst / But then you play the victim'). The speaker regrets their love and wishes to forget the memories ('Id rather wish these memories could be abandoned'). The relationship ended with unanswered questions and lingering hurt ('I got questions from the time that still remain unanswered').",
+            "themes": [
+              "betrayal",
+              "deception",
+              "heartbreak",
+              "regret",
+              "toxic love"
+            ],
+            "emotional_tone": "angry, hurt, resentful, regretful",
+            "key_imagery": [
+              "pretty lies",
+              "silhouette from love",
+              "devil in disguise",
+              "middle of the ocean hollow heavy hearted",
+              "Aphrodite and Adonis"
+            ]
+          }
         },
         {
           "id": 10675482,
@@ -59,8 +140,30 @@
           "artist_names": "millkzy",
           "release_date": "2023-08-30",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.300x300x1.png",
+          "album": "Floetry",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker questions a woman about her lifestyle, preferences, and choices in relationships, asking 'Tell me what you do, on yo' time when you living life'. They express frustration with her seeking attention from men who are not serious, noting 'Why do you look for men who only want to travel'. The speaker reflects on their own past experiences with love, admitting 'I got penalized for love when I was being patient', and realizes that their emotional investment was merely 'entertainment'. They also critique a broader pattern of women valuing material wealth over genuine connection, stating 'Exchanging love for men with bands and benz's in they savings'.",
+            "themes": [
+              "relationships",
+              "materialism",
+              "self-reflection",
+              "frustration"
+            ],
+            "emotional_tone": "frustrated, reflective, critical",
+            "key_imagery": [
+              "sleepless nights among Seattle",
+              "Exchanging love for men with bands and benz's in they savings",
+              "battling my heart cause it was being taken"
+            ]
+          }
         },
         {
           "id": 10675455,
@@ -68,8 +171,30 @@
           "artist_names": "millkzy",
           "release_date": "2023-08-30",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.300x300x1.png",
+          "album": "Floetry",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a deep, transformative connection with another person, describing it as a source of inspiration and emotional fulfillment. They express gratitude for this relationship, stating, 'You’re the reason why I sing.' The speaker also acknowledges the challenges they’ve faced, but emphasizes how this bond has helped them overcome difficulties, as seen in the line, 'You’ve been my shelter through the storm.' The lyrics convey a sense of mutual support and growth, with the speaker noting, 'We’ve grown together, now we’re stronger.'",
+            "themes": [
+              "love",
+              "gratitude",
+              "resilience",
+              "connection"
+            ],
+            "emotional_tone": "grateful, reflective, uplifting",
+            "key_imagery": [
+              "'You’re the reason why I sing'",
+              "'You’ve been my shelter through the storm'",
+              "'We’ve grown together, now we’re stronger'"
+            ]
+          }
         },
         {
           "id": 10675485,
@@ -77,8 +202,31 @@
           "artist_names": "millkzy",
           "release_date": "2023-08-30",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.300x300x1.png",
+          "album": "Floetry",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses frustration with a romantic partner's manipulative behavior, stating, 'Girl, I'm so tired of your mind games' and 'everything you do seems like manipulation.' They reflect on choosing love despite feeling undervalued, saying, 'I chose love inside a lost and found it' and questioning, 'Was it the money or no car that made you belittle me for?' The speaker acknowledges their own financial struggles, noting, 'all my money felt like bills to me, love,' and laments the loss of mutual respect, recalling, 'I miss the days you knew my worth.' They also criticize the partner's insincerity, stating, 'You only call to say 'what's up' to see who out there sippin'.' The speaker concludes by emphasizing the need for sincerity, repeating, 'you need a solo session on sincerity.'",
+            "themes": [
+              "manipulation",
+              "lost love",
+              "self-reflection",
+              "insincerity"
+            ],
+            "emotional_tone": "frustrated, reflective, critical",
+            "key_imagery": [
+              "mind games",
+              "lost and found",
+              "solo session on sincerity",
+              "free payments"
+            ]
+          }
         },
         {
           "id": 10675486,
@@ -86,8 +234,31 @@
           "artist_names": "millkzy",
           "release_date": "2023-08-30",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.300x300x1.png",
+          "album": "Floetry",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses reluctance to engage with someone who has taken their relationship for granted, as evidenced by 'I’m ducking your calls again / Because in my mind I’m not ready to answer'. They criticize the other person for forgetting how they 'altered my mindset' and for now posting insincere messages about 'strengthening and healing' and 'couple goals without knowing the meaning'. The speaker implies the other person only realizes their mistakes after the fact, noting 'you took it for granted' and 'that man that gave you shit that you always demanded'.",
+            "themes": [
+              "avoidance",
+              "betrayal",
+              "insincerity",
+              "regret"
+            ],
+            "emotional_tone": "resentful and dismissive",
+            "key_imagery": [
+              "ducking your calls",
+              "altered my mindset",
+              "posting sorry quotes",
+              "couple goals without knowing the meaning"
+            ]
+          }
         }
       ]
     },
@@ -97,24 +268,79 @@
       "start": "2023-09-17",
       "end": "2024-07-25",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 2
+      },
       "songs": [
         {
           "id": 10595643,
           "title": "RUSSIAN ROULETTE(I ADORE U)",
           "artist_names": "millkzy",
           "release_date": "2024-01-20",
-          "pageviews": 25499,
+          "pageviews": 25509,
+          "song_art_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+          "album": "EVER SINCE SHEFFIELD",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 13032835,
+              "title": "Can’t Talk About",
+              "artist": "Widlton",
+              "release_date": "2025-04-28"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a conflicted love, acknowledging their adoration for the other person while also recognizing the toxicity of the relationship. They mention repeated cycles of pain and reconciliation, as in 'put another bullet to my heart again / Once we stop, let’s start again'. The speaker admits to past mistakes and hopes for improvement, stating 'Since we back, I’ll treat you better now so we won’t part again'. However, they also feel undervalued and question their partner's sincerity, asking 'Do you treat me like your love or like your entertainment?'. The speaker grapples with trust issues, noting 'A book of lies that's trailed by your deception', yet remains emotionally attached, confessing 'But I'm blinded by the fact that I still do adore you'.",
+            "themes": [
+              "toxic love",
+              "cycle of pain",
+              "self-deception",
+              "emotional conflict"
+            ],
+            "emotional_tone": "conflicted, pained, yet affectionate",
+            "key_imagery": [
+              "bullet to my heart",
+              "book of lies",
+              "invisible",
+              "delusional"
+            ]
+          }
         },
         {
           "id": 10675452,
           "title": "CINDERELLA",
           "artist_names": "millkzy",
           "release_date": "2024-05-17",
-          "pageviews": 8731,
+          "pageviews": 8733,
+          "song_art_image_url": "https://images.genius.com/0991c106b445fde0ff60bd5e27f8b8c5.316x316x1.webp",
+          "song_art_image_thumbnail_url": "https://images.genius.com/0991c106b445fde0ff60bd5e27f8b8c5.300x300x1.webp",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses confidence and self-assuredness, referring to themselves as 'the greatest artist of all time'. The lyrics contain boastful claims about their talent and status, such as 'MILKZY THE GREATEST ARTIST OF ALL TIME'. There is no evident narrative or emotional depth beyond self-praise.",
+            "themes": [
+              "self-confidence",
+              "boasting",
+              "artistic pride"
+            ],
+            "emotional_tone": "boastful",
+            "key_imagery": [
+              "MILKZY THE GREATEST ARTIST OF ALL TIME"
+            ]
+          }
         },
         {
           "id": 10597322,
@@ -122,8 +348,31 @@
           "artist_names": "millkzy",
           "release_date": "2024-01-20",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/24ad2f6c59b41c7cf493eea67ca6622f.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/24ad2f6c59b41c7cf493eea67ca6622f.300x300x1.png",
+          "album": "EVER SINCE SHEFFIELD",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on the complexities and contradictions of love, describing it as both 'tarnished, corrupted, bitter, spiteful' and as 'the only thing that can truly cure hate and suffering.' They emphasize that love is an enduring force, stating 'it's always gonna be a part of you' and 'you can only give love; you can never truly take it.' The speaker acknowledges the confusion surrounding love, noting 'we all get so confused and have mixed emotions about love and what it is and what it can be,' but ultimately urges conscious effort to 'love one another.'",
+            "themes": [
+              "love",
+              "complexity",
+              "endurance",
+              "human connection"
+            ],
+            "emotional_tone": "reflective and hopeful",
+            "key_imagery": [
+              "love be tarnished, corrupted, bitter, spiteful",
+              "love is really the only thing that can truly cure hate and suffering",
+              "it's always gonna be a part of you",
+              "you can only give love; you can never truly take it"
+            ]
+          }
         },
         {
           "id": 10597228,
@@ -131,8 +380,37 @@
           "artist_names": "millkzy",
           "release_date": "2024-01-20",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.350x350x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/242514d02fe56813de22f12537d9139f.300x300x1.jpg",
+          "album": "EVER SINCE SHEFFIELD",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 13033404,
+              "title": "Thoughts",
+              "artist": "Widlton",
+              "release_date": "2025-04-28"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship that began as a friendship but ended in separation. They recall shared moments ('We used to do some things that we claimed only friends would') and express confusion and frustration over the loss ('now I'm stuck here, lost with hella information'). The speaker feels their love was unappreciated ('Mad that all my love was taken just for granted') and blames the other person for the breakup ('the reason why she left was 'cause she couldn't manage'). They assert their positive qualities ('A man who always loved and gave her all the praises') and criticize the other person's actions ('Crazy how you blame me for your own reactions'). Ultimately, the speaker concludes that they are better off as strangers ('Better of as friends, I hope you understand me').",
+            "themes": [
+              "lost love",
+              "regret",
+              "self-reflection",
+              "moving on"
+            ],
+            "emotional_tone": "frustrated, reflective, resigned",
+            "key_imagery": [
+              "stuck here, lost with hella information",
+              "all my love was taken just for granted",
+              "better off if we remain as strangers"
+            ]
+          }
         },
         {
           "id": 10597201,
@@ -140,8 +418,31 @@
           "artist_names": "millkzy",
           "release_date": "2023-11-15",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/a9d99f357beff95a1a0e64448dc0cf8d.300x300x1.jpg",
+          "album": "EVER SINCE SHEFFIELD",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, describing it as both delicate and intense, comparing it to art shaped by heat but emphasizing it is not 'pandora's box'. They recall the pleasure and emotional depth of their connection, stating it 'yields emotional food for the soul'. However, the relationship ended due to unresolved emotions and arguments, leaving the speaker feeling 'homesick' and conflicted about reaching out. They express pain over their former partner moving on with someone new, feeling their heart has 'grown colder than nights in Chicago'. The speaker acknowledges their own mistakes and regrets, admitting they 'played with fire' and questioning the worth of their actions. Despite the breakup, they still hold lingering thoughts and concerns, hoping their former partner understands their perspective. The song concludes with a plea for understanding, urging their ex to 'cry amongst this river 'til you understand me'.",
+            "themes": [
+              "lost love",
+              "regret",
+              "emotional conflict",
+              "moving on"
+            ],
+            "emotional_tone": "reflective, melancholic, conflicted",
+            "key_imagery": [
+              "pandora's box",
+              "art hardened through the heat",
+              "nights in Chicago",
+              "cry amongst this river"
+            ]
+          }
         }
       ]
     },
@@ -151,15 +452,46 @@
       "start": "2024-07-25",
       "end": "2025-06-02",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 11984612,
           "title": "Yin & Yang",
           "artist_names": "millkzy & Leandra Dielle",
           "release_date": "2024-09-03",
-          "pageviews": 5922,
+          "pageviews": 5926,
+          "song_art_image_url": "https://images.genius.com/5b8cf125c2063096cb19558368bbee6c.500x500x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/5b8cf125c2063096cb19558368bbee6c.300x300x1.jpg",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses deep romantic affection and admiration for their partner, describing them as uniquely crafted ('God took his sweet time with you') and idealizing intimate moments ('Kiss you 'til your lips turn blue'). They highlight a desire for closeness and adventure ('Take me on a date inside my planet', 'Take me on a ship 'cross the Atlantic'). However, there are also moments of doubt and conflict ('Yeah, you're the love of my life and, so why are we fighting?'), where the speaker questions their worthiness ('I hate that you're perfect 'Cause then I ain't worth it'). The bridge reflects a deep emotional connection ('your voice is my favourite tune') and a sense of belonging ('you found where you always belonged'). The final verse introduces themes of loss and unresolved love ('What happens when you give them love and they laugh and leave?'), contrasting earlier idealization with painful memories.",
+            "themes": [
+              "romantic love",
+              "idealization",
+              "doubt",
+              "longing",
+              "loss"
+            ],
+            "emotional_tone": "passionate, conflicted, nostalgic",
+            "key_imagery": [
+              "date inside my planet",
+              "ship 'cross the Atlantic",
+              "lips turn blue",
+              "home full of hearts",
+              "voice is my favourite tune"
+            ]
+          }
         },
         {
           "id": 11336940,
@@ -167,8 +499,31 @@
           "artist_names": "millkzy",
           "release_date": "2025-01-31",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+          "album": "AN AUTHOR’S DEMISE",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses deep betrayal and hurt over a partner's infidelity, framed metaphorically as squandering 'seven minutes in heaven'. They question the partner's choices, asking 'What if God gave you seven minutes in heaven what would you do ?' and criticize their disloyalty: 'But you chose to be unfaithful and touch among other dudes'. The speaker reflects on the emotional toll, noting 'It's sickening to see that all you needed was 7 minutes' to betray trust. They contrast past love 'worth the moon' with the partner's lies, lamenting 'you capitalized on your lies'. The repeated counting of minutes ('1 minute, 2 minute...') underscores the brevity of the betrayal, yet its profound impact.",
+            "themes": [
+              "betrayal",
+              "infidelity",
+              "religious metaphor",
+              "heartbreak"
+            ],
+            "emotional_tone": "angry, hurt, disillusioned",
+            "key_imagery": [
+              "seven minutes in heaven",
+              "play my name and play the game",
+              "love was worth the moon",
+              "capitalized on your lies"
+            ]
+          }
         },
         {
           "id": 11273807,
@@ -176,8 +531,31 @@
           "artist_names": "millkzy",
           "release_date": "2025-01-31",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+          "album": "AN AUTHOR’S DEMISE",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a woman who was perceived as good and beautiful but had a darker side, described as a 'beast within'. She was 'a light with no darkness in sight' and 'innocent lover', yet she had moments 'worthy for a groupie'. The speaker questions why people glorify the good when the worst aspects come to light, stating, 'Why do we glorify the good when all the worst comes undone?'. The speaker admits they 'never wanted to forgive' but felt bad at the time. The song explores the complexities of love, describing it as worse than drugs, hate, and even doves, stating, 'What’s worse than drugs is love' and 'What’s worse than hate is love'. The speaker acknowledges the irony of seeking love despite its pain, noting, 'We would all preach we wanted love, that’s all that matter'. The song concludes with a repetition of the initial description of the woman, emphasizing her duality.",
+            "themes": [
+              "duality",
+              "love",
+              "forgiveness",
+              "perception"
+            ],
+            "emotional_tone": "reflective and conflicted",
+            "key_imagery": [
+              "beast within",
+              "light with no darkness",
+              "heart too cold, too empty",
+              "worse than drugs is love"
+            ]
+          }
         },
         {
           "id": 10675422,
@@ -185,8 +563,31 @@
           "artist_names": "millkzy",
           "release_date": "2024-07-26",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/652ebde59fe876e81a09e26860b0f985.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/652ebde59fe876e81a09e26860b0f985.300x300x1.png",
+          "album": "bites",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on the complexities of gender roles and relationships, questioning societal expectations. They ponder the nature of a woman, describing her as 'a girl with personalities' and questioning why 'your momma made a woman worth the world'. The speaker also examines their own role as a man, wondering if they 'meet your requirements' or are 'too selfish for just thinking you might want a man'. They express confusion and frustration, admitting 'I understand I'm foolish, but what made you wanna mock a man'. The speaker desires a deeper connection, stating 'I'd rather wait and finally get a woman who loves me for me'.",
+            "themes": [
+              "gender roles",
+              "relationships",
+              "self-doubt",
+              "societal expectations"
+            ],
+            "emotional_tone": "conflicted and introspective",
+            "key_imagery": [
+              "a girl with personalities",
+              "a woman worth the world",
+              "a man who needs a woman",
+              "a lifeline in your life"
+            ]
+          }
         },
         {
           "id": 11401374,
@@ -194,8 +595,33 @@
           "artist_names": "millkzy",
           "release_date": "2025-01-31",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.640x640x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c3f86b8f59ee07b327196134461db0dc.300x300x1.jpg",
+          "album": "AN AUTHOR’S DEMISE",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, expressing feelings of attachment and survival rather than mutual living. They criticize their partner for not redefining the relationship ('Baby it stings you should take time to give some redefining') and for reaching out only when lonely ('Don't come around and text a nigga when you're lonely'). The speaker decides to disassociate ('And let me disassociate') and seeks isolation ('So maybe isolation is what I was needing'). They describe the relationship as a 'love affair's a challenge' and acknowledge the emotional toll ('You break me up and build me down but should I let it happen'). The speaker wonders if their partner can see the brokenness of the relationship ('You're stuck in wonderland I wonder then if you could see') and expresses a longing for the past ('I love the way how I used to say I will really miss it'). The song ends with a hope to reconnect ('I hope I find you in this moment, please don't cast away').",
+            "themes": [
+              "attachment",
+              "survival",
+              "disassociation",
+              "emotional toll",
+              "longing"
+            ],
+            "emotional_tone": "reflective, critical, longing",
+            "key_imagery": [
+              "wonderland",
+              "isolation",
+              "love affair's a challenge",
+              "brokenness",
+              "eviction"
+            ]
+          }
         }
       ]
     },
@@ -205,15 +631,44 @@
       "start": "2025-06-02",
       "end": "2026-04-10",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 13360831,
           "title": "A Woman Written By God",
           "artist_names": "millkzy",
           "release_date": "2026-04-10",
-          "pageviews": 15345,
+          "pageviews": 15363,
+          "song_art_image_url": "https://images.genius.com/078cd760963733027f2a89b11c724410.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/078cd760963733027f2a89b11c724410.300x300x1.png",
+          "album": "Floetry The Extension",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on the qualities of a 'woman written by God,' questioning whether her story is told through her eyes rather than her physical appearance ('Is the story told in her eyes?'). They express a desire for a woman whose character aligns with biblical ideals ('I hope she's described in the Bible scripture') and reject superficiality ('Don't need a lady whose story told by her thighs'). The speaker acknowledges past mistakes ('I've been wrapped around by her lies') and prays for guidance ('I pray one and only, my God's configured'). They critique societal pressures and the objectification of women ('It's hard to pick between the good and then the bad / 'Cause the bad gon' paint the picture that they holy') and emphasize the importance of finding a genuine partner ('Go hunker down and find a woman who's been written by God'). The outro shifts to a personal update about their busy schedule and career ('Today was long, but it was productive').",
+            "themes": [
+              "spirituality",
+              "relationships",
+              "self-reflection",
+              "societal critique"
+            ],
+            "emotional_tone": "reflective and earnest",
+            "key_imagery": [
+              "woman written by God",
+              "story told in her eyes",
+              "Bible scripture",
+              "paint the picture"
+            ]
+          }
         },
         {
           "id": 13360855,
@@ -221,8 +676,30 @@
           "artist_names": "millkzy",
           "release_date": "2026-04-10",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/078cd760963733027f2a89b11c724410.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/078cd760963733027f2a89b11c724410.300x300x1.png",
+          "album": "Floetry The Extension",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on their journey from struggle to success, expressing gratitude to their mother for her sacrifices and guidance. They acknowledge past hardships ('I know we struggled, had some hard times back then') and celebrate their achievements ('Look, mama, I made it, your baby boy is reachin' greatness'). The speaker credits their mother's joy and resilience as a source of inspiration ('I use your joy in cadences I write') and expresses deep love and appreciation ('I love you, ma, I'll never turn back'). They also recall moments of frustration ('I had some times where I got mad') but ultimately recognize the value of their upbringing ('I was raised right, you did that').",
+            "themes": [
+              "gratitude",
+              "family",
+              "struggle",
+              "success"
+            ],
+            "emotional_tone": "grateful, reflective, celebratory",
+            "key_imagery": [
+              "your baby boy is reachin' greatness",
+              "I use your joy in cadences I write",
+              "I was raised right, you did that"
+            ]
+          }
         },
         {
           "id": 12022784,
@@ -230,8 +707,32 @@
           "artist_names": "millkzy",
           "release_date": "2025-06-13",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/2117b41d886b4d6e32c9fe3e669aa770.592x592x1.webp",
+          "song_art_image_thumbnail_url": "https://images.genius.com/2117b41d886b4d6e32c9fe3e669aa770.300x300x1.webp",
+          "album": "thenarrator",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker presents a stark contrast between two life stories: one of stability ('a life of wife, and a kid, and a stable job') and one of despair ('a life of regret, hate and despair'). They challenge the listener to choose between these lives, criticizing societal biases toward wealth ('you wouldn't dare to choose a man who needs a car'). The speaker reflects on their own past struggles ('A man who came from nothing, picking pieces up') and argues that the 'poor man' is the better choice ('I'll tell you that it is the poor man you should choose'). They question the fairness of judging based on status ('why would they choose a man? Because of his status, never, his mindset') and express frustration with societal choices ('I'm just mad that they keep makin' the wrong choices'). The song repeatedly emphasizes the dichotomy between wealth and poverty ('Concept of a poor and rich man').",
+            "themes": [
+              "socioeconomic disparity",
+              "choice",
+              "judgment",
+              "struggle",
+              "societal bias"
+            ],
+            "emotional_tone": "frustrated, reflective, critical",
+            "key_imagery": [
+              "two different stories",
+              "paper plates and red box movies",
+              "puppeteer",
+              "haves and nots"
+            ]
+          }
         },
         {
           "id": 12824806,
@@ -239,8 +740,29 @@
           "artist_names": "millkzy",
           "release_date": "2025-12-12",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/4fefd2e8c35fe881c6c33c1b14d9e68b.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/4fefd2e8c35fe881c6c33c1b14d9e68b.300x300x1.jpg",
+          "album": "ACT II: The Truth",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses frustration with a partner who is unwilling to change their 'bad habits' due to pride, which causes emotional pain and distance in their relationship. The speaker acknowledges their own role in the conflict, stating, 'I made it more than it was,' but also feels blamed unfairly, as the partner claims, 'I'm the problem 'cause you don't feel at home.' The speaker believes the partner's pride is the root of their separation, saying, 'it's your pride you never changed that may cause separations.' The repeated phrase 'too prideful' underscores the central issue.",
+            "themes": [
+              "pride",
+              "relationship conflict",
+              "emotional distance"
+            ],
+            "emotional_tone": "frustrated, reflective, hurt",
+            "key_imagery": [
+              "'too prideful for my love's havoc'",
+              "'leave the building hurtin''",
+              "'your problems get sought after by the owner'"
+            ]
+          }
         },
         {
           "id": 12160513,
@@ -248,8 +770,31 @@
           "artist_names": "millkzy",
           "release_date": "2025-07-18",
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/ddc2f78266fb5590a7e3fc60445307b8.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/ddc2f78266fb5590a7e3fc60445307b8.300x300x1.png",
+          "album": "thenarrator",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a failed romantic relationship, initially believing it was 'love at first sight' but later realizing it was a 'setup from the start'. They express regret over their commitment, wishing they could 'revise all my written vows' due to the partner's deceit, as they 'played two-face to get inside a n*gga heart'. The chorus repeatedly labels the partner as a 'black swan', emphasizing their uniqueness or deception among others ('All of the whites among the room you chose / The black one').",
+            "themes": [
+              "betrayal",
+              "regret",
+              "deception",
+              "failed love"
+            ],
+            "emotional_tone": "resentful and regretful",
+            "key_imagery": [
+              "black swan",
+              "hellish agreement",
+              "played two-face",
+              "All of the whites among the room you chose"
+            ]
+          }
         }
       ]
     },
@@ -259,6 +804,12 @@
       "start": null,
       "end": null,
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 14073505,
@@ -266,8 +817,31 @@
           "artist_names": "millkzy",
           "release_date": null,
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.512x512x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/77b5e18c211b57423650db2e7a50b5d6.300x300x1.jpg",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a failed relationship, questioning whether change from the other person would make a difference now ('And what would be the difference if you changed now?'). They acknowledge that the relationship's end was not solely due to physical distance ('It wasn't just the distance that lost us') and express a sense of uniqueness in their love ('That you can't find this love nowhere else'). The speaker feels conflicted, admitting they are 'blinded by your blank stares' but continue to love persistently ('But I keep loving on and on'). They express regret ('Sorry that it ended') and struggle to understand the other person's actions ('Find why you did it, hurry'). The speaker contemplates the difficulty of letting go ('Mighty hard to sacrifice my love for you') and wonders if they could forget the lies ('If I could find a way to forget all your lies'). The repetition of the question about change ('And what would be the difference if you change?') underscores their uncertainty and unresolved feelings.",
+            "themes": [
+              "lost love",
+              "regret",
+              "uncertainty",
+              "persistence"
+            ],
+            "emotional_tone": "conflicted and reflective",
+            "key_imagery": [
+              "blank stares",
+              "distance",
+              "moments",
+              "lies"
+            ]
+          }
         },
         {
           "id": 11919188,
@@ -275,8 +849,28 @@
           "artist_names": "millkzy",
           "release_date": null,
           "pageviews": 0,
+          "song_art_image_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7cfa0d66bd6d864b6572797013c67760.300x300x1.png",
+          "album": "Floetry",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on the nature of love, emphasizing acts of kindness and care for others. For example, 'I wish everybody could love like I love' and 'you see someone, maybe need a hand or something / And you give him a hand and help him out'. The speaker defines love as 'Showing that you care about someone other than yourself'.",
+            "themes": [
+              "love",
+              "kindness",
+              "selflessness"
+            ],
+            "emotional_tone": "reflective and earnest",
+            "key_imagery": [
+              "giving someone a hand",
+              "showing care for others"
+            ]
+          }
         }
       ]
     }

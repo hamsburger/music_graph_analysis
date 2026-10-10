@@ -3,7 +3,7 @@
 Usage
 -----
     python src/analyze_artist.py "Artist Name" [--eras 5] [--top 5]
-                                       [--json] [--out FILE]
+                                       [--json] [--out DIR|FILE]
                                        [--no-cache] [--cache-dir DIR]
                                        [--no-summarize] [--summarizer-model M]
 
@@ -17,7 +17,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -48,7 +50,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--json", action="store_true", help="Print the full result as JSON"
     )
-    parser.add_argument("--out", help="Write the full result as JSON to this path")
+    parser.add_argument(
+        "--out",
+        default="data/report",
+        help=(
+            "Write the full result as JSON to this path. If it is a directory "
+            "(the default, data/report), a per-artist file is created inside it."
+        ),
+    )
     parser.add_argument(
         "--no-cache", action="store_true", help="Disable the on-disk response cache"
     )
@@ -83,8 +92,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8")
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
 
     args = build_parser().parse_args(argv)
     load_dotenv()
@@ -111,15 +121,25 @@ def main(argv: list[str] | None = None) -> int:
 
     print(format_report(result))
 
-    if args.out:
-        with open(args.out, "w", encoding="utf-8") as handle:
-            json.dump(result, handle, ensure_ascii=False, indent=2)
-        print(f"Wrote {args.out}", file=sys.stderr)
+    out_path = _report_path(args.out, args.artist)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with out_path.open("w", encoding="utf-8") as handle:
+        json.dump(result, handle, ensure_ascii=False, indent=2)
+    print(f"Wrote {out_path}", file=sys.stderr)
 
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
     return 0
+
+
+def _report_path(out: str, artist: str) -> Path:
+    """Resolve ``--out`` to a file path, deriving a filename for directories."""
+    path = Path(out)
+    if path.suffix.lower() == ".json":
+        return path
+    slug = re.sub(r"[^a-z0-9]+", "_", artist.casefold()).strip("_")
+    return path / f"{slug or 'unnamed'}.json"
 
 
 def _attach_summaries(

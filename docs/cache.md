@@ -13,6 +13,7 @@ to a nested folder, with a `.json` extension on the final segment:
 
 ```
 key:  "{artist-name}-{artist-id}/discography"
+key:  "{artist-name}-{artist-id}/songs/{song-id}"
 key:  "{artist-name}-{artist-id}/relationships/{song-title}-{song-id}"
 key:  "{artist-name}-{artist-id}/summaries/{song-title}-{song-id}-{model}-{digest}"
 ```
@@ -23,6 +24,8 @@ which produces, for example:
 data/cache/
 └── kanye-west-123/
     ├── discography.json
+    ├── songs/
+    │   └── 456.json
     ├── relationships/
     │   ├── stronger-456.json
     │   └── power-789.json
@@ -41,6 +44,7 @@ inspect by hand instead of dealing with opaque hash filenames.
 | Key path | Source | Used for |
 | --- | --- | --- |
 | `{artist}/discography` | `GET /artists/{id}/songs` (paged) | The artist's full song list. |
+| `{artist}/songs/{song}` | `GET /songs/{id}` | Per-song album name (the list endpoint omits it). |
 | `{artist}/relationships/{song}` | `GET /songs/{id}` | A song's samples / sampled_in / interpolates / interpolated_by. |
 | `{artist}/lyrics/{song}` | `lyricsgenius` scrape | Raw lyrics for a song. |
 | `{artist}/summaries/{song}-{model}-{digest}` | OpenRouter chat completion | The LLM summary of a song's lyrics. |

@@ -21,16 +21,15 @@ See [docs/repo-structure.md](docs/repo-structure.md) for a map of the codebase.
 - **Phase 1 (Complete)**: Divide songs into eras and pick top 5 most popular songs in each era
 - **Phase 2 (Complete)**: For each song, find out song relationships: samples, sampled_in, interpolates, interpolated_by
 - **Phase 3 (In progress)**: LLM Summary of lyrics for each song is completed and integrated (see [docs/phase-3-summarization.md](docs/phase-3-summarization.md)); the LLM judge experiment and the song-lineage summary remain in the sandbox.
-- **Phase 4**: Produce something that can render on github and show the following things:
-  - Eras on a "time" x-axis.
-  - Themes, imageries, or emotional tones labeled on a chart for each era. User should be able to select which one that want to see in a dropdown menu.
-  - Render each song in the era as a shape of some sort? With the album image of the song being embedded in the shape.
+- **Phase 4 (Complete)**: an interactive, self-contained HTML page renders each artist's eras on a time x-axis, with themes / imagery / emotional tone selectable from a dropdown and each song drawn as a shape with its album thumbnail embedded. See [docs/phase-4-visualization.md](docs/phase-4-visualization.md).
 
 ## Improvements
 - Add CLAUDE/AGENT.md so you can be more confident in the data your coding agent is using as context for making decisions
 - Add skills for automations you're sure about, such as changelog generation on every commit
 - How is DeepSeek Flash so good at figuring out where to get context? (e.g. use lyricsgenius to get lyrics, implement the Genius API perfectly as if it has been grounded in its endpoint)
 - Batch Processing for LLM summarization? Right now we're just processing one song at a time.
+- We should scrape more data outside of cache if we haven't scraped on the current date? Or maybe use a flag to look for new data.
+- /song endpoint fetch should use {title}-{id} as cache key instead of just the id.
 
 # Data Source
 
@@ -110,11 +109,41 @@ Useful flags:
 
 - `--eras N` / `--top K` — number of era buckets / songs per era.
 - `--json` — print the full structured result as JSON.
-- `--out FILE` — write the full result as JSON to a file.
+- `--out DIR|FILE` — where to write the full result as JSON. Defaults to
+  `data/report`, where a per-artist file (e.g. `data/report/daniel_caesar.json`)
+  is created; pass a `.json` path to choose the exact file.
 - `--no-cache` — disable the on-disk response cache (`data/cache/`).
 - `--min-interval SECONDS` — client-side throttle between Genius API requests.
 - `--no-summarize` — skip the LLM lyric summarization step.
 - `--summarizer-model M` — OpenRouter model for summaries (default `OPENROUTER_MODEL`).
+
+## Rendering the visualization
+
+Turn one or more saved analysis reports (with their LLM summaries) into a
+single self-contained interactive HTML page: eras on a time x-axis, each song
+drawn as a shape with its album thumbnail embedded, and a dropdown to switch
+between **themes**, **key imagery**, and **emotional tone**. When more than one
+report is combined, an **artist** dropdown appears too.
+
+```bash
+# one artist
+python src/render_report.py --in data/report/daniel_caesar.json --out pages/index.html
+
+# combine every report in a folder
+python src/render_report.py --in-dir data/report --out pages/index.html
+```
+
+Useful flags:
+
+- `--out FILE` — output path (default `pages/index.html`).
+- `--no-images` — skip fetching album art (draw plain shapes; no network).
+- `--title T` — page title.
+- `--cache-dir DIR` — cache fetched thumbnails (default `data/cache`).
+
+The generated HTML is committed (unlike the gitignored caches). To publish it,
+push `pages/` and enable GitHub Pages with the **GitHub Actions** source; the
+committed workflow uploads the `pages/` folder. See
+[docs/phase-4-visualization.md](docs/phase-4-visualization.md) for details.
 
 ## Tests
 

@@ -37,7 +37,9 @@ Do not invent or assume a lint command.
   or file I/O in that layer, so it stays easy to unit test.
 - Genius network access is funnelled through `music_graph_analysis/genius.py`
   (`GeniusClient`); OpenRouter access through `music_graph_analysis/llm.py`
-  (`OpenRouterClient`). These are the only modules that call `requests`.
+  (`OpenRouterClient`). These are the only modules that call `requests`, except
+  `music_graph_analysis/images.py` (`ImageFetcher`), which downloads album
+  thumbnails from `images.genius.com` for the Phase 4 renderer.
   Lyrics scraping lives in `lyrics.py` (`LyricsSource`, lazy `lyricsgenius`).
 - `analysis.py` is the orchestration layer; `summarize.py` attaches the LLM
   summary dict to each song. `__init__.py` re-exports the public API, so add

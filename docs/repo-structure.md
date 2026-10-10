@@ -8,6 +8,8 @@ This document maps out the repository layout and explains what each part does.
 music_graph_analysis/
 ├── .env                     # Local secrets (gitignored). GENIUS_ACCESS_TOKEN.
 ├── .env.example             # Template for the environment file.
+├── .github/
+│   └── workflows/pages.yml  # Deploys the committed pages/ folder to Pages.
 ├── README.md                # Project goals, setup, and usage.
 ├── pyproject.toml           # Package metadata, dependencies, pytest config.
 ├── opencode.json            # opencode configuration (read/grep permissions).
@@ -17,13 +19,16 @@ music_graph_analysis/
 ├── docs/
 │   ├── cache.md             # On-disk response cache design.
 │   ├── phase-3-summarization.md  # LLM lyric summarization plan.
+│   ├── phase-4-visualization.md  # Interactive HTML rendering plan.
 │   └── repo-structure.md    # This document.
 ├── notebook_experiments/    # Scratch space for exploratory notebooks.
+├── pages/                   # Committed generated HTML for GitHub Pages.
 ├── summarization_experiments/  # Phase 3 sandbox: lyrics -> LLM summary -> judge.
 │                               # Judge/aggregate experiments live here; the
 │                               # summarizer used in production is in the package.
 ├── src/
 │   ├── analyze_artist.py            # CLI entry point for the era analysis.
+│   ├── render_report.py             # CLI entry point for HTML rendering.
 │   ├── genius_api_example.py        # Minimal /songs/{id} example script.
 │   └── music_graph_analysis/        # Installable package.
 │       ├── __init__.py              # Public API re-exports.
@@ -34,15 +39,18 @@ music_graph_analysis/
 │       ├── config.py                # Summarizer env vars, model, prompts dir.
 │       ├── llm.py                   # OpenRouter chat-completions client.
 │       ├── lyrics.py                # LyricsSource (lazy lyricsgenius).
+│       ├── images.py                # Album-art fetcher -> base64 data URIs.
 │       ├── prompts.py               # Load/render prompt templates.
 │       ├── prompts/
 │       │   └── summarize.txt        # Summarize prompt (package data).
+│       ├── render.py                # Pure SVG/HTML rendering for the charts.
 │       ├── summarize.py             # SongSummarizer + attach_summaries.
 │       └── analysis.py              # Orchestration + report formatting.
 └── tests/
     ├── test_genius.py               # Client request/retry/paging tests.
     ├── test_eras.py                 # Bucketing and selection tests.
     ├── test_analysis.py             # End-to-end analysis tests (fake client).
+    ├── test_render.py               # SVG/HTML rendering + image fetcher tests.
     └── test_summarize.py            # Summarizer tests (fake LLM + lyrics).
 ```
 
@@ -106,6 +114,27 @@ Pure, side-effect-free logic (no network or file I/O) that is easy to unit test.
   scraper (imported lazily) and caches the raw result per artist.
   `LyricsError` when the token is missing or a fetch fails.
 
+### `music_graph_analysis/images.py`
+- `ImageFetcher` — downloads a song's album thumbnail from `images.genius.com`
+  and returns it as a base64 `data:` URI, caching the result via `JsonCache`
+  (`{artist}/images/{song}.json`). The `fetch` callable is injectable so tests
+  never hit the network. This is the only render-related module that uses
+  `requests`.
+
+### `music_graph_analysis/render.py`
+Pure, side-effect-free rendering (no network or file I/O) that returns strings.
+
+- `DIMENSIONS` — `("themes", "key_imagery", "emotional_tone")`.
+- `normalize_tags(summary, dimension)` — clean/dedupe tags (splits the
+  comma-separated `emotional_tone`).
+- `era_tag_counts(era, dimension)` — tag frequency across an era.
+- `build_chart_svg(result, images, ...)` — one SVG per artist: time x-axis with
+  era bands, log-scaled pageviews on y, songs drawn as clipped circles filled
+  with `images[song_id]` (embedded once), and one toggleable tag layer per
+  dimension.
+- `render_html(artists, images, *, title)` — a self-contained page with one SVG
+  per artist plus artist/dimension dropdowns and toggle JS.
+
 ### `music_graph_analysis/prompts.py` + `prompts/`
 - `load_prompt(name)` / `render(template, **values)` load and fill the
   plain-text templates. `prompts/summarize.txt` is the summarize prompt and
@@ -142,10 +171,18 @@ callers can import from the package root.
   summarizes each song's lyrics and attaches the summary; without
   `OPENROUTER_API_KEY` (or with `--no-summarize`) it warns and skips.
   ```bash
-  python src/analyze_artist.py "SWV" [--eras N] [--top K] [--json] [--out FILE]
+  python src/analyze_artist.py "SWV" [--eras N] [--top K] [--json] [--out DIR|FILE]
                                      [--no-summarize] [--summarizer-model M]
   ```
 - `src/genius_api_example.py` — prints the raw `/songs/{id}` response.
+- `src/render_report.py` — reads one or more saved reports and writes a
+  self-contained interactive HTML page (album thumbnails inlined as data URIs).
+  ```bash
+  python src/render_report.py --in data/report/a.json data/report/b.json \
+                              --out pages/index.html [--title T] [--no-images]
+  ```
+  Commit the output under `pages/`; `.github/workflows/pages.yml` deploys that
+  folder to GitHub Pages.
 
 ## Data flow
 

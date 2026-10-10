@@ -16,13 +16,22 @@
       "start": "2014-09-22",
       "end": "2016-12-10",
       "total_samples": 10,
+      "totals": {
+        "samples": 3,
+        "sampled_in": 10,
+        "interpolates": 1,
+        "interpolated_by": 5
+      },
       "songs": [
         {
           "id": 2887594,
           "title": "Get You",
           "artist_names": "Daniel Caesar (Ft. Kali Uchis)",
           "release_date": "2016-10-21",
-          "pageviews": 2281313,
+          "pageviews": 2281458,
+          "song_art_image_url": "https://images.genius.com/75b16d24797cf51d4aaf7a90b563f015.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/75b16d24797cf51d4aaf7a90b563f015.300x300x1.png",
+          "album": "Freudian",
           "sample_count": 10,
           "sampled_by": [
             {
@@ -85,43 +94,240 @@
               "artist": "Mister JT",
               "release_date": null
             }
-          ]
+          ],
+          "samples": [
+            {
+              "id": 8663162,
+              "title": "STATE OF MIND",
+              "artist": "Matrix Dviper",
+              "release_date": "2022-12-22"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 6073974,
+              "title": "True Love",
+              "artist": "Carrion GodBle$$ & Saske",
+              "release_date": "2020-10-18"
+            },
+            {
+              "id": 4015711,
+              "title": "Get You (QueMix)",
+              "artist": "Jacquees",
+              "release_date": "2018-10-16"
+            },
+            {
+              "id": 4457308,
+              "title": "Get You / Best Part",
+              "artist": "Dylan Reese",
+              "release_date": "2017-12-26"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 8663162,
+              "title": "STATE OF MIND",
+              "artist": "Matrix Dviper",
+              "release_date": "2022-12-22"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on a deep, enduring relationship, expressing gratitude and amazement at having found their partner. They describe the partner's unwavering support through difficult times ('Through drought and famine, natural disasters, My baby has been around for me') and the profound connection they share ('Every time I look into your eyes, I see it, You're all I need'). The speaker emphasizes the physical and emotional intimacy of their bond ('And when we're making love, uh, Your cries, they can be heard from far and wide'). They also acknowledge the fleeting nature of time and cherish the memories created ('And I'll take some time, Just to be thankful, That I had days full of you, you'). The outro highlights the joy and vitality the partner brings ('This feels like summer, Boy, you make me feel so alive').",
+            "themes": [
+              "love",
+              "gratitude",
+              "intimacy",
+              "time",
+              "memories"
+            ],
+            "emotional_tone": "grateful, reflective, passionate",
+            "key_imagery": [
+              "drought and famine, natural disasters",
+              "kingdoms have fallen, angels be callin'",
+              "cries, they can be heard from far and wide",
+              "days full of you",
+              "This feels like summer"
+            ]
+          }
         },
         {
           "id": 2887597,
           "title": "Japanese Denim",
           "artist_names": "Daniel Caesar",
           "release_date": "2016-10-19",
-          "pageviews": 1325442,
+          "pageviews": 1325493,
+          "song_art_image_url": "https://images.genius.com/3cb1f3a0394458c4676caee1ba07f509.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/3cb1f3a0394458c4676caee1ba07f509.300x300x1.png",
+          "album": "Get You",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 79941,
+              "title": "Untitled (How Does It Feel)",
+              "artist": "D'Angelo",
+              "release_date": "2000-01-25"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 79941,
+              "title": "Untitled (How Does It Feel)",
+              "artist": "D'Angelo",
+              "release_date": "2000-01-25"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses a deep, enduring love, comparing it to a pair of blue jeans that will last a lifetime. They emphasize their willingness to wait for their loved one, stating, 'I don't stand in line, I don't pay for clubs, fuck that, yeah / But I'll wait for you.' The speaker reflects on their initial meeting, recalling, 'Met you at the shop, sun was getting hot,' and acknowledges the unexpected nature of their connection, 'Never would've thought you'd be the one.' They also express a sense of transcendence, 'I'm reaching Nirvana,' and a longing for permanence, 'Forever's a long time.'",
+            "themes": [
+              "everlasting love",
+              "devotion",
+              "transcendence"
+            ],
+            "emotional_tone": "romantic, reflective, longing",
+            "key_imagery": [
+              "blue jeans",
+              "four leaf clover",
+              "Nirvana"
+            ]
+          }
         },
         {
           "id": 2368028,
           "title": "Streetcar",
           "artist_names": "Daniel Caesar",
           "release_date": "2015-11-12",
-          "pageviews": 608119,
+          "pageviews": 608149,
+          "song_art_image_url": "https://images.genius.com/e1e750d796bafaf7e13a41f681c78114.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/e1e750d796bafaf7e13a41f681c78114.300x300x1.jpg",
+          "album": "Pilgrim’s Paradise",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on their journey and uncertainty about personal growth, asking, 'Do I still got time to grow?' They acknowledge that 'things ain't always set in stone,' suggesting life's unpredictability. The recurring imagery of 'street lights, glowing' symbolizes fleeting moments, as they observe, 'Just like moments passing in front of me.' The speaker expresses a sense of direction but not arrival, stating, 'I know my destination, I'm just not there.' They lament the unfairness of life, repeating, 'Life just ain't fair,' and conclude with a resigned acceptance of life's cycles, noting, 'The good Lord gives, The good Lord taketh away.'",
+            "themes": [
+              "uncertainty",
+              "time",
+              "journey",
+              "acceptance"
+            ],
+            "emotional_tone": "melancholic and reflective",
+            "key_imagery": [
+              "street lights, glowing",
+              "moments passing in front of me",
+              "I know my destination, I'm just not there",
+              "The good Lord gives, The good Lord taketh away"
+            ]
+          }
         },
         {
           "id": 587896,
           "title": "Violet",
           "artist_names": "Daniel Caesar",
           "release_date": "2014-09-22",
-          "pageviews": 252677,
+          "pageviews": 252690,
+          "song_art_image_url": "https://images.genius.com/97f3d9c7d5a622d035cc594056d05658.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/97f3d9c7d5a622d035cc594056d05658.300x300x1.png",
+          "album": "Praise Break",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 1856187,
+              "title": "All We Ask",
+              "artist": "Donnie McClurkin",
+              "release_date": null
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 587921,
+              "title": "End of the Road",
+              "artist": "Daniel Caesar",
+              "release_date": "2014-09-22"
+            },
+            {
+              "id": 3183204,
+              "title": "Transform",
+              "artist": "Daniel Caesar (Ft. Charlotte Day Wilson)",
+              "release_date": "2017-08-25"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 1856187,
+              "title": "All We Ask",
+              "artist": "Donnie McClurkin",
+              "release_date": null
+            }
+          ],
+          "summary": {
+            "overview": "The speaker encourages someone, referred to as a 'beautiful boy' and 'brilliant boy,' to persevere and not give up on their journey. They emphasize the individual's potential, stating, 'You're made to sing on anything, you golden child.' The chorus repeatedly refers to this person as 'my violet in the sun,' suggesting they are cherished and unique. The outro shifts to a plea for divine guidance, asking for strength and direction, 'Lead us by your holy word, guide us in.'",
+            "themes": [
+              "perseverance",
+              "encouragement",
+              "spirituality"
+            ],
+            "emotional_tone": "uplifting and reverent",
+            "key_imagery": [
+              "violet in the sun",
+              "golden child",
+              "holy word"
+            ]
+          }
         },
         {
           "id": 2342929,
           "title": "Death & Taxes",
           "artist_names": "Daniel Caesar",
           "release_date": "2015-10-11",
-          "pageviews": 210003,
+          "pageviews": 210013,
+          "song_art_image_url": "https://images.rapgenius.com/1dc2cb226ecc978c6f38dfd773516e7a.500x500x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.rapgenius.com/1dc2cb226ecc978c6f38dfd773516e7a.300x300x1.jpg",
+          "album": "Pilgrim’s Paradise",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 5760418,
+              "title": "Baptizing Scene",
+              "artist": "Reverend W.A. Donaldson",
+              "release_date": "1960"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 5760418,
+              "title": "Baptizing Scene",
+              "artist": "Reverend W.A. Donaldson",
+              "release_date": "1960"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses a sense of resignation and disillusionment with their faith, stating 'I've lost my faith'. They reflect on personal sins and their consequences, as in 'Surely my sins have found me out'. The chorus offers a hopeful yet vague outlook, suggesting that 'all of our problems they fade away'. The bridge and outro emphasize the inevitability of 'Death and taxes' as the only certainties in life.",
+            "themes": [
+              "loss of faith",
+              "inevitability",
+              "sin",
+              "resignation"
+            ],
+            "emotional_tone": "disillusioned, resigned, with a hint of hope",
+            "key_imagery": [
+              "'Surely my sins have found me out'",
+              "'I've lost my faith'",
+              "'Death and taxes'"
+            ]
+          }
         }
       ]
     },
@@ -131,13 +337,22 @@
       "start": "2016-12-10",
       "end": "2019-02-28",
       "total_samples": 9,
+      "totals": {
+        "samples": 1,
+        "sampled_in": 9,
+        "interpolates": 4,
+        "interpolated_by": 4
+      },
       "songs": [
         {
           "id": 3183199,
           "title": "Best Part",
           "artist_names": "Daniel Caesar (Ft. H.E.R.)",
           "release_date": "2017-08-25",
-          "pageviews": 6988433,
+          "pageviews": 6988843,
+          "song_art_image_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.300x300x1.png",
+          "album": "Freudian",
           "sample_count": 5,
           "sampled_by": [
             {
@@ -170,14 +385,71 @@
               "artist": "TotallyReeeaaal",
               "release_date": "2026-03-15"
             }
-          ]
+          ],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 245975,
+              "title": "Lemonade (Ukulele Version)",
+              "artist": "Jeremy Passion",
+              "release_date": "2011-12-13"
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 6152217,
+              "title": "Viola",
+              "artist": "Esperança",
+              "release_date": "2020-11-06"
+            },
+            {
+              "id": 4457308,
+              "title": "Get You / Best Part",
+              "artist": "Dylan Reese",
+              "release_date": "2017-12-26"
+            },
+            {
+              "id": 11861661,
+              "title": "Caída Libre",
+              "artist": "After. (Vintage Gang)",
+              "release_date": "2024-05-23"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 245975,
+              "title": "Lemonade (Ukulele Version)",
+              "artist": "Jeremy Passion",
+              "release_date": "2011-12-13"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses deep admiration and love for their partner, emphasizing their partner's irreplaceable role in their life. They describe physical affection as 'the sweetest thing' and express a desire for their partner to recognize their worth: 'You would know that you are'. The speaker uses metaphors to illustrate their dependency and admiration, calling their partner 'the coffee that I need in the morning' and 'my sunshine in the rain when it's pouring'. They repeatedly affirm their partner's beauty and significance, stating 'you're the best part' and 'I know you're a star'. The outro reveals a longing for verbal affirmation of love, asking 'If you love me, won't you say something?'",
+            "themes": [
+              "love",
+              "admiration",
+              "dependency",
+              "longing"
+            ],
+            "emotional_tone": "adoring, affectionate, yearning",
+            "key_imagery": [
+              "'the sweetest thing'",
+              "'the coffee that I need in the morning'",
+              "'my sunshine in the rain when it's pouring'",
+              "'If life is a movie, know you're the best part'",
+              "'You're my water when I'm stuck in the desert'"
+            ]
+          }
         },
         {
           "id": 3116797,
           "title": "Blessed",
           "artist_names": "Daniel Caesar",
           "release_date": "2017-06-09",
-          "pageviews": 881608,
+          "pageviews": 881675,
+          "song_art_image_url": "https://images.genius.com/96fc2e4237f3289b15272b8be0a910a8.500x500x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/96fc2e4237f3289b15272b8be0a910a8.300x300x1.jpg",
+          "album": "Freudian",
           "sample_count": 1,
           "sampled_by": [
             {
@@ -186,14 +458,36 @@
               "artist": "j. sula",
               "release_date": "2018-01-28"
             }
-          ]
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a deep emotional dependence on another person, stating they don't want to be anywhere they can't feel their presence: 'Anyplace that I can't feel you, I just wanna be near you.' They acknowledge their flaws and the unhealthy aspects of their relationship: 'Sometimes it gets unhealthy,' but still feel fortunate to be with this person: 'And yes, I'm a mess but I'm blessed to be stuck with you.' The speaker reflects on their insecurities and mistakes: 'Prey on my insecurities,' 'I know sometimes I do wrong,' yet they always return to this person: 'When I go, I don't stay gone for long.' They express a desire to fix past issues: 'If I could, I swear I'd go back, make everything all better,' and repeatedly affirm their commitment to returning home to this person: 'And I'm coming back home to you.'",
+            "themes": [
+              "emotional dependence",
+              "insecurity",
+              "commitment",
+              "self-awareness"
+            ],
+            "emotional_tone": "conflicted yet grateful",
+            "key_imagery": [
+              "stuck with you",
+              "prey on my insecurities",
+              "coming back home"
+            ]
+          }
         },
         {
           "id": 3183200,
           "title": "Hold Me Down",
           "artist_names": "Daniel Caesar",
           "release_date": "2017-08-25",
-          "pageviews": 836536,
+          "pageviews": 836655,
+          "song_art_image_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.300x300x1.png",
+          "album": "Freudian",
           "sample_count": 1,
           "sampled_by": [
             {
@@ -202,14 +496,65 @@
               "artist": "Yatta Bandz",
               "release_date": "2024-11-08"
             }
-          ]
+          ],
+          "samples": [
+            {
+              "id": 1104713,
+              "title": "I Save Cigarette Butts",
+              "artist": "Daniel Johnston",
+              "release_date": "1981"
+            }
+          ],
+          "interpolates": [
+            {
+              "id": 1663337,
+              "title": "Hold Me Now",
+              "artist": "Kirk Franklin",
+              "release_date": "1998-09-22"
+            }
+          ],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 1104713,
+              "title": "I Save Cigarette Butts",
+              "artist": "Daniel Johnston",
+              "release_date": "1981"
+            },
+            {
+              "id": 1663337,
+              "title": "Hold Me Now",
+              "artist": "Kirk Franklin",
+              "release_date": "1998-09-22"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses a mix of love, longing, and frustration in a relationship. They repeatedly ask for verbal affirmation of love ('If you love me, baby, let me hear you say it') but also feel abandoned ('First you love me, then you leave me in the basement'). The speaker describes intense physical attraction ('Pussy so good, it sets me on fire') and emotional investment ('I nearly let her have all my babies'), yet acknowledges the relationship's instability ('This time we ain't making it through'). There's a sense of betrayal ('You've left me with a pain I carry it everyday') and a plea for loyalty ('can you hold me down?').",
+            "themes": [
+              "love",
+              "betrayal",
+              "longing",
+              "physical desire",
+              "emotional pain"
+            ],
+            "emotional_tone": "yearning, frustrated, vulnerable",
+            "key_imagery": [
+              "leave me in the basement",
+              "sets me on fire",
+              "travelling far away",
+              "hold me down"
+            ]
+          }
         },
         {
           "id": 3116785,
           "title": "We Find Love",
           "artist_names": "Daniel Caesar",
           "release_date": "2017-06-09",
-          "pageviews": 493680,
+          "pageviews": 493723,
+          "song_art_image_url": "https://images.genius.com/1b54f9a2989676326f1fc2962adb15a2.600x600x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/1b54f9a2989676326f1fc2962adb15a2.300x300x1.jpg",
+          "album": "Freudian",
           "sample_count": 2,
           "sampled_by": [
             {
@@ -224,16 +569,93 @@
               "artist": "Rylo Rodriguez",
               "release_date": "2019-06-27"
             }
-          ]
+          ],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 1115147,
+              "title": "We Fall Down",
+              "artist": "Donnie McClurkin",
+              "release_date": "2000-08-22"
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 3183202,
+              "title": "Loose",
+              "artist": "Daniel Caesar",
+              "release_date": "2017-08-25"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 1115147,
+              "title": "We Fall Down",
+              "artist": "Donnie McClurkin",
+              "release_date": "2000-08-22"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on the end of a relationship, expressing pain and confusion over their partner's departure. They recall the initial connection ('Ever since the day that I met you, I knew you were the girl of my dreams') but acknowledge the relationship's failure ('But we could never be'). The chorus highlights a cycle of finding love, rising, falling, and giving up ('We find love, we get up, Then we fall down, we give up'). In the bridge, the speaker describes love as something that crashes down, leaving broken pieces ('This thing called love comes crashing down, Pieces all on the ground') and expresses a sense of loss and helplessness ('What once was lost cannot be found, Heaven help us, we're on our own').",
+            "themes": [
+              "heartbreak",
+              "cycle of love",
+              "loss",
+              "helplessness"
+            ],
+            "emotional_tone": "melancholic, reflective, resigned",
+            "key_imagery": [
+              "walking out that door",
+              "girl of my dreams",
+              "spinnin' out of control",
+              "pieces all on the ground",
+              "heaven help us"
+            ]
+          }
         },
         {
           "id": 3183202,
           "title": "Loose",
           "artist_names": "Daniel Caesar",
           "release_date": "2017-08-25",
-          "pageviews": 476802,
+          "pageviews": 476914,
+          "song_art_image_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/211bc5c59b071c5613ce9ce82d70f6eb.300x300x1.png",
+          "album": "Freudian",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 3116785,
+              "title": "We Find Love",
+              "artist": "Daniel Caesar",
+              "release_date": "2017-06-09"
+            }
+          ],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 3116785,
+              "title": "We Find Love",
+              "artist": "Daniel Caesar",
+              "release_date": "2017-06-09"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on a relationship that needs to end, addressing the girl directly and himself. He acknowledges that her presence brings turmoil ('Why all the rain and all the thunder / Follows her around') and advises letting her go ('You better cut that girl loose'). He questions his own hesitation ('What are you, a coward?') and asserts his agency ('You got the power / Then do it yourself, king'). In the second verse, he confronts the reality of their separation ('You don't love me anymore') and reminisces about their initial connection ('Ever since the day that I met you / Knew you were the girl of my dreams'). The outro includes a brief, casual conversation, suggesting a moment of closure.",
+            "themes": [
+              "letting go",
+              "self-reflection",
+              "relationship struggles"
+            ],
+            "emotional_tone": "resigned, introspective",
+            "key_imagery": [
+              "rain and thunder",
+              "walking out the door",
+              "girl of my dreams"
+            ]
+          }
         }
       ]
     },
@@ -243,51 +665,250 @@
       "start": "2019-02-28",
       "end": "2021-05-18",
       "total_samples": 0,
+      "totals": {
+        "samples": 3,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 5
+      },
       "songs": [
         {
           "id": 4660975,
           "title": "CYANIDE",
           "artist_names": "Daniel Caesar",
           "release_date": "2019-06-28",
-          "pageviews": 352223,
+          "pageviews": 352243,
+          "song_art_image_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.300x300x1.png",
+          "album": "CASE STUDY 01",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 4662600,
+              "title": "Candy Maker",
+              "artist": "Tommy James and the Shondells",
+              "release_date": "1970"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 6581185,
+              "title": "Euphoria",
+              "artist": "Desmond Michael",
+              "release_date": "2023-07-14"
+            },
+            {
+              "id": 5164506,
+              "title": "Wonderful",
+              "artist": "Michael D.",
+              "release_date": "2019-12-25"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 4662600,
+              "title": "Candy Maker",
+              "artist": "Tommy James and the Shondells",
+              "release_date": "1970"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses a deep, passionate love and desire for a woman, describing her as a source of both strength and vulnerability. He acknowledges his own needs and flaws, stating, 'I'm not a monster, I'm just a man with needs.' The speaker also reflects on the complexities of their relationship, noting moments of conflict ('Then become my enemy') and unrequited love ('You give me your love, it's unrequited'). He emphasizes his commitment to her, declaring, 'Forevermore you gon' be my kin,' and seeks a spiritual connection, referencing Jah and the idea of divine binding. The song also highlights physical and emotional intimacy, with lines like 'Feel my love drip over your skin' and 'You light up my life, you’re like (Lightning, lightning).'",
+            "themes": [
+              "love",
+              "desire",
+              "spirituality",
+              "conflict",
+              "intimacy"
+            ],
+            "emotional_tone": "passionate and reflective",
+            "key_imagery": [
+              "Sweet melody, whine up yuh body 'pon mi",
+              "Feel my love drip over your skin",
+              "Rich dark chocolate, sweet melanin",
+              "You light up my life, you’re like (Lightning, lightning)"
+            ]
+          }
         },
         {
           "id": 4660980,
           "title": "SUPERPOSITION",
           "artist_names": "Daniel Caesar (Ft. John Mayer)",
           "release_date": "2019-06-28",
-          "pageviews": 285004,
+          "pageviews": 285053,
+          "song_art_image_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.300x300x1.png",
+          "album": "CASE STUDY 01",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 10155675,
+              "title": "hold her close*",
+              "artist": "Daniel Caesar",
+              "release_date": "2018"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on the complexities and contradictions of their life, using scientific and philosophical concepts as metaphors. They acknowledge the irony that what inspires them also causes pain ('The things that inspire me / They make me bleed'). Despite having material comfort ('cash grows on trees'), they question its meaning. The speaker embraces the idea of existing in a state of superposition, symbolizing life's contradictions ('Exist in superposition / Life's all about contradiction'). They assert their identity and purpose ('I'm me, I'm God / I'm everything / I'm my own reason why I sing') and extend this understanding to others ('And so are you, are you understanding?'). The speaker admits to personal struggles ('I know you see me actin' sleazy / I'm working on it, take it easy') but remains resilient ('I'll figure it all out before I break'). They express acceptance of their chaotic life ('The rest of my life's in a state of chaos / But I know I'll be okay') and a sense of fulfillment ('I know I didn't live my life in vain').",
+            "themes": [
+              "contradiction",
+              "identity",
+              "resilience",
+              "self-reflection"
+            ],
+            "emotional_tone": "reflective and resilient",
+            "key_imagery": [
+              "superposition",
+              "yin and yang",
+              "cash grows on trees",
+              "state of chaos"
+            ]
+          }
         },
         {
           "id": 4660974,
           "title": "ENTROPY",
           "artist_names": "Daniel Caesar",
           "release_date": "2019-06-28",
-          "pageviews": 199476,
+          "pageviews": 199492,
+          "song_art_image_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.300x300x1.png",
+          "album": "CASE STUDY 01",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 814717,
+              "title": "At the River",
+              "artist": "Groove Armada",
+              "release_date": "1998-03-09"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 814717,
+              "title": "At the River",
+              "artist": "Groove Armada",
+              "release_date": "1998-03-09"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on the inevitability of entropy and the transient nature of peace and joy. They reference the Bhagavad-Gita, where Vishnu declares, 'Now I am become death, the destroyer of worlds,' to emphasize the inescapable force of entropy. The speaker questions their own stability, wondering if they are 'just a dog who's found me a bone' or if they have truly found a home. They acknowledge the passage of time, stating, 'time flows linearly, only forwards, never backwards,' and express a mix of suffering and acceptance, saying, 'Sometimes I'll suffer, sometimes I'll bleed.' The speaker also grapples with their ego and past self-hatred, noting, 'I hated myself when I was a boy, now that I don't, they're tryna take my joy.' Ultimately, they accept the inevitability of entropy, repeating, 'Ain't no stoppin' that entropy,' and conclude with the idea that 'thermodynamics, there's no escape,' and 'no life without energy.'",
+            "themes": [
+              "entropy",
+              "transience",
+              "self-reflection",
+              "acceptance"
+            ],
+            "emotional_tone": "reflective and resigned",
+            "key_imagery": [
+              "'Now I am become death, the destroyer of worlds'",
+              "'time flows linearly'",
+              "'Ain't no stoppin' that entropy'",
+              "'thermodynamics, there's no escape'"
+            ]
+          }
         },
         {
           "id": 4660981,
           "title": "TOO DEEP TO TURN BACK",
           "artist_names": "Daniel Caesar",
           "release_date": "2019-06-28",
-          "pageviews": 192856,
+          "pageviews": 192874,
+          "song_art_image_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.300x300x1.png",
+          "album": "CASE STUDY 01",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 814717,
+              "title": "At the River",
+              "artist": "Groove Armada",
+              "release_date": "1998-03-09"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 814717,
+              "title": "At the River",
+              "artist": "Groove Armada",
+              "release_date": "1998-03-09"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on the complexities of life, love, and pain, questioning the purpose of existence ('What else does life have to give but the pain'). They describe themselves as drawn to light and love ('I feed off bioluminescence'), yet acknowledge the struggles and 'sick game' of life. The chorus emphasizes a plea for submission and promises salvation ('Submit to me, come get down on one knee'). In later verses, the speaker grapples with their mortality ('My mortality's staring back at me') and societal pressures ('Bourgeoisie tryna silence me'), while asserting their resilience ('Now your boy is up, and I'm fit as a fiddle'). They also observe someone else's sadness ('Sometimes you're sad, I see it on your face') and suggest that answers lie within ('The answers it seems are inside your own dreams').",
+            "themes": [
+              "existential reflection",
+              "struggle",
+              "salvation",
+              "resilience"
+            ],
+            "emotional_tone": "introspective and conflicted",
+            "key_imagery": [
+              "mosquitoes to light",
+              "bioluminescence",
+              "mortality staring back",
+              "fit as a fiddle"
+            ]
+          }
         },
         {
           "id": 4660983,
           "title": "ARE YOU OK?",
           "artist_names": "Daniel Caesar",
           "release_date": "2019-06-28",
-          "pageviews": 138375,
+          "pageviews": 138387,
+          "song_art_image_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/186e7c3b8838ed2ff06014efe1fb7d32.300x300x1.png",
+          "album": "CASE STUDY 01",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 14184133,
+              "title": "Please Do Not Lean 2",
+              "artist": "Daniel Caesar (Ft. BADBADNOTGOOD)",
+              "release_date": null
+            },
+            {
+              "id": 7911508,
+              "title": "Please Do Not Lean",
+              "artist": "Daniel Caesar (Ft. BADBADNOTGOOD)",
+              "release_date": "2022-04-22"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses concern for someone who seems out of place, asking 'Are you okay?' and noting their 'long face' despite others recognizing them positively. The speaker reflects on a complicated relationship, admitting 'it's wrong' but finding comfort in physical closeness and music as therapy. The chorus shifts to a celebratory tone about success and camaraderie, mentioning 'gettin' paper' and being 'highly blessed and highly favoured'. Later verses and interludes reveal personal struggles, including regret over a lost relationship with 'Sweet Emily', whom the speaker apologizes to and expresses longing for, asking 'why'd she leave me?'. The outro shows remorse and a desire for reconciliation, promising 'Next time I'll knock at your door'.",
+            "themes": [
+              "concern",
+              "relationship struggles",
+              "success",
+              "regret",
+              "longing"
+            ],
+            "emotional_tone": "mixed; concerned, celebratory, regretful, longing",
+            "key_imagery": [
+              "starin' at your face",
+              "hold you in my arms",
+              "smokin' hella flavors",
+              "snow melt slowly day-by-day",
+              "Sweet Emily, my bride to be"
+            ]
+          }
         }
       ]
     },
@@ -297,51 +918,171 @@
       "start": "2021-05-18",
       "end": "2023-08-06",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 8938966,
           "title": "Always",
           "artist_names": "Daniel Caesar",
           "release_date": "2023-04-07",
-          "pageviews": 600115,
+          "pageviews": 600495,
+          "song_art_image_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.300x300x1.png",
+          "album": "NEVER ENOUGH",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses enduring love and commitment, emphasizing that their feelings will remain unchanged despite time or circumstances. They recall past memories, both positive and negative, and assert that the person will always be theirs ('You'll always be mine'). The speaker acknowledges potential mistakes ('And maybe I'm wrong') but remains steadfast in their devotion ('I'm always-ways-ways'). They offer patience and space ('I'll give you time and space') but insist their love is permanent ('Just know I'm not a phase'). The outro reinforces this unwavering commitment ('Always, my love for you ain't goin' nowhere').",
+            "themes": [
+              "enduring love",
+              "commitment",
+              "patience",
+              "memory"
+            ],
+            "emotional_tone": "steadfast, nostalgic, hopeful",
+            "key_imagery": [
+              "space for you and me",
+              "walk with me, down Bloor Street",
+              "sure as the stars in the sky",
+              "sure as the sun will rise"
+            ]
+          }
         },
         {
           "id": 8938996,
           "title": "Superpowers",
           "artist_names": "Daniel Caesar",
           "release_date": "2023-04-07",
-          "pageviews": 258148,
+          "pageviews": 258278,
+          "song_art_image_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.300x300x1.png",
+          "album": "NEVER ENOUGH",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker addresses someone with 'superpowers,' emphasizing their uniqueness and greatness. They describe this person as 'just like a flower,' ever-giving and special, unlike others ('All God's children are special, but not like you'). The speaker encourages them to 'lift your head to the sky,' symbolizing confidence and self-belief. They reflect on the person's journey, stating 'you come a long way, kid,' and affirm their central role ('You're the main character now').",
+            "themes": [
+              "uniqueness",
+              "self-belief",
+              "growth"
+            ],
+            "emotional_tone": "uplifting and celebratory",
+            "key_imagery": [
+              "superpowers",
+              "flower",
+              "lift your head to the sky",
+              "main character"
+            ]
+          }
         },
         {
           "id": 8938965,
           "title": "Toronto 2014",
           "artist_names": "Daniel Caesar & Mustafa",
           "release_date": "2023-04-07",
-          "pageviews": 167109,
+          "pageviews": 167189,
+          "song_art_image_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.300x300x1.png",
+          "album": "NEVER ENOUGH",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on feelings of disconnection and longing for a simpler, happier past. They express a desire to escape the present, stating, 'Take me far away from the sun' and 'If only I could find my way through space-time / Back to when I was happy being me.' The chorus emphasizes the passage of time and existential contemplation, with lines like 'We're stuck in The Matrix, living a lie' and 'I'm not afraid to die.' The speaker also recalls a specific moment in 2014, describing it as a time when 'The future was alluring,' but now feels unseen, saying, 'On the other side of TVs, hoping that they see me / But, they hardly see me.' The song concludes with a sense of resilience and connection to their roots, as the speaker asserts, 'it's still my city, it's still my city.'",
+            "themes": [
+              "nostalgia",
+              "existential reflection",
+              "disconnection",
+              "resilience"
+            ],
+            "emotional_tone": "melancholic yet resolute",
+            "key_imagery": [
+              "'We're stuck in The Matrix, living a lie'",
+              "'Take me back to 2014'",
+              "'I woke up in an ambulance'",
+              "'it's still my city'"
+            ]
+          }
         },
         {
           "id": 8419244,
           "title": "Horsepower",
           "artist_names": "Daniel Caesar",
           "release_date": "2022-08-25",
-          "pageviews": 152109,
+          "pageviews": 152129,
+          "song_art_image_url": "https://images.genius.com/f4522b455a85f60f4952a5872957e998.500x500x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/f4522b455a85f60f4952a5872957e998.300x300x1.jpg",
+          "album": null,
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses confidence in their role as a guide and support for someone else, stating, 'One day you're gonna need me where you wanna go' and 'I'll help you find that road.' They reflect on their personal growth, recalling, 'I was just a kid but now I understand.' The speaker acknowledges the surreal nature of life, saying, 'Nothing is what it seems in real life' and 'Caught inside a dream and it feels right.' They envision a future where they can provide comfort, asking, 'Please don't lock me in the cold, that ain't the way.' The speaker also asserts their self-worth and determination, declaring, 'I display greatness for the world to see' and 'It starts with me, and it ends with me, eventually.'",
+            "themes": [
+              "guidance",
+              "personal growth",
+              "self-worth",
+              "surrealism"
+            ],
+            "emotional_tone": "confident, reflective, determined",
+            "key_imagery": [
+              "find that road",
+              "caught inside a dream",
+              "lock me in the cold",
+              "display greatness"
+            ]
+          }
         },
         {
           "id": 8938968,
           "title": "Disillusioned",
           "artist_names": "Daniel Caesar & serpentwithfeet",
           "release_date": "2023-04-07",
-          "pageviews": 142247,
+          "pageviews": 142290,
+          "song_art_image_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/840f8b2841954df45699f0e69dd8f69a.300x300x1.png",
+          "album": "NEVER ENOUGH",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker observes that the person they are addressing finds life difficult and unfulfilled, stating, 'You find this whole life thing a drag' and 'You think this shit's bogus—, it is, and you know this.' Both the speaker and the person they address share a fear of aging, as expressed in the lines, 'And I—, I'm scared of gettin' older' and 'And you—, you're scared of it too.' They suggest overcoming these fears together by trying something new, as seen in the repeated phrase, 'We should try something new.' In the second verse, the speaker notes a positive change in the person, mentioning, 'Damn, you cleaned up your space' and 'Looking less mad and more focused.' The outro proposes a spontaneous escape, with the speaker inviting the person to join them on a road trip, saying, 'Hop inside my Bimmer with me, time to hit the road' and 'Who cares where we end up, 'long as it's a place that's cool.'",
+            "themes": [
+              "fear of aging",
+              "disillusionment",
+              "renewal",
+              "companionship"
+            ],
+            "emotional_tone": "reflective, hopeful, anxious",
+            "key_imagery": [
+              "life thing a drag",
+              "scared of gettin' older",
+              "cleaned up your space",
+              "Hop inside my Bimmer"
+            ]
+          }
         }
       ]
     },
@@ -351,51 +1092,173 @@
       "start": "2023-08-06",
       "end": "2025-10-24",
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 12316978,
           "title": "Who Knows",
           "artist_names": "Daniel Caesar",
           "release_date": "2025-10-24",
-          "pageviews": 841587,
+          "pageviews": 842505,
+          "song_art_image_url": "https://images.genius.com/b24ce29c094a185880632f403290d3b7.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/b24ce29c094a185880632f403290d3b7.300x300x1.png",
+          "album": "Son Of Spergy",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses uncertainty about their worthiness in a relationship, questioning if they are a 'waste of your time' and likely to 'step out of line'. They admit to feeling like a 'coward' hiding behind a facade ('disguise of an ever-giving flower') and being an 'incompetent steward' of emotional power. The speaker reflects on fleeting happiness ('Yesterday was feeling so good, now it's gone') and seeks reassurance about the future ('Will you be there with me by my side, my girl, my shooter?'). They grapple with self-doubt ('You might be too good for me, unattainable') but also expresses enduring love ('I know that I'll love you always').",
+            "themes": [
+              "uncertainty",
+              "self-doubt",
+              "love",
+              "future contemplation"
+            ],
+            "emotional_tone": "introspective and uncertain, with moments of affection",
+            "key_imagery": [
+              "'disguise of an ever-giving flower'",
+              "'incompetent steward of all of that sweet, sweet power'",
+              "'precarious future'",
+              "'too good for me, unattainable'"
+            ]
+          }
         },
         {
           "id": 11485087,
           "title": "Have a Baby (With Me)",
           "artist_names": "Daniel Caesar",
           "release_date": "2025-07-25",
-          "pageviews": 207283,
+          "pageviews": 207327,
+          "song_art_image_url": "https://images.genius.com/fd37cd119c3cf2afa9d4107190263c07.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/fd37cd119c3cf2afa9d4107190263c07.300x300x1.png",
+          "album": "Son Of Spergy",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a sense of urgency and longing for a deeper commitment, specifically asking their partner to 'Have a baby with me' as a way to solidify their relationship. They acknowledge the partner's emotional distance, stating, 'You hold my hand, but in your head, you've already left,' and recognize the partner's impatience, 'You free yourself of patience.' The speaker reflects on missed opportunities and unfulfilled dreams, questioning, 'What if it cut short with the fires I've started?' They also consider hypothetical scenarios, such as marriage and shared beliefs, asking, 'What if we married? What if you believed in God, this world, in Hell, and all the things that this could be?' Despite this, they accept the partner's need to leave, urging them to 'see what this world can offer you, outside of me.' The chorus repeats the plea for a baby, emphasizing the lack of time to 'believe in what we could be.' In the outro, the speaker expresses deep need and admiration for their partner, calling them 'African woman, you're the one I adore,' and promises to give everything they have.",
+            "themes": [
+              "longing",
+              "urgency",
+              "commitment",
+              "unfulfilled dreams",
+              "emotional distance"
+            ],
+            "emotional_tone": "urgent, longing, reflective",
+            "key_imagery": [
+              "'You hold my hand, but in your head, you've already left'",
+              "'You sit on the bed, but your shadow is getting dressed'",
+              "'Have a baby with me'",
+              "'African woman, you're the one I adore'"
+            ]
+          }
         },
         {
           "id": 11466383,
           "title": "Rearrange My World",
           "artist_names": "Daniel Caesar & Rex Orange County",
           "release_date": "2025-02-14",
-          "pageviews": 188399,
+          "pageviews": 188421,
+          "song_art_image_url": "https://images.genius.com/5b68c39827fd7ef05ee6ddfe09411361.640x640x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/5b68c39827fd7ef05ee6ddfe09411361.300x300x1.jpg",
+          "album": "Rearrange My World / There’s a Field (That’s Only Yours)",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a desire for transformation and connection, repeatedly asking someone to 'rearrange my world the way you do,' suggesting a longing for change influenced by this person. They reflect on their identity, stating, 'Can we walk until I know who I am?' and describe their living situation, 'I live above a bar I've never been.' The speaker thinks deeply about this person, 'I think about you more than I can spend,' and offers to share their space, 'If you don't find somewhere, you can move in.' They also mention their mother, 'My mother called me in the early afternoon,' and express love similarly to both their mother and this person, 'I told her that I loved her / The way I tell you.' The second verse highlights a growing connection, 'It's almost like you love me, I can tell,' and hints at unspoken burdens, 'I won't tell you what burdens me.'",
+            "themes": [
+              "transformation",
+              "connection",
+              "identity",
+              "love"
+            ],
+            "emotional_tone": "yearning, reflective",
+            "key_imagery": [
+              "rearrange my world",
+              "walk until I know who I am",
+              "apartment's rising, but my rent is fixed",
+              "your hair changes colours"
+            ]
+          }
         },
         {
           "id": 12316981,
           "title": "Emily’s Song",
           "artist_names": "Daniel Caesar",
           "release_date": "2025-10-24",
-          "pageviews": 142735,
+          "pageviews": 142787,
+          "song_art_image_url": "https://images.genius.com/b24ce29c094a185880632f403290d3b7.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/b24ce29c094a185880632f403290d3b7.300x300x1.png",
+          "album": "Son Of Spergy",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, expressing confusion and longing as they question why the other person no answers their calls ('Why don't you answer my calls no more?'). They reminisce about shared experiences, both positive and negative ('We used to stay up for hours, many nights / Fussin' and fightin', fuckin' and lyin''). Despite the relationship's end, the speaker expresses gratitude for the other person's role in helping them understand themselves better ('I just want to thank you / For being my mirror / Showing me myself'). They acknowledge the relationship's impact but affirm they will not return to it ('But I'll never go back, I hope that you know that').",
+            "themes": [
+              "gratitude",
+              "reflection",
+              "closure",
+              "self-awareness"
+            ],
+            "emotional_tone": "reflective and bittersweet",
+            "key_imagery": [
+              "mirror",
+              "telephone",
+              "nights in Miami",
+              "tears at the GRAMMYs"
+            ]
+          }
         },
         {
           "id": 12015760,
           "title": "Moon",
           "artist_names": "Daniel Caesar (Ft. Bon Iver)",
           "release_date": "2025-09-23",
-          "pageviews": 112738,
+          "pageviews": 112791,
+          "song_art_image_url": "https://images.genius.com/453c47c37aacae325f35e913c1567fc8.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/453c47c37aacae325f35e913c1567fc8.300x300x1.png",
+          "album": "Son Of Spergy",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses dissatisfaction with their current state, stating, 'I'm not who I wanna be at the moment.' They convey a determination to persist despite challenges, saying, 'Fighters keep fighting, I'll fight 'til I'm blue.' The speaker also questions who will support or advocate for them, asking, 'Who's gonna fight for me? Who will advocate?' and 'Who's gonna be my Jesus?' In the second part, the speaker reflects on violence and its nature, stating, 'Violence is as violence does,' and expresses a desire to break free and assert independence, declaring, 'Someday I will leave your home, I'll be a man, I'll make my own.'",
+            "themes": [
+              "struggle",
+              "self-reflection",
+              "independence",
+              "violence"
+            ],
+            "emotional_tone": "resolute and questioning",
+            "key_imagery": [
+              "howl at the moon",
+              "fight 'til I'm blue",
+              "pile of dust",
+              "set this world on fire"
+            ]
+          }
         }
       ]
     },
@@ -405,15 +1268,45 @@
       "start": null,
       "end": null,
       "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 0
+      },
       "songs": [
         {
           "id": 9035196,
           "title": "innocence*",
           "artist_names": "Daniel Caesar (Ft. Sean Leon)",
           "release_date": null,
-          "pageviews": 374714,
+          "pageviews": 374811,
+          "song_art_image_url": "https://images.genius.com/da9d279cd54cc1592460ac953a65a3d7.950x950x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/da9d279cd54cc1592460ac953a65a3d7.300x300x1.png",
+          "album": "Pseudomutuality",
           "sample_count": 0,
-          "sampled_by": []
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on their loss of innocence and longing to return to childhood, contrasting their past happiness with their current struggles. They describe financial hardship ('broke as a joke,' 'credit is low'), substance use ('drunk as a skunk,' 'doin' lines in the bathroom'), and the pressure of adult responsibilities ('make sure their expenses are all paid on time'). They express a desire to escape their current reality ('I wanna be a kid again,' 'Leave the bullshit all behind') and acknowledge a shift in their perspective ('Shift my paradigm'). In later verses, they describe personal growth and independence ('Now I float, now I rise like a rose,' 'Really free, independent') while reflecting on their journey and relationships ('I remember we were Kobe and Shaq').",
+            "themes": [
+              "loss of innocence",
+              "nostalgia",
+              "struggle",
+              "personal growth"
+            ],
+            "emotional_tone": "reflective and melancholic",
+            "key_imagery": [
+              "broke as a joke",
+              "drunk as a skunk",
+              "shift my paradigm",
+              "rise like a rose",
+              "Kobe and Shaq"
+            ]
+          }
         }
       ]
     }

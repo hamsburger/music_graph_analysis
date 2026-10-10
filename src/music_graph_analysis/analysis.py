@@ -92,11 +92,39 @@ class ArtistAnalyzer:
     def discography(
         self, artist_id: int, artist_name: str | None = None
     ) -> list[dict[str, Any]]:
-        """Return (and cache) every song for ``artist_id``."""
-        return self._cached(
-            f"{_artist_folder(artist_name, artist_id)}/discography",
+        """Return (and cache) every song for ``artist_id``.
+
+        The artist-songs list endpoint omits each song's album, so every song
+        without one is enriched from its ``GET /songs/{id}`` detail (cached
+        per song). Songs that already carry an album are left untouched.
+        """
+        folder = _artist_folder(artist_name, artist_id)
+        songs = self._cached(
+            f"{folder}/discography",
             lambda: list(self.client.iter_artist_songs(artist_id)),
         )
+        return [self._with_album(song, folder) for song in songs]
+
+    def _with_album(
+        self, song: dict[str, Any], folder: str
+    ) -> dict[str, Any]:
+        """Return ``song`` with its album filled in from the song detail."""
+        if song.get("album"):
+            return song
+        song_id = song.get("id")
+        if song_id is None:
+            return song
+        try:
+            detail = self._cached(
+                f"{folder}/songs/{song_id}",
+                lambda: self.client.get_song_detail(song_id),
+            )
+        except GeniusAPIError:
+            return song
+        album = detail.get("album")
+        if not album:
+            return song
+        return {**song, "album": album}
 
     def relationships(
         self,
@@ -221,6 +249,13 @@ class ArtistAnalyzer:
                     "artist_names": song.get("artist_names"),
                     "release_date": _date_label(song),
                     "pageviews": song_pageviews(song),
+                    "song_art_image_url": song.get("song_art_image_url"),
+                    "song_art_image_thumbnail_url": song.get(
+                        "song_art_image_thumbnail_url"
+                    ),
+                    "album": (song.get("album") or {}).get("name")
+                    if isinstance(song.get("album"), dict)
+                    else song.get("album"),
                     "sample_count": len(sampled_in),
                     "sampled_by": [_related_song(s) for s in sampled_in],
                     "samples": [

@@ -5,13 +5,22 @@ from music_graph_analysis.cache import JsonCache
 
 
 class FakeClient:
-    def __init__(self, songs, relationships=None, artist_id=42, name="Test Artist"):
+    def __init__(
+        self,
+        songs,
+        relationships=None,
+        artist_id=42,
+        name="Test Artist",
+        details=None,
+    ):
         self._songs = songs
         self._relationships = relationships or {}
+        self._details = details or {}
         self.artist_id = artist_id
         self.name = name
         self.discography_calls = 0
         self.relationships_calls = 0
+        self.detail_calls = 0
 
     def find_artist(self, name):
         if name != self.name:
@@ -25,6 +34,10 @@ class FakeClient:
     def iter_artist_songs(self, artist_id):
         self.discography_calls += 1
         return list(self._songs)
+
+    def get_song_detail(self, song_id):
+        self.detail_calls += 1
+        return self._details.get(song_id, {})
 
     def get_all_relationships(self, song_id):
         self.relationships_calls += 1
@@ -151,10 +164,12 @@ def test_analyze_uses_cache_on_second_run(tmp_path):
     analyzer.analyze("Test Artist")
     first_discography = client.discography_calls
     first_relationships = client.relationships_calls
+    first_details = client.detail_calls
 
     analyzer.analyze("Test Artist")
     assert client.discography_calls == first_discography
     assert client.relationships_calls == first_relationships
+    assert client.detail_calls == first_details
 
 
 def test_analyze_raises_for_unknown_artist():
@@ -165,6 +180,41 @@ def test_analyze_raises_for_unknown_artist():
     analyzer = ArtistAnalyzer(build_client())
     with pytest.raises(GeniusAPIError):
         analyzer.analyze("Nobody")
+
+
+def test_analyze_carries_album_art_fields():
+    song = make_song(1, "Art Song", 2000, views=100)
+    song["song_art_image_url"] = "https://images.genius.com/full.png"
+    song["song_art_image_thumbnail_url"] = "https://images.genius.com/thumb.png"
+    song["album"] = {"name": "The Album"}
+    analyzer = ArtistAnalyzer(FakeClient([song]))
+    result = analyzer.analyze("Test Artist", n_eras=5, top_k=5)
+    era_song = result["eras"][0]["songs"][0]
+    assert era_song["song_art_image_url"] == "https://images.genius.com/full.png"
+    assert (
+        era_song["song_art_image_thumbnail_url"]
+        == "https://images.genius.com/thumb.png"
+    )
+    assert era_song["album"] == "The Album"
+
+
+def test_analyze_fills_album_from_song_detail():
+    song = make_song(1, "Album Song", 2000, views=100)
+    client = FakeClient(
+        [song], details={1: {"album": {"name": "From Detail"}}}
+    )
+    result = ArtistAnalyzer(client).analyze("Test Artist", n_eras=5, top_k=5)
+    assert result["eras"][0]["songs"][0]["album"] == "From Detail"
+    assert client.detail_calls == 1
+
+
+def test_analyze_skips_detail_when_album_present():
+    song = make_song(1, "Album Song", 2000, views=100)
+    song["album"] = {"name": "Already There"}
+    client = FakeClient([song], details={1: {"album": {"name": "Ignored"}}})
+    result = ArtistAnalyzer(client).analyze("Test Artist", n_eras=5, top_k=5)
+    assert result["eras"][0]["songs"][0]["album"] == "Already There"
+    assert client.detail_calls == 0
 
 
 def test_format_report_mentions_artist_and_songs():

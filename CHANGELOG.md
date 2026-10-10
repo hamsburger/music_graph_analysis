@@ -3,33 +3,41 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
-## b7f26fe — 2026-10-10
+## 2c7ecf2 — 2026-10-10
+
+**Added** Phase 4: `render_report.py` and the `render`/`images` modules turn
+saved reports into a self-contained interactive HTML page (eras on a time axis,
+album thumbnails, theme/imagery/tone toggles), **changed** `analyze_artist.py` to
+write per-artist files under `data/report/` by default, and **added** a GitHub
+Pages workflow that deploys the committed `pages/index.html`.
+
+## 8db6e5a — 2026-10-10
 
 **Added** the production lyric summarization pipeline to the package
 (`config`, `llm`, `lyrics`, `naming`, `prompts`, `summarize`) and **changed**
 `analyze_artist.py` to attach an LLM `summary` to every song as its final,
 best-effort step (skipped without `OPENROUTER_API_KEY` or with `--no-summarize`).
 
-## ec8a7b6 — 2026-10-10
+## d5746be — 2026-10-10
 
 **Changed** the summarize prompt to require a detailed overview with each claim
 backed by a short lyric quote and **removed** the `narrative` field; **changed**
 run outputs to a single `results.json` (`{"songs": [...]}`) instead of one JSON
 file per song.
 
-## 8272fb0 — 2026-10-10
+## a296539 — 2026-10-10
 
 **Changed** both changelog skills to record what was added, changed, or removed,
 and **changed** existing CHANGELOG.md and PROMPT_CHANGELOG.md entries to use the
 new **Added/Changed/Removed** labels.
 
-## 400ea5b — 2026-10-10
+## f7ae6ff — 2026-10-10
 
 **Added** the Phase 3 summarization sandbox: a lyrics → LLM summary → LLM judge
 pipeline under `summarization_experiments/`, with prompt files, caching, a CLI,
 and network-free tests.
 
-## 849295d — 2026-10-10
+## 9a0f129 — 2026-10-10
 
 **Changed** the update-changelog skill so entries are written after the change
 commit and then folded back into that same commit.
