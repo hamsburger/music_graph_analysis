@@ -3,7 +3,13 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
-## 021935d — 2026-10-10
+## 7110b6e — 2026-10-10
+
+**Changed** the chart layout so songs spread evenly down each era (staggered
+between adjacent eras) with a small deterministic x-jitter, dropping the
+pageview y-axis; circle size still encodes popularity via `sqrt(pageviews)`.
+
+## 4b40a15 — 2026-10-10
 
 **Added** the song's `overview` summary text to the chart hover tooltip (shown
 when a summary is present), alongside the title, album, and per-dimension tags.

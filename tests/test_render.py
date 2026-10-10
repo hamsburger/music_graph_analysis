@@ -1,8 +1,12 @@
 import base64
+import re
 
 from music_graph_analysis.cache import JsonCache
 from music_graph_analysis.images import ImageFetcher
 from music_graph_analysis.render import (
+    JITTER_MAX,
+    _jitter_for_song,
+    _song_y,
     build_chart_svg,
     era_tag_counts,
     normalize_tags,
@@ -192,6 +196,47 @@ def test_build_chart_svg_tag_labels_omit_counts():
     svg = build_chart_svg(make_result(), {})
     assert ">love</text>" in svg
     assert " (2)" not in svg
+
+
+def test_song_y_spreads_songs_evenly_within_era():
+    count = 4
+    ys = [
+        _song_y(era_index=0, song_index=i, count=count, top=0.0, height=100.0)
+        for i in range(count)
+    ]
+    assert len(set(ys)) == count
+    gaps = [round(b - a, 6) for a, b in zip(ys, ys[1:])]
+    assert len(set(gaps)) == 1
+
+
+def test_song_y_staggers_adjacent_eras():
+    even = _song_y(era_index=0, song_index=0, count=3, top=0.0, height=100.0)
+    odd = _song_y(era_index=1, song_index=0, count=3, top=0.0, height=100.0)
+    assert even != odd
+
+
+def test_build_chart_svg_spreads_era_songs_vertically():
+    svg = build_chart_svg(make_result(), {})
+    cys = re.findall(r'cy="([0-9.]+)"', svg)
+    assert len(cys) == 4
+    assert cys[0] != cys[1]
+
+
+def test_build_chart_svg_drops_pageview_y_axis():
+    svg = build_chart_svg(make_result(), {})
+    assert "Pageviews" not in svg
+
+
+def test_build_chart_svg_x_jitter_is_deterministic():
+    assert build_chart_svg(make_result(), {}) == build_chart_svg(make_result(), {})
+
+
+def test_jitter_for_song_is_deterministic_and_bounded():
+    song = {"id": 7}
+    value = _jitter_for_song(song)
+    assert value == _jitter_for_song(song)
+    assert -JITTER_MAX <= value <= JITTER_MAX
+
 
 
 def test_render_html_includes_tooltip_element():

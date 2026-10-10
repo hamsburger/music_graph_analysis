@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import html
 import math
+import zlib
 from collections import Counter
 from datetime import date
 from typing import Any, Iterable
@@ -38,6 +39,7 @@ MAX_TAGS_PER_ERA = 4
 UNKNOWN_BAND_WIDTH = 96
 RADIUS_MIN = 9.0
 RADIUS_MAX = 26.0
+JITTER_MAX = 6.0
 
 _BAND_FILLS = ("#f4f6fb", "#e8ecf6")
 _AXIS_COLOR = "#8a93a6"
@@ -99,13 +101,6 @@ def _parse_iso(value: Any) -> date | None:
         return None
 
 
-def _log_bounds(values: Iterable[float]) -> tuple[float, float] | None:
-    positive = [math.log10(v) for v in values if v and v > 0]
-    if not positive:
-        return None
-    return min(positive), max(positive)
-
-
 def _x_for_date(
     day: date | None, dmin: date | None, dmax: date | None, left: float, span: float
 ) -> float:
@@ -116,15 +111,26 @@ def _x_for_date(
     return left + frac * span
 
 
-def _y_for_pageviews(
-    pageviews: float, bounds: tuple[float, float] | None, top: float, height: float
+def _song_y(
+    *,
+    era_index: int,
+    song_index: int,
+    count: int,
+    top: float,
+    height: float,
 ) -> float:
-    if bounds is None or bounds[1] <= bounds[0]:
-        return top + height / 2
-    low, high = bounds
-    frac = (math.log10(max(pageviews, 1.0)) - low) / (high - low)
-    frac = min(1.0, max(0.0, frac))
-    return top + (1.0 - frac) * height
+    step = 1.0 / (max(1, count) + 1)
+    frac = (song_index + 1) * step
+    frac += (0.5 * step) if era_index % 2 else (-0.5 * step)
+    return top + frac * height
+
+
+def _jitter_for_song(song: dict[str, Any], amount: float = JITTER_MAX) -> float:
+    song_id = song.get("id")
+    if song_id is None:
+        return 0.0
+    seed = zlib.crc32(str(song_id).encode("utf-8"))
+    return ((seed % 2001) / 2000.0 - 0.5) * 2.0 * amount
 
 
 def _radius_for_pageviews(pageviews: float, values: list[float]) -> float:
@@ -138,14 +144,6 @@ def _radius_for_pageviews(pageviews: float, values: list[float]) -> float:
     frac = (math.sqrt(max(pageviews, 0.0)) - low) / (high - low)
     frac = min(1.0, max(0.0, frac))
     return RADIUS_MIN + frac * (RADIUS_MAX - RADIUS_MIN)
-
-
-def _format_count(value: float) -> str:
-    if value >= 1_000_000:
-        return f"{value / 1_000_000:.1f}M"
-    if value >= 1_000:
-        return f"{value / 1_000:.0f}k"
-    return f"{value:.0f}"
 
 
 def _short_era_label(era: dict[str, Any]) -> tuple[str, str]:
@@ -207,10 +205,11 @@ def build_chart_svg(
 ) -> str:
     """Render ``result`` as a single SVG string.
 
-    X is time (release date) with era bands; Y and radius are pageviews. Album
-    art is drawn inside clipped circles when ``images`` has the song id. Era
-    tag labels are emitted once per dimension into toggleable ``dim-tags``
-    layers.
+    X is time (release date) with era bands; songs are spread evenly down each
+    era's vertical band (staggered between adjacent eras) with a small
+    deterministic x-jitter, while radius is pageviews. Album art is drawn
+    inside clipped circles when ``images`` has the song id. Era tag labels are
+    emitted once per dimension into toggleable ``dim-tags`` layers.
     """
     dimensions = tuple(dimensions)
     images = images or {}
@@ -224,7 +223,6 @@ def build_chart_svg(
 
     all_songs = [song for era in eras for song in era.get("songs", [])]
     pageview_values = [float(song.get("pageviews") or 0) for song in all_songs]
-    y_bounds = _log_bounds(pageview_values)
 
     dated_eras = [e for e in eras if e.get("start") and e.get("end")]
     undated_eras = [e for e in eras if not (e.get("start") and e.get("end"))]
@@ -304,8 +302,13 @@ def build_chart_svg(
                 left=left,
                 dated_span=dated_w,
             )
-            y = _y_for_pageviews(
-                float(song.get("pageviews") or 0), y_bounds, top, plot_h
+            x = min(x1, max(x0, x + _jitter_for_song(song)))
+            y = _song_y(
+                era_index=era_index,
+                song_index=song_index,
+                count=len(songs),
+                top=top,
+                height=plot_h,
             )
             radius = _radius_for_pageviews(
                 float(song.get("pageviews") or 0), pageview_values
@@ -345,26 +348,6 @@ def build_chart_svg(
         f'<line x1="{left}" y1="{top + plot_h:.1f}" '
         f'x2="{left + plot_w:.1f}" y2="{top + plot_h:.1f}" '
         f'stroke="{_AXIS_COLOR}"/>'
-    )
-    parts.append(
-        f'<line x1="{left}" y1="{top:.1f}" x2="{left}" '
-        f'y2="{top + plot_h:.1f}" stroke="{_AXIS_COLOR}"/>'
-    )
-
-    if y_bounds is not None:
-        low, high = y_bounds
-        for frac in (0.0, 0.5, 1.0):
-            value = 10 ** (low + frac * (high - low))
-            y = top + (1 - frac) * plot_h
-            parts.append(
-                f'<text x="{left - 8:.1f}" y="{y + 4:.1f}" font-size="10" '
-                f'text-anchor="end" fill="{_AXIS_COLOR}">'
-                f"{_esc(_format_count(value))}</text>"
-            )
-    parts.append(
-        f'<text x="{left - 54:.1f}" y="{top + plot_h / 2:.1f}" font-size="11" '
-        f'fill="{_AXIS_COLOR}" transform="rotate(-90 {left - 54:.1f} '
-        f'{top + plot_h / 2:.1f})" text-anchor="middle">Pageviews (log)</text>'
     )
 
     parts.append("</svg>")

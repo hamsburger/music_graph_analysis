@@ -129,7 +129,8 @@ Pure, side-effect-free rendering (no network or file I/O) that returns strings.
   comma-separated `emotional_tone`).
 - `era_tag_counts(era, dimension)` — tag frequency across an era.
 - `build_chart_svg(result, images, ...)` — one SVG per artist: time x-axis with
-  era bands, log-scaled pageviews on y, songs drawn as clipped circles filled
+  era bands, songs spread evenly down each era (staggered, with a deterministic
+  x-jitter) and sized by `sqrt(pageviews)`, drawn as clipped circles filled
   with `images[song_id]` (embedded once), and one toggleable tag layer per
   dimension.
 - `render_html(artists, images, *, title)` — a self-contained page with one SVG

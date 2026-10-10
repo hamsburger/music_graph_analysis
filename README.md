@@ -120,10 +120,11 @@ Useful flags:
 ## Rendering the visualization
 
 Turn one or more saved analysis reports (with their LLM summaries) into a
-single self-contained interactive HTML page: eras on a time x-axis, each song
-drawn as a shape with its album thumbnail embedded, and a dropdown to switch
-between **themes**, **key imagery**, and **emotional tone**. When more than one
-report is combined, an **artist** dropdown appears too.
+single self-contained interactive HTML page: eras on a time x-axis, songs
+spread evenly down each era (with a small deterministic x-jitter) and sized by
+popularity, each drawn as a shape with its album thumbnail embedded, and a
+dropdown to switch between **themes**, **key imagery**, and **emotional tone**.
+When more than one report is combined, an **artist** dropdown appears too.
 
 ```bash
 # one artist

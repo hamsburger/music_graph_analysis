@@ -29,7 +29,7 @@ network.
 | --- | --- |
 | Render target | Self-contained HTML page for GitHub Pages |
 | Chart tech | Python-generated SVG + tiny vanilla JS (no new deps, no CDN) |
-| Y position + shape size | Both driven by pageviews (log-scaled y, `r ∝ sqrt(pageviews)`) |
+| Y position + shape size | Songs spread evenly down each era (staggered between adjacent eras); shape size `r ∝ sqrt(pageviews)` |
 | Album art | 300×300 thumbnails, fetched and embedded as base64 data URIs |
 | Artist switching | Single combined page with an artist dropdown |
 | Output folder | `pages/` (served by a GitHub Actions Pages workflow) |
@@ -58,10 +58,14 @@ network.
 
 ## Layout details
 
-- **X axis** = time (release date). Alternating era bands with era labels;
-  undated songs go in a trailing `Unknown` band.
-- **Y axis** = pageviews, log-scaled (`log10` mapped into the plot height;
-  guards for zero/equal values). **Radius** `∝ sqrt(pageviews)`, clamped.
+- **X axis** = time (release date), with a small deterministic horizontal
+  jitter (derived from the song id) so overlapping songs separate slightly.
+  Alternating era bands with era labels; undated songs go in a trailing
+  `Unknown` band.
+- **Y axis** = no longer encodes pageviews: each era's songs are spread evenly
+  down the plot area (staggered between adjacent eras) so shapes do not overlap
+  vertically. **Radius** `∝ sqrt(pageviews)`, clamped, so circle size still
+  conveys popularity.
 - **Labels per era** = top tags for the selected dimension, by frequency
   (counts are not shown).
 - **Hover tooltip** — a JS-driven tooltip on each song shape shows the song
