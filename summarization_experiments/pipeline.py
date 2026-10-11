@@ -13,12 +13,15 @@ from datetime import datetime, timezone
 from typing import Any, Callable
 
 from music_graph_analysis.cache import JsonCache
+from music_graph_analysis.render import normalize_tags
 
 from . import prompts
 from .config import (
     DEFAULT_PROMPTS_DIR,
     DEFAULT_JUDGE_MODEL,
+    DEFAULT_REPRESENTATIVE_MODEL,
     DEFAULT_SUMMARIZER_MODEL,
+    MAX_REPRESENTATIVES,
     VALID_SCORE_THRESHOLD,
 )
 from .naming import artist_folder, content_hash, model_slug, song_label
@@ -89,6 +92,63 @@ def _as_bool(value: Any) -> bool:
     return bool(value)
 
 
+def era_label(era: dict[str, Any], index: int) -> str:
+    """Return a human-readable label for an era (e.g. ``"Era 2 (2019–2021)"``)."""
+    value = era.get("era")
+    if isinstance(value, int):
+        start = (era.get("start") or "")[:4]
+        end = (era.get("end") or "")[:4]
+        return f"Era {value + 1} ({start}–{end})"
+    return f"Era {index + 1} (no date)"
+
+
+def _era_songs_payload(songs: list[dict[str, Any]]) -> str:
+    """Render each song's cleaned themes/tone labels as prompt input lines."""
+    lines: list[str] = []
+    for song in songs:
+        summary = song.get("summary") or {}
+        themes = normalize_tags(summary, "themes")
+        tones = normalize_tags(summary, "emotional_tone")
+        title = song.get("title") or "Untitled"
+        lines.append(
+            f"- {title}: themes=[{'; '.join(themes) or '—'}]; "
+            f"tone=[{'; '.join(tones) or '—'}]"
+        )
+    return "\n".join(lines) if lines else "(no songs with usable tags)"
+
+
+def _normalize_labels(value: Any) -> list[str]:
+    """Coerce a raw LLM label field to a trimmed, de-duplicated, capped list."""
+    if value is None:
+        return []
+    if isinstance(value, str):
+        parts: list[str] = value.split(",")
+    elif isinstance(value, (list, tuple)):
+        parts = [str(part) for part in value]
+    else:
+        parts = [str(value)]
+
+    labels: list[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        label = part.strip().strip("\"'").strip()
+        if label and label.casefold() not in seen:
+            seen.add(label.casefold())
+            labels.append(label)
+        if len(labels) >= MAX_REPRESENTATIVES:
+            break
+    return labels
+
+
+def _normalize_representative(parsed: dict[str, Any]) -> dict[str, Any]:
+    """Normalise a raw representative-selection response into a stable shape."""
+    return {
+        "themes": _normalize_labels(parsed.get("themes")),
+        "emotional_tone": _normalize_labels(parsed.get("emotional_tone")),
+        "reasoning": str(parsed.get("reasoning", "")).strip(),
+    }
+
+
 class SummarizationPipeline:
     """Run the summarize + judge loop for individual songs, with caching."""
 
@@ -101,6 +161,7 @@ class SummarizationPipeline:
         prompts_dir: Any = None, # TODO: This project needs better typing
         summarizer_model: str = DEFAULT_SUMMARIZER_MODEL,
         judge_model: str = DEFAULT_JUDGE_MODEL,
+        representative_model: str = DEFAULT_REPRESENTATIVE_MODEL,
         valid_threshold: int = VALID_SCORE_THRESHOLD,
     ) -> None:
         self.llm = llm
@@ -109,6 +170,7 @@ class SummarizationPipeline:
         self.prompts_dir = prompts_dir if prompts_dir is not None else DEFAULT_PROMPTS_DIR
         self.summarizer_model = summarizer_model
         self.judge_model = judge_model
+        self.representative_model = representative_model
         self.valid_threshold = valid_threshold
 
     def _cached(self, key: str, fetch: Callable[[], Any]) -> Any:
@@ -187,6 +249,40 @@ class SummarizationPipeline:
                 "reasoning": str(parsed.get("reasoning", "")),
                 "verdict": "valid" if valid else "invalid",
             }
+
+        return self._cached(key, fetch)
+
+    def select_representative(
+        self,
+        songs: list[dict[str, Any]],
+        *,
+        era_label: str,
+        era_index: int | None = None,
+        artist_id: int | None = None,
+        artist_name: str | None = None,
+    ) -> dict[str, Any]:
+        """Pick the era's most representative themes/tone (cached per model + input).
+
+        ``songs`` are era song dicts that each carry a ``summary``. Only ``themes``
+        and ``emotional_tone`` are considered; ``key_imagery`` is left to the
+        renderer's frequency-based selection.
+        """
+        folder = artist_folder(artist_name, artist_id)
+        template = prompts.load_prompt(
+            prompts.REPRESENTATIVE_PROMPT, self.prompts_dir
+        )
+        prompt = prompts.render(
+            template, era=era_label, songs=_era_songs_payload(songs)
+        )
+        index = era_index if era_index is not None else "x"
+        key = (
+            f"{folder}/representative/era-{index}"
+            f"-{model_slug(self.representative_model)}-{content_hash(prompt)}"
+        )
+
+        def fetch() -> dict[str, Any]:
+            response = self.llm.complete(prompt, model=self.representative_model)
+            return _normalize_representative(extract_json(response))
 
         return self._cached(key, fetch)
 

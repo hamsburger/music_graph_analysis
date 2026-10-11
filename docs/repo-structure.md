@@ -20,11 +20,12 @@ music_graph_analysis/
 │   ├── cache.md             # On-disk response cache design.
 │   ├── phase-3-summarization.md  # LLM lyric summarization plan.
 │   ├── phase-4-visualization.md  # Interactive HTML rendering plan.
+│   ├── representative-selection.md  # Stage 4 era representative plan.
 │   └── repo-structure.md    # This document.
 ├── notebook_experiments/    # Scratch space for exploratory notebooks.
 ├── pages/                   # Committed generated HTML for GitHub Pages.
-├── summarization_experiments/  # Phase 3 sandbox: lyrics -> LLM summary -> judge.
-│                               # Judge/aggregate experiments live here; the
+├── summarization_experiments/  # Phase 3 sandbox: lyrics -> summary -> judge
+│                               # -> per-era representative selection. The
 │                               # summarizer used in production is in the package.
 ├── src/
 │   ├── analyze_artist.py            # CLI entry point for the era analysis.

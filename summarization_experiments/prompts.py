@@ -2,9 +2,9 @@
 
 Prompts live as ``.txt`` files under ``summarization_experiments/prompts/`` so
 they can be edited without touching Python. Placeholders use single braces
-(``{lyrics}``, ``{summary}``); rendering is a literal token replacement rather
-than :meth:`str.format` so the JSON examples inside the prompts keep their
-braces untouched.
+(``{lyrics}``, ``{summary}``, ``{era}``, ``{songs}``); rendering is a literal
+token replacement rather than :meth:`str.format` so the JSON examples inside the
+prompts keep their braces untouched.
 """
 
 from __future__ import annotations
@@ -15,6 +15,7 @@ from .config import DEFAULT_PROMPTS_DIR
 
 SUMMARIZE_PROMPT = "summarize"
 JUDGE_PROMPT = "judge"
+REPRESENTATIVE_PROMPT = "representative"
 
 
 def load_prompt(name: str, prompts_dir: str | Path | None = None) -> str:

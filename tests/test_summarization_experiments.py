@@ -6,12 +6,19 @@ from music_graph_analysis.cache import JsonCache
 from summarization_experiments.config import DEFAULT_PROMPTS_DIR
 from summarization_experiments.pipeline import (
     SummarizationPipeline,
+    _normalize_representative,
     aggregate,
     clean_lyrics,
     extract_json,
 )
 from summarization_experiments.prompts import render
-from summarization_experiments.run_pipeline import build_parser, parse_song_ids, select_songs
+from summarization_experiments.run_pipeline import (
+    add_representatives,
+    attach_summaries_to_eras,
+    build_parser,
+    parse_song_ids,
+    select_songs,
+)
 
 
 class FakeLLM:
@@ -60,6 +67,23 @@ JUDGE_JSON = json.dumps(
     }
 )
 
+REPRESENTATIVE_JSON = json.dumps(
+    {
+        "themes": ["love", "Devotion", "love"],
+        "emotional_tone": ["tender", "longing"],
+        "reasoning": "These recur across the era.",
+    }
+)
+
+ERA_SONGS = [
+    {
+        "id": 1,
+        "title": "A",
+        "summary": {"themes": ["love", "loss"], "emotional_tone": "tender, sad"},
+    },
+    {"id": 2, "title": "B", "summary": {"themes": ["love"], "emotional_tone": "longing"}},
+]
+
 
 def build_pipeline(llm, lyrics_source, cache=None):
     return SummarizationPipeline(
@@ -69,6 +93,7 @@ def build_pipeline(llm, lyrics_source, cache=None):
         prompts_dir=DEFAULT_PROMPTS_DIR,
         summarizer_model="test/summarizer",
         judge_model="test/judge",
+        representative_model="test/representative",
     )
 
 
@@ -290,3 +315,131 @@ def test_aggregate_metrics():
     assert report["pass_rate"] == 0.5
     assert report["grounded_rate"] == 1.0
     assert report["score_distribution"]["5"] == 1
+
+
+def test_normalize_representative_coerces_string_tone():
+    result = _normalize_representative(
+        {
+            "themes": "love, loss , love",
+            "emotional_tone": "Tender",
+            "reasoning": "  because  ",
+        }
+    )
+
+    assert result["themes"] == ["love", "loss"]
+    assert result["emotional_tone"] == ["Tender"]
+    assert result["reasoning"] == "because"
+
+
+def test_normalize_representative_caps_labels():
+    result = _normalize_representative({"themes": ["a", "b", "c", "d", "e", "f"]})
+
+    assert result["themes"] == ["a", "b", "c", "d"]
+    assert result["emotional_tone"] == []
+
+
+def test_select_representative_parses_and_normalizes():
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    pipeline = build_pipeline(llm, FakeLyricsSource({}))
+
+    result = pipeline.select_representative(
+        ERA_SONGS, era_label="Era 1 (2019–2021)", era_index=0
+    )
+
+    assert result["themes"] == ["love", "Devotion"]
+    assert result["emotional_tone"] == ["tender", "longing"]
+    assert result["reasoning"] == "These recur across the era."
+    assert "key_imagery" not in result
+    assert llm.calls[0]["model"] == "test/representative"
+    assert "themes=[love; loss]" in llm.calls[0]["prompt"]
+
+
+def test_select_representative_cache_prevents_duplicate_calls(tmp_path):
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    cache = JsonCache(tmp_path)
+    pipeline = build_pipeline(llm, FakeLyricsSource({}), cache=cache)
+
+    pipeline.select_representative(ERA_SONGS, era_label="Era 1", era_index=0)
+    pipeline.select_representative(ERA_SONGS, era_label="Era 1", era_index=0)
+
+    assert len(llm.calls) == 1
+
+
+def test_attach_summaries_to_eras_does_not_mutate_input():
+    report = {
+        "artist": {"id": 9, "name": "Artist"},
+        "eras": [
+            {
+                "era": 0,
+                "start": "2019-01-01",
+                "end": "2020-01-01",
+                "songs": [{"id": 1, "title": "A"}, {"id": 2, "title": "B"}],
+            }
+        ],
+    }
+    records = [
+        {"song_id": 1, "summary": {"themes": ["love"]}},
+        {"song_id": 2, "skipped": True, "reason": "no usable lyrics"},
+    ]
+
+    enriched = attach_summaries_to_eras(report, records)
+
+    assert enriched["eras"][0]["songs"][0]["summary"] == {"themes": ["love"]}
+    assert "summary" not in enriched["eras"][0]["songs"][1]
+    assert "summary" not in report["eras"][0]["songs"][0]
+
+
+def test_add_representatives_per_era():
+    report = {
+        "artist": {"id": 9, "name": "Artist"},
+        "eras": [
+            {
+                "era": 0,
+                "start": "2019-01-01",
+                "end": "2020-01-01",
+                "songs": [
+                    {
+                        "id": 1,
+                        "title": "A",
+                        "summary": {"themes": ["love"], "emotional_tone": "tender"},
+                    }
+                ],
+            },
+            {"era": 1, "start": "2020-01-01", "end": "2021-01-01", "songs": []},
+        ],
+    }
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    pipeline = build_pipeline(llm, FakeLyricsSource({}))
+
+    add_representatives(report, pipeline)
+
+    assert report["eras"][0]["representative"]["themes"] == ["love", "Devotion"]
+    assert "representative" not in report["eras"][1]
+    assert len(llm.calls) == 1
+
+
+def test_add_representatives_records_errors():
+    report = {
+        "artist": {"id": 9, "name": "Artist"},
+        "eras": [
+            {
+                "era": 0,
+                "songs": [{"id": 1, "title": "A", "summary": {"themes": ["love"]}}],
+            }
+        ],
+    }
+    llm = FakeLLM(["not json at all"])
+    pipeline = build_pipeline(llm, FakeLyricsSource({}))
+
+    add_representatives(report, pipeline)
+
+    assert "error" in report["eras"][0]["representative"]
+
+
+def test_build_parser_parses_representative_flags():
+    args = build_parser().parse_args(
+        ["report.json", "--representative-model", "x/y", "--skip-representatives"]
+    )
+
+    assert args.representative_model == "x/y"
+    assert args.skip_representatives is True

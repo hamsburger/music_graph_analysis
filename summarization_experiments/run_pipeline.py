@@ -4,19 +4,23 @@ Usage
 -----
     python summarization_experiments/run_pipeline.py data/report/millkzy.json
         [--limit N] [--song-ids IDS] [--seed S]
-        [--summarizer-model M] [--judge-model M]
+        [--summarizer-model M] [--judge-model M] [--representative-model M]
+        [--skip-representatives]
         [--no-cache] [--cache-dir DIR] [--out DIR] [--min-interval SECONDS]
 
 Reads a Phase 2 report, fetches each song's lyrics, summarizes them with an LLM,
-scores the summary with a second LLM, and writes the combined per-song records to
-a single ``results.json`` plus an aggregate report. Credentials come from
-``.env`` (loaded automatically): ``GENIUS_ACCESS_TOKEN`` and
-``OPENROUTER_API_KEY``.
+scores the summary with a second LLM, then selects the most representative
+themes and emotional tone for each era with a third LLM call. Writes the combined
+per-song records to a single ``results.json`` plus an aggregate report, and an
+augmented ``report_enriched.json`` (input schema + song summaries + per-era
+``representative``) for the renderer. Credentials come from ``.env`` (loaded
+automatically): ``GENIUS_ACCESS_TOKEN`` and ``OPENROUTER_API_KEY``.
 """
 
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import random
 import sys
@@ -45,13 +49,16 @@ from summarization_experiments import (
 from summarization_experiments.config import (
     DEFAULT_CACHE_DIR,
     DEFAULT_JUDGE_MODEL,
+    DEFAULT_REPRESENTATIVE_MODEL,
     DEFAULT_RESULTS_DIR,
     DEFAULT_SUMMARIZER_MODEL,
     judge_model,
     openrouter_api_key,
+    representative_model,
     summarizer_model,
 )
 from summarization_experiments.naming import artist_folder
+from summarization_experiments.pipeline import era_label
 from music_graph_analysis.cache import JsonCache
 
 
@@ -91,6 +98,17 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--judge-model", default=None, help=f"Model (default: {DEFAULT_JUDGE_MODEL})"
+    )
+    parser.add_argument(
+        "--representative-model",
+        default=None,
+        help=f"Model for era representative selection "
+        f"(default: {DEFAULT_REPRESENTATIVE_MODEL})",
+    )
+    parser.add_argument(
+        "--skip-representatives",
+        action="store_true",
+        help="Skip the per-era representative-selection stage",
     )
     parser.add_argument("--no-cache", action="store_true", help="Disable caching")
     parser.add_argument(
@@ -153,6 +171,55 @@ def select_songs(
     return songs
 
 
+def attach_summaries_to_eras(
+    report: dict[str, Any], records: list[dict[str, Any]]
+) -> dict[str, Any]:
+    """Return a copy of ``report`` with each era song's ``summary`` attached.
+
+    The input report keeps its Phase 2 schema (``artist`` + ``eras[].songs[]``),
+    so the augmented copy can be fed straight to the renderer. Songs that were
+    skipped or errored keep no ``summary`` key.
+    """
+    summaries = {
+        record["song_id"]: record["summary"]
+        for record in records
+        if record.get("summary")
+    }
+    enriched = copy.deepcopy(report)
+    for era in enriched.get("eras", []):
+        for song in era.get("songs", []):
+            summary = summaries.get(song.get("id"))
+            if summary is not None:
+                song["summary"] = summary
+    return enriched
+
+
+def add_representatives(
+    report: dict[str, Any], pipeline: SummarizationPipeline
+) -> dict[str, Any]:
+    """Attach ``era["representative"]`` for every era with usable summaries.
+
+    Best-effort: an era that fails to select representatives stores an ``error``
+    instead of aborting the run.
+    """
+    artist = report.get("artist", {})
+    for index, era in enumerate(report.get("eras", [])):
+        songs = [song for song in era.get("songs", []) if song.get("summary")]
+        if not songs:
+            continue
+        try:
+            era["representative"] = pipeline.select_representative(
+                songs,
+                era_label=era_label(era, index),
+                era_index=index,
+                artist_id=artist.get("id"),
+                artist_name=artist.get("name"),
+            )
+        except (LLMError, ValueError) as exc:
+            era["representative"] = {"error": str(exc)}
+    return report
+
+
 def main(argv: list[str] | None = None) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -193,6 +260,7 @@ def main(argv: list[str] | None = None) -> int:
         cache=cache,
         summarizer_model=args.summarizer_model or summarizer_model(),
         judge_model=args.judge_model or judge_model(),
+        representative_model=args.representative_model or representative_model(),
     )
 
     out_dir = Path(args.out) / artist_folder(artist.get("name"), artist.get("id"))
@@ -222,6 +290,16 @@ def main(argv: list[str] | None = None) -> int:
     }
     with (out_dir / "report.json").open("w", encoding="utf-8") as handle:
         json.dump(report_out, handle, ensure_ascii=False, indent=2)
+
+    enriched = attach_summaries_to_eras(report, records)
+    if not args.skip_representatives:
+        print(
+            "Selecting representative themes/emotions per era...",
+            file=sys.stderr,
+        )
+        add_representatives(enriched, pipeline)
+    with (out_dir / "report_enriched.json").open("w", encoding="utf-8") as handle:
+        json.dump(enriched, handle, ensure_ascii=False, indent=2)
 
     print(format_summary(report_out))
     print(f"Wrote results to {out_dir}", file=sys.stderr)

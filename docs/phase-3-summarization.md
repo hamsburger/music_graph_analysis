@@ -78,16 +78,19 @@ python src/analyze_artist.py "Daniel Caesar"
 summarization_experiments/
 ├── prompts/
 │   ├── summarize.txt          # Stage 2 prompt (plain text, {lyrics} placeholder)
-│   └── judge.txt              # Stage 3 prompt (plain text, {lyrics}/{summary})
+│   ├── judge.txt              # Stage 3 prompt (plain text, {lyrics}/{summary})
+│   └── representative.txt     # Stage 4 prompt ({era}/{songs} placeholders)
 ├── data/                      # gitignored; mirrors the JsonCache layout
 │   └── {artist-name}-{artist-id}/
 │       ├── lyrics/{song-title}-{song-id}.json
 │       ├── summaries/{song-title}-{song-id}.json
-│       └── judge/{song-title}-{song-id}.json
+│       ├── judge/{song-title}-{song-id}.json
+│       └── representative/era-{index}-{model}-{digest}.json
 ├── results/                   # gitignored; run outputs
 │   └── {artist-name}-{artist-id}/
 │       ├── results.json       # {"songs": [...]} — per-song summary + judge
-│       └── report.json        # aggregate: mean score, pass rate, distribution
+│       ├── report.json        # aggregate: mean score, pass rate, distribution
+│       └── report_enriched.json  # input schema + summaries + era representatives
 ├── __init__.py
 ├── config.py                  # env vars, model ids, paths, constants
 ├── naming.py                  # shared cache-key / result-path helpers
@@ -126,12 +129,26 @@ summarization_experiments/
 - Default validity rule: `verdict == "valid"` when `grounded` is true **and**
   `score >= 4`. The threshold lives in `config.py` so it is easy to retune.
 
+### Stage 4 — Representative selection
+
+- Once every song in an era has a summary, a *third* LLM call receives the era's
+  `themes` and `emotional_tone` labels (only) plus `prompts/representative.txt`.
+- It must return **strict JSON** with `themes[]`, `emotional_tone[]`, and
+  `reasoning` — the most representative labels for the era plus why they were
+  chosen. Labels may be merged/consolidated but must be grounded in the era's
+  tags. `key_imagery` is intentionally excluded; the renderer keeps selecting it
+  by frequency.
+- Output is written to `era["representative"]` in an augmented
+  `results/{artist}/report_enriched.json`. See
+  [representative-selection.md](representative-selection.md) for the full plan.
+
 ### Prompt templates
 
-- `prompts.py` loads `prompts/summarize.txt` and `prompts/judge.txt`.
-- Placeholders are `{lyrics}` and `{summary}`. They are replaced by a literal
-  token substitution, **not** `str.format`, so the JSON examples inside the
-  prompts keep their braces.
+- `prompts.py` loads `prompts/summarize.txt`, `prompts/judge.txt`, and
+  `prompts/representative.txt`.
+- Placeholders are `{lyrics}`, `{summary}`, `{era}`, and `{songs}`. They are
+  replaced by a literal token substitution, **not** `str.format`, so the JSON
+  examples inside the prompts keep their braces.
 
 ## LLM client
 
@@ -202,7 +219,8 @@ pass rate, `grounded` rate, and the score distribution.
 ```
 python summarization_experiments/run_pipeline.py <report.json>
     [--limit N] [--seed S] [--song-ids IDS]
-    [--summarizer-model M] [--judge-model M]
+    [--summarizer-model M] [--judge-model M] [--representative-model M]
+    [--skip-representatives]
     [--no-cache] [--out DIR]
 ```
 
@@ -212,6 +230,8 @@ python summarization_experiments/run_pipeline.py <report.json>
 - `--song-ids` processes specific songs, comma-separated
   (`--song-ids 1,2,3`); combined with `--limit` the sample is drawn from the
   selected IDs.
+- `--representative-model M` picks the Stage 4 model; `--skip-representatives`
+  runs only the summarize + judge stages.
 - `--no-cache` forces fresh lyrics + LLM calls; `--out` overrides the results dir.
 
 ## Evaluation

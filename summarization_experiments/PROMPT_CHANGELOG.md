@@ -4,6 +4,24 @@ Brief, reverse-chronological notes on changes to the Phase 3 summarization
 prompt templates (`summarization_experiments/prompts/`). Each entry records what
 was added, changed, or removed, why, and how the results changed as a result.
 
+## 3085315 · 2026-10-11 — representative
+
+**Added** `representative.txt`, a new fourth-stage prompt that takes every song's
+already-extracted theme and emotional-tone labels for one era and asks an LLM to
+pick the most representative ones (aiming for 3–4 each), merge near-duplicate
+labels, and return strict JSON (`themes`, `emotional_tone`, `reasoning`). It uses
+the new `{era}` and `{songs}` placeholders and explicitly forbids inventing labels
+no song supports.
+
+**Effect** Observed on the Daniel Caesar run: all six era blocks (5 eras plus the
+date-less "Unknown era") now carry a `representative` object that is grounded
+entirely in the song-level labels. For example Era 1 returned themes
+`love, time, transformation, acceptance` and tones `reflective, passionate,
+resigned`, with the reasoning naming the labels it left out (`gratitude`,
+`uplifting`); each block lists 3–4 themes and 3 tones. Because the stage appends
+data rather than changing summarization or judging, the aggregate metrics are
+unchanged (`mean_score` 4.04, `pass_rate` 0.96, `grounded_rate` 1.0).
+
 ## d5746be · 2026-10-10 — summarize.txt
 
 **Changed** `summarize.txt` to ask for a detailed, multi-sentence overview in

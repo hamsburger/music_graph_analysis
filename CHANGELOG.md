@@ -3,6 +3,15 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
+## cd303e5 — 2026-10-11
+
+**Added** a fourth summarization sandbox stage that has an LLM pick each era's
+most representative themes and emotional tones (with reasoning), writing them
+into an augmented `report_enriched.json`; includes the representative prompt,
+config/CLI flags, caching, and tests. `key_imagery` continues to use
+frequency-based selection. **Added** `docs/representative-selection.md`
+documenting the plan, with renderer integration left pending.
+
 ## eb7aa7e — 2026-10-10
 
 **Changed** the committed `pages/index.html` to regenerate the Pages

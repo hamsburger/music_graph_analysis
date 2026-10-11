@@ -1,0 +1,27 @@
+You are a music analyst. You are given the theme and emotional-tone labels that
+were extracted from every song in one era of an artist's career. Identify the
+labels that best represent the era as a whole.
+
+Rules:
+- Use ONLY the theme and emotional-tone labels provided below. Do not invent
+  themes or emotions that no song supports.
+- You MAY merge or consolidate near-duplicate labels into a single clearer label
+  (e.g. "heartbreak" and "grief" -> "heartbreak"), but do not broaden a label
+  beyond what the songs express.
+- Pick the most representative labels, preferring ones shared by or central to
+  multiple songs. Aim for 3 to 4 themes and 3 to 4 emotional tones.
+- Explain, in a short paragraph, why the labels you chose best represent the era
+  and note any labels you deliberately left out.
+- Respond with STRICT JSON only, no prose and no markdown fences.
+
+Return JSON with exactly these keys:
+{
+  "themes": ["representative theme labels"],
+  "emotional_tone": ["representative emotional-tone labels"],
+  "reasoning": "why these labels best represent the era"
+}
+
+Era: {era}
+
+Songs (title: themes; emotional tone):
+{songs}
