@@ -6,10 +6,13 @@ Usage
                                        [--json] [--out DIR|FILE]
                                        [--no-cache] [--cache-dir DIR]
                                        [--no-summarize] [--summarizer-model M]
+                                       [--representative-model M]
+                                       [--skip-representatives]
 
 The access token is read from ``GENIUS_ACCESS_TOKEN`` (loaded from ``.env``).
 As a final step each song's lyrics are summarized via the OpenRouter API and the
-summary is attached to the song; this needs ``OPENROUTER_API_KEY`` and is skipped
+summary is attached to the song, then each era's most representative themes and
+emotional tone are selected; this needs ``OPENROUTER_API_KEY`` and is skipped
 with a warning when the key is missing (or with ``--no-summarize``).
 """
 
@@ -32,8 +35,10 @@ from music_graph_analysis import (
     LyricsSource,
     OpenRouterClient,
     SongSummarizer,
+    attach_representatives,
     attach_summaries,
     openrouter_api_key,
+    representative_model,
     summarizer_model,
 )
 
@@ -83,6 +88,19 @@ def build_parser() -> argparse.ArgumentParser:
         help="OpenRouter model for summaries (default: OPENROUTER_MODEL)",
     )
     parser.add_argument(
+        "--representative-model",
+        default=None,
+        help=(
+            "OpenRouter model for per-era representative selection "
+            "(default: OPENROUTER_REPRESENTATIVE_MODEL or OPENROUTER_MODEL)"
+        ),
+    )
+    parser.add_argument(
+        "--skip-representatives",
+        action="store_true",
+        help="Skip the per-era representative-selection step",
+    )
+    parser.add_argument(
         "--llm-min-interval",
         type=float,
         default=0.0,
@@ -115,7 +133,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     if not args.no_summarize:
-        _attach_summaries(result, args, cache)
+        _run_llm_stages(result, args, cache)
 
     from music_graph_analysis import format_report
 
@@ -142,10 +160,15 @@ def _report_path(out: str, artist: str) -> Path:
     return path / f"{slug or 'unnamed'}.json"
 
 
-def _attach_summaries(
+def _run_llm_stages(
     result: dict, args: argparse.Namespace, cache: JsonCache | None
 ) -> None:
-    """Summarize every song in ``result``, logging progress to stderr."""
+    """Summarize every song in ``result`` and select per-era representatives.
+
+    Progress is logged to stderr. Both stages are best-effort and never abort
+    the analysis; the representative stage only runs if summarization is
+    enabled.
+    """
     if not openrouter_api_key():
         print(
             "Summarization skipped: OPENROUTER_API_KEY is not set (see .env.example).",
@@ -164,10 +187,12 @@ def _attach_summaries(
         LyricsSource(cache=cache),
         cache=cache,
         summarizer_model=args.summarizer_model or summarizer_model(),
+        representative_model=args.representative_model or representative_model(),
     )
-    attach_summaries(
-        result, summarizer, log=lambda message: print(message, file=sys.stderr)
-    )
+    log = lambda message: print(message, file=sys.stderr)
+    attach_summaries(result, summarizer, log=log)
+    if not args.skip_representatives:
+        attach_representatives(result, summarizer, log=log)
 
 
 if __name__ == "__main__":

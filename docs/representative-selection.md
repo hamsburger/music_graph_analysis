@@ -21,16 +21,17 @@ and surface what actually characterises the era, and to justify the choice.
 
 | Question | Choice |
 | --- | --- |
-| Where it lives | `summarization_experiments/` sandbox (not the package yet) |
+| Where it lives | Production package `music_graph_analysis` (ported from the sandbox) |
 | Granularity | One LLM call **per era**, covering `themes` and `emotional_tone` |
-| Output storage | `era["representative"]` in an augmented copy of the input report |
+| Output storage | `era["representative"]` on each era of the analysis report |
 | Label freedom | May synthesize/merge labels, grounded only in the era's song tags |
 | Reasoning display | Per-era tooltip/caption in the renderer (Phase 4) |
 | `key_imagery` | **Unchanged** — still top tags by frequency |
 
 ## Status
 
-- Stage 4 (sandbox prompt + pipeline + CLI + tests): **implemented**.
+- Stage 4 (prompt + `SongSummarizer.select_representative` + CLI + tests):
+  **implemented** in production and the sandbox.
 - Renderer integration (`src/music_graph_analysis/render.py`): **pending** until
   the summarization output has been manually inspected.
 
@@ -40,8 +41,9 @@ and surface what actually characterises the era, and to justify the choice.
 
 - Input: every song in one era that has a summary, reduced to its cleaned
   `themes` and `emotional_tone` labels.
-- Prompt: `summarization_experiments/prompts/representative.txt`, placeholders
-  `{era}` (e.g. `Era 2 (2019–2021)`) and `{songs}`.
+- Prompt: `src/music_graph_analysis/prompts/representative.txt`, placeholders
+  `{era}` (e.g. `Era 2 (2019–2021)`) and `{songs}`. (Mirrored in the sandbox at
+  `summarization_experiments/prompts/representative.txt`.)
 - Output: **strict JSON** with
   `themes[]`, `emotional_tone[]`, `reasoning`.
 - Normalisation (`_normalize_representative`): coerce both label fields to
@@ -51,14 +53,13 @@ and surface what actually characterises the era, and to justify the choice.
 
 ## Prompt
 
-`summarization_experiments/prompts/representative.txt`:
+`src/music_graph_analysis/prompts/representative.txt`:
 
 - Use only the provided labels; do not invent themes/emotions no song supports.
 - May merge near-duplicate labels (e.g. "heartbreak" + "grief" -> "heartbreak").
 - Pick the most representative themes and emotional tones (aim for 3–4 each),
   preferring labels shared by or central to multiple songs.
-- Explain why the chosen labels best represent the era and note notable
-  omissions.
+- Explain why the chosen labels best represent the era.
 
 ## Caching
 
@@ -74,9 +75,8 @@ the model slug is included so switching models never serves a stale result.
 
 ## Output
 
-Stage 4 does not alter `results.json` or the aggregate `report.json`. Instead
-`run_pipeline.py` writes an **augmented copy of the input report** to
-`results/{artist}/report_enriched.json`:
+In production (`analyze_artist.py`) Stage 4 augments the in-memory analysis
+result and it is written with everything else to `data/report/{artist}.json`:
 
 - every era song gains its `summary` dict (needed for `key_imagery` counts and
   song tooltips), and
@@ -85,6 +85,7 @@ Stage 4 does not alter `results.json` or the aggregate `report.json`. Instead
 ```json
 {
   "era": 1,
+  "label": "Era 2 (2019-01-01 to 2021-01-01)",
   "start": "2019-01-01",
   "end": "2021-01-01",
   "songs": [{ "id": 1, "title": "...", "summary": { "...": "..." } }],
@@ -98,11 +99,24 @@ Stage 4 does not alter `results.json` or the aggregate `report.json`. Instead
 
 The report keeps the Phase 2 schema (`artist`, `eras[].songs[]`), so
 `render_report.py` can read it directly with no adapter. Failed eras are
-best-effort and store `{"error": "..."}` instead. With `--limit`, representative
-selection only sees the processed subset of each era (documented in the CLI
-help).
+best-effort and store `{"error": "..."}` instead. Eras with no usable song
+summaries are left untouched.
+
+In the sandbox, `run_pipeline.py` writes an augmented copy of the input report to
+`results/{artist}/report_enriched.json` instead; with `--limit`, representative
+selection only sees the processed subset of each era.
 
 ## CLI
+
+Production:
+
+```
+python src/analyze_artist.py "Artist Name"
+    [--eras N] [--top K] [--summarizer-model M] [--representative-model M]
+    [--skip-representatives] [--no-summarize] ...
+```
+
+Sandbox:
 
 ```
 python summarization_experiments/run_pipeline.py <report.json>
@@ -114,7 +128,8 @@ python summarization_experiments/run_pipeline.py <report.json>
 
 - `--representative-model M` picks the model for Stage 4 (default
   `OPENROUTER_REPRESENTATIVE_MODEL` or `OPENROUTER_MODEL`).
-- `--skip-representatives` runs only the summarize + judge stages.
+- `--skip-representatives` keeps the summaries but skips representative
+  selection (`--no-summarize` skips both LLM stages).
 
 ## Renderer integration (pending)
 
@@ -132,16 +147,9 @@ summarization output has been checked by hand:
 ## Testing
 
 No network (AGENTS.md pattern): `FakeLLM` returns canned JSON and the lyrics
-source is faked. Covered: representative parsing/normalisation (string vs list
-`emotional_tone`, dedupe, cap), caching (one call; key changes with input and
-prompt), `attach_summaries_to_eras`, per-era `representative` wiring, and the new
-CLI flags. Renderer tests are added with the pending renderer work.
-
-## Docs to update
-
-- `docs/phase-3-summarization.md` — link Stage 4 and its prompt.
-- `docs/repo-structure.md` — note the new prompt and sandbox output.
-- `README.md` — keep the sandbox out of the main usage flow until
-  productionised; no CLI change there yet.
-- `CHANGELOG.md` — via the update-changelog skill when this is committed.
-- `summarization_experiments/PROMPT_CHANGELOG.md` — only when explicitly asked.
+source is faked. Covered in `tests/test_summarize.py`:
+representative parsing/normalisation (string vs list `emotional_tone`, dedupe,
+cap), caching (one call), and per-era `representative` wiring via
+`attach_representatives` (including the error path). The sandbox mirrors these in
+`tests/test_summarization_experiments.py`. Renderer tests are added with the
+pending renderer work.

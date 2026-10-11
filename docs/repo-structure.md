@@ -43,9 +43,10 @@ music_graph_analysis/
 │       ├── images.py                # Album-art fetcher -> base64 data URIs.
 │       ├── prompts.py               # Load/render prompt templates.
 │       ├── prompts/
-│       │   └── summarize.txt        # Summarize prompt (package data).
+│       │   ├── summarize.txt        # Summarize prompt (package data).
+│       │   └── representative.txt   # Era representative prompt (package data).
 │       ├── render.py                # Pure SVG/HTML rendering for the charts.
-│       ├── summarize.py             # SongSummarizer + attach_summaries.
+│       ├── summarize.py             # SongSummarizer + summaries/representatives.
 │       └── analysis.py              # Orchestration + report formatting.
 └── tests/
     ├── test_genius.py               # Client request/retry/paging tests.
@@ -102,8 +103,10 @@ Pure, side-effect-free logic (no network or file I/O) that is easy to unit test.
 
 ### `music_graph_analysis/config.py`
 - Summarizer configuration: `DEFAULT_PROMPTS_DIR`, `OPENROUTER_BASE_URL`,
-  `DEFAULT_SUMMARIZER_MODEL`, plus `openrouter_api_key()` and
-  `summarizer_model()` (reads `OPENROUTER_API_KEY` / `OPENROUTER_MODEL`).
+  `DEFAULT_SUMMARIZER_MODEL`, `DEFAULT_REPRESENTATIVE_MODEL`,
+  `MAX_REPRESENTATIVES`, plus `openrouter_api_key()`, `summarizer_model()`
+  (`OPENROUTER_API_KEY` / `OPENROUTER_MODEL`), and `representative_model()`
+  (`OPENROUTER_REPRESENTATIVE_MODEL` -> `OPENROUTER_MODEL` -> default).
 
 ### `music_graph_analysis/llm.py`
 - `OpenRouterClient` — OpenAI-compatible chat-completions client for
@@ -139,17 +142,23 @@ Pure, side-effect-free rendering (no network or file I/O) that returns strings.
 
 ### `music_graph_analysis/prompts.py` + `prompts/`
 - `load_prompt(name)` / `render(template, **values)` load and fill the
-  plain-text templates. `prompts/summarize.txt` is the summarize prompt and
-  ships as package data; rendering is literal `{token}` replacement so the
-  JSON examples inside the prompt keep their braces.
+  plain-text templates. `prompts/summarize.txt` (Stage 2) and
+  `prompts/representative.txt` (Stage 4) ship as package data; rendering is
+  literal `{token}` replacement so the JSON examples inside the prompts keep
+  their braces.
 
 ### `music_graph_analysis/summarize.py`
 - `SongSummarizer` — fetches a song's lyrics, cleans them, calls the LLM with
   the summarize prompt, and parses the strict-JSON summary (cached per model +
   rendered prompt). `summarize_song(song)` returns the summary dict or `None`
-  when there are no usable lyrics.
+  when there are no usable lyrics. `select_representative(songs, era_label=...)`
+  reads an era's `themes`/`emotional_tone` labels at once and returns the most
+  representative ones plus `reasoning` (cached per era + model + prompt).
 - `attach_summaries(result, summarizer)` — walks an analysis result and sets a
   `summary` key on every song (or `None`); never aborts on a per-song error.
+- `attach_representatives(result, summarizer)` — sets `era["representative"]` for
+  every era that has usable summaries (best-effort, storing `{"error": ...}` on
+  failure).
 - `clean_lyrics` / `extract_json` — the pure helpers (snippet/`[editing]`
   rejection and tolerant JSON parsing).
 
@@ -170,11 +179,13 @@ callers can import from the package root.
 ## Entry points
 
 - `src/analyze_artist.py` — CLI for the era analysis. As a final step it
-  summarizes each song's lyrics and attaches the summary; without
-  `OPENROUTER_API_KEY` (or with `--no-summarize`) it warns and skips.
+  summarizes each song's lyrics and selects each era's representative themes /
+  emotional tone; without `OPENROUTER_API_KEY` (or with `--no-summarize`) it
+  warns and skips, and `--skip-representatives` skips just the era stage.
   ```bash
   python src/analyze_artist.py "SWV" [--eras N] [--top K] [--json] [--out DIR|FILE]
                                      [--no-summarize] [--summarizer-model M]
+                                     [--representative-model M] [--skip-representatives]
   ```
 - `src/genius_api_example.py` — prints the raw `/songs/{id}` response.
 - `src/render_report.py` — reads one or more saved reports and writes a
@@ -209,11 +220,17 @@ artist id ──► iter_artist_songs (paged, cached)
                   ▼
           aggregated JSON + console report
                   │
-                  ▼ (final step, best-effort)
+                  ▼ (final steps, best-effort)
           attach_summaries ◄── LyricsSource (lyricsgenius)
                   │              + OpenRouterClient (summarize.txt)
                   ▼
           each song gains a `summary` dict
+                  │
+                  ▼
+          attach_representatives ◄── OpenRouterClient (representative.txt)
+                  │
+                  ▼
+          each era gains a `representative` dict
 ```
 
 ## Tests

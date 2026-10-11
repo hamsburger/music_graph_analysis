@@ -8,6 +8,8 @@ from music_graph_analysis.llm import LLMError
 from music_graph_analysis.prompts import render
 from music_graph_analysis.summarize import (
     SongSummarizer,
+    _normalize_representative,
+    attach_representatives,
     attach_summaries,
     clean_lyrics,
     extract_json,
@@ -52,6 +54,23 @@ SUMMARY_JSON = json.dumps(
     }
 )
 
+REPRESENTATIVE_JSON = json.dumps(
+    {
+        "themes": ["love", "Devotion", "love"],
+        "emotional_tone": ["tender", "longing"],
+        "reasoning": "These recur across the era.",
+    }
+)
+
+ERA_SONGS = [
+    {
+        "id": 1,
+        "title": "A",
+        "summary": {"themes": ["love", "loss"], "emotional_tone": "tender, sad"},
+    },
+    {"id": 2, "title": "B", "summary": {"themes": ["love"], "emotional_tone": "longing"}},
+]
+
 
 def build_summarizer(llm, lyrics_source, cache=None, prompts_dir=DEFAULT_PROMPTS_DIR):
     return SongSummarizer(
@@ -60,6 +79,7 @@ def build_summarizer(llm, lyrics_source, cache=None, prompts_dir=DEFAULT_PROMPTS
         cache=cache,
         prompts_dir=prompts_dir,
         summarizer_model="test/summarizer",
+        representative_model="test/representative",
     )
 
 
@@ -203,3 +223,98 @@ def test_attach_summaries_does_not_abort_on_error():
 
     songs = [song for era in result["eras"] for song in era["songs"]]
     assert [song["summary"] for song in songs] == [None, None]
+
+
+def test_normalize_representative_coerces_string_tone():
+    result = _normalize_representative(
+        {
+            "themes": "love, loss , love",
+            "emotional_tone": "Tender",
+            "reasoning": "  because  ",
+        }
+    )
+
+    assert result["themes"] == ["love", "loss"]
+    assert result["emotional_tone"] == ["Tender"]
+    assert result["reasoning"] == "because"
+
+
+def test_normalize_representative_caps_labels():
+    result = _normalize_representative({"themes": ["a", "b", "c", "d", "e", "f"]})
+
+    assert result["themes"] == ["a", "b", "c", "d"]
+    assert result["emotional_tone"] == []
+
+
+def test_select_representative_parses_and_normalizes():
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    summarizer = build_summarizer(llm, FakeLyricsSource({}))
+
+    result = summarizer.select_representative(
+        ERA_SONGS, era_label="Era 1 (2019–2021)", era_index=0
+    )
+
+    assert result["themes"] == ["love", "Devotion"]
+    assert result["emotional_tone"] == ["tender", "longing"]
+    assert result["reasoning"] == "These recur across the era."
+    assert "key_imagery" not in result
+    assert llm.calls[0]["model"] == "test/representative"
+    assert "themes=[love; loss]" in llm.calls[0]["prompt"]
+
+
+def test_select_representative_cache_prevents_duplicate_calls(tmp_path):
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    cache = JsonCache(tmp_path)
+    summarizer = build_summarizer(llm, FakeLyricsSource({}), cache=cache)
+
+    summarizer.select_representative(ERA_SONGS, era_label="Era 1", era_index=0)
+    summarizer.select_representative(ERA_SONGS, era_label="Era 1", era_index=0)
+
+    assert len(llm.calls) == 1
+
+
+def test_attach_representatives_per_era():
+    result = {
+        "artist": {"id": 9, "name": "Artist"},
+        "eras": [
+            {
+                "era": 0,
+                "label": "Era 1 (2019-01-01 to 2020-01-01)",
+                "songs": [
+                    {
+                        "id": 1,
+                        "title": "A",
+                        "summary": {"themes": ["love"], "emotional_tone": "tender"},
+                    }
+                ],
+            },
+            {"era": 1, "label": "Era 2", "songs": []},
+        ],
+    }
+    llm = FakeLLM([REPRESENTATIVE_JSON])
+    summarizer = build_summarizer(llm, FakeLyricsSource({}))
+
+    attach_representatives(result, summarizer)
+
+    assert result["eras"][0]["representative"]["themes"] == ["love", "Devotion"]
+    assert "representative" not in result["eras"][1]
+    assert len(llm.calls) == 1
+
+
+def test_attach_representatives_records_errors():
+    result = {
+        "artist": {"id": 9, "name": "Artist"},
+        "eras": [
+            {
+                "era": 0,
+                "label": "Era 1",
+                "songs": [{"id": 1, "title": "A", "summary": {"themes": ["love"]}}],
+            }
+        ],
+    }
+    llm = FakeLLM(["not json at all"])
+    summarizer = build_summarizer(llm, FakeLyricsSource({}))
+
+    attach_representatives(result, summarizer)
+
+    assert "error" in result["eras"][0]["representative"]

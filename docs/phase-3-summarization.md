@@ -6,11 +6,11 @@ summarize the lyrics of each era-defining song, then have a second LLM act as a
 
 The first step is a throwaway sandbox under `summarization_experiments/` so we can
 tune prompts on real songs *before* wiring anything into the production
-`analysis.py` pipeline. The summarize stage has since been productionised: a
-summary-only `SongSummarizer` lives in the `music_graph_analysis` package
-(`llm.py`, `lyrics.py`, `summarize.py`, `prompts/summarize.txt`) and is attached
-to every song as the final step of `analyze_artist.py`. The judge remains a
-sandbox experiment.
+`analysis.py` pipeline. The summarize and representative stages have since been
+productionised: `SongSummarizer` lives in the `music_graph_analysis` package
+(`llm.py`, `lyrics.py`, `summarize.py`, `prompts/summarize.txt`,
+`prompts/representative.txt`) and both are run as the final steps of
+`analyze_artist.py`. The judge remains a sandbox experiment.
 
 ## Goal & scope
 
@@ -138,8 +138,9 @@ summarization_experiments/
   chosen. Labels may be merged/consolidated but must be grounded in the era's
   tags. `key_imagery` is intentionally excluded; the renderer keeps selecting it
   by frequency.
-- Output is written to `era["representative"]` in an augmented
-  `results/{artist}/report_enriched.json`. See
+- In production the output is written to `era["representative"]` in the analysis
+  report (`data/report/{artist}.json`, via `attach_representatives`); the sandbox
+  writes it to an augmented `results/{artist}/report_enriched.json`. See
   [representative-selection.md](representative-selection.md) for the full plan.
 
 ### Prompt templates

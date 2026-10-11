@@ -2,7 +2,13 @@
 
 from .analysis import ArtistAnalyzer, format_report
 from .cache import JsonCache
-from .config import DEFAULT_SUMMARIZER_MODEL, openrouter_api_key, summarizer_model
+from .config import (
+    DEFAULT_REPRESENTATIVE_MODEL,
+    DEFAULT_SUMMARIZER_MODEL,
+    openrouter_api_key,
+    representative_model,
+    summarizer_model,
+)
 from .eras import (
     UNKNOWN_ERA,
     EraBounds,
@@ -24,6 +30,7 @@ from .render import (
 )
 from .summarize import (
     SongSummarizer,
+    attach_representatives,
     attach_summaries,
     clean_lyrics,
     extract_json,
@@ -31,6 +38,7 @@ from .summarize import (
 
 __all__ = [
     "ArtistAnalyzer",
+    "DEFAULT_REPRESENTATIVE_MODEL",
     "DEFAULT_SUMMARIZER_MODEL",
     "DIMENSIONS",
     "EraBounds",
@@ -44,6 +52,7 @@ __all__ = [
     "OpenRouterClient",
     "SongSummarizer",
     "UNKNOWN_ERA",
+    "attach_representatives",
     "attach_summaries",
     "build_chart_svg",
     "clean_lyrics",
@@ -55,6 +64,7 @@ __all__ = [
     "openrouter_api_key",
     "parse_release_date",
     "render_html",
+    "representative_model",
     "select_top_songs_per_era",
     "song_pageviews",
     "summarizer_model",

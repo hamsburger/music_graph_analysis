@@ -14,6 +14,7 @@ from pathlib import Path
 from .config import DEFAULT_PROMPTS_DIR
 
 SUMMARIZE_PROMPT = "summarize"
+REPRESENTATIVE_PROMPT = "representative"
 
 
 def load_prompt(name: str, prompts_dir: str | Path | None = None) -> str:

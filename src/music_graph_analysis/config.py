@@ -17,6 +17,12 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 # OpenRouter model slug. Override with OPENROUTER_MODEL or the CLI flag.
 DEFAULT_SUMMARIZER_MODEL = "deepseek/deepseek-chat"
 
+# OpenRouter model slug for per-era representative selection.
+DEFAULT_REPRESENTATIVE_MODEL = "deepseek/deepseek-chat"
+
+# Cap on how many representative themes/emotional tones an era keeps.
+MAX_REPRESENTATIVES = 4
+
 
 def openrouter_api_key() -> str | None:
     """Return the OpenRouter API key from the environment, if set."""
@@ -26,3 +32,17 @@ def openrouter_api_key() -> str | None:
 def summarizer_model() -> str:
     """Return the summarizer model slug (``OPENROUTER_MODEL`` or default)."""
     return os.environ.get("OPENROUTER_MODEL", DEFAULT_SUMMARIZER_MODEL)
+
+
+def representative_model() -> str:
+    """Return the representative-selection model slug.
+
+    Falls back to ``OPENROUTER_MODEL`` and then the built-in default, so the
+    representative stage can be pointed at a stronger model via
+    ``OPENROUTER_REPRESENTATIVE_MODEL`` without changing the summarizer.
+    """
+    return (
+        os.environ.get("OPENROUTER_REPRESENTATIVE_MODEL")
+        or os.environ.get("OPENROUTER_MODEL")
+        or DEFAULT_REPRESENTATIVE_MODEL
+    )

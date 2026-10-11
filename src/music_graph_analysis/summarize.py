@@ -1,10 +1,12 @@
 """Summarize a song's lyrics with an LLM and attach the result to the report.
 
-This is the productionised, summarization-only slice of the Phase 3 sandbox:
-lyrics are fetched via :class:`~music_graph_analysis.lyrics.LyricsSource`,
-cleaned, sent through :class:`~music_graph_analysis.llm.OpenRouterClient` using
-the ``summarize`` prompt, and the parsed summary dict is attached to each song.
-The judge stage stays in the sandbox.
+This is the productionised slice of the Phase 3 sandbox: lyrics are fetched via
+:class:`~music_graph_analysis.lyrics.LyricsSource`, cleaned, sent through
+:class:`~music_graph_analysis.llm.OpenRouterClient` using the ``summarize``
+prompt, and the parsed summary dict is attached to each song. It also hosts the
+per-era representative selection stage: the era's song tags are read at once and
+an LLM picks the most representative ``themes`` and ``emotional_tone``. The judge
+stage stays in the sandbox.
 """
 
 from __future__ import annotations
@@ -13,10 +15,16 @@ import json
 import re
 from typing import Any, Callable
 
-from .config import DEFAULT_PROMPTS_DIR, DEFAULT_SUMMARIZER_MODEL
+from .config import (
+    DEFAULT_PROMPTS_DIR,
+    DEFAULT_REPRESENTATIVE_MODEL,
+    DEFAULT_SUMMARIZER_MODEL,
+    MAX_REPRESENTATIVES,
+)
 from .llm import LLMError
 from .lyrics import LyricsError
 from .naming import artist_folder, content_hash, model_slug, song_label
+from .render import normalize_tags
 from . import prompts
 
 # Lyrics states that carry no usable content.
@@ -69,6 +77,53 @@ def extract_json(text: str) -> dict[str, Any]:
     return parsed
 
 
+def _era_songs_payload(songs: list[dict[str, Any]]) -> str:
+    """Render each song's cleaned themes/tone labels as prompt input lines."""
+    lines: list[str] = []
+    for song in songs:
+        summary = song.get("summary") or {}
+        themes = normalize_tags(summary, "themes")
+        tones = normalize_tags(summary, "emotional_tone")
+        title = song.get("title") or "Untitled"
+        lines.append(
+            f"- {title}: themes=[{'; '.join(themes) or '—'}]; "
+            f"tone=[{'; '.join(tones) or '—'}]"
+        )
+    return "\n".join(lines) if lines else "(no songs with usable tags)"
+
+
+def _normalize_labels(value: Any) -> list[str]:
+    """Coerce a raw LLM label field to a trimmed, de-duplicated, capped list."""
+    if value is None:
+        return []
+    if isinstance(value, str):
+        parts: list[str] = value.split(",")
+    elif isinstance(value, (list, tuple)):
+        parts = [str(part) for part in value]
+    else:
+        parts = [str(value)]
+
+    labels: list[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        label = part.strip().strip("\"'").strip()
+        if label and label.casefold() not in seen:
+            seen.add(label.casefold())
+            labels.append(label)
+        if len(labels) >= MAX_REPRESENTATIVES:
+            break
+    return labels
+
+
+def _normalize_representative(parsed: dict[str, Any]) -> dict[str, Any]:
+    """Normalise a raw representative-selection response into a stable shape."""
+    return {
+        "themes": _normalize_labels(parsed.get("themes")),
+        "emotional_tone": _normalize_labels(parsed.get("emotional_tone")),
+        "reasoning": str(parsed.get("reasoning", "")).strip(),
+    }
+
+
 class SongSummarizer:
     """Summarize individual songs, with optional per-model/input caching."""
 
@@ -80,6 +135,7 @@ class SongSummarizer:
         cache: Any = None,
         prompts_dir: Any = None,
         summarizer_model: str = DEFAULT_SUMMARIZER_MODEL,
+        representative_model: str = DEFAULT_REPRESENTATIVE_MODEL,
     ) -> None:
         self.llm = llm
         self.lyrics_source = lyrics_source
@@ -88,6 +144,7 @@ class SongSummarizer:
             prompts_dir if prompts_dir is not None else DEFAULT_PROMPTS_DIR
         )
         self.summarizer_model = summarizer_model
+        self.representative_model = representative_model
 
     def _cached(self, key: str, fetch: Callable[[], Any]) -> Any:
         if self.cache is not None:
@@ -154,6 +211,40 @@ class SongSummarizer:
             title=title,
         )
 
+    def select_representative(
+        self,
+        songs: list[dict[str, Any]],
+        *,
+        era_label: str,
+        era_index: int | None = None,
+        artist_id: int | None = None,
+        artist_name: str | None = None,
+    ) -> dict[str, Any]:
+        """Pick the era's most representative themes/tone (cached per model + input).
+
+        ``songs`` are era song dicts that each carry a ``summary``. Only ``themes``
+        and ``emotional_tone`` are considered; ``key_imagery`` is left to the
+        renderer's frequency-based selection.
+        """
+        folder = artist_folder(artist_name, artist_id)
+        template = prompts.load_prompt(
+            prompts.REPRESENTATIVE_PROMPT, self.prompts_dir
+        )
+        prompt = prompts.render(
+            template, era=era_label, songs=_era_songs_payload(songs)
+        )
+        index = era_index if era_index is not None else "x"
+        key = (
+            f"{folder}/representative/era-{index}"
+            f"-{model_slug(self.representative_model)}-{content_hash(prompt)}"
+        )
+
+        def fetch() -> dict[str, Any]:
+            response = self.llm.complete(prompt, model=self.representative_model)
+            return _normalize_representative(extract_json(response))
+
+        return self._cached(key, fetch)
+
 
 def attach_summaries(
     result: dict[str, Any],
@@ -182,5 +273,44 @@ def attach_summaries(
                 song["summary"] = None
                 if log:
                     log(f"  skipped: {exc}")
+
+    return result
+
+
+def attach_representatives(
+    result: dict[str, Any],
+    summarizer: SongSummarizer,
+    *,
+    log: Callable[[str], None] | None = None,
+) -> dict[str, Any]:
+    """Attach ``era["representative"]`` for every era with usable summaries.
+
+    Best-effort: an era whose representative selection fails stores an
+    ``{"error": "..."}`` dict instead of aborting the run. Eras with no usable
+    song summaries are left untouched.
+    """
+    artist = result.get("artist", {})
+    artist_id = artist.get("id")
+    artist_name = artist.get("name")
+
+    for index, era in enumerate(result.get("eras", [])):
+        songs = [song for song in era.get("songs", []) if song.get("summary")]
+        if not songs:
+            continue
+        label = era.get("label") or f"Era {index + 1}"
+        if log:
+            log(f"Selecting representative labels for {label}...")
+        try:
+            era["representative"] = summarizer.select_representative(
+                songs,
+                era_label=label,
+                era_index=index,
+                artist_id=artist_id,
+                artist_name=artist_name,
+            )
+        except (LLMError, ValueError) as exc:
+            era["representative"] = {"error": str(exc)}
+            if log:
+                log(f"  skipped: {exc}")
 
     return result

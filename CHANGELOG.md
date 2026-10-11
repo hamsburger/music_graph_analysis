@@ -3,6 +3,18 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
+## d66ef1b — 2026-10-11
+
+**Added** per-era representative selection to the production package:
+`SongSummarizer.select_representative` and `attach_representatives` read each
+era's song tags and attach an `era["representative"]` dict (themes, tone,
+reasoning), backed by a new `representative` prompt, config
+(`DEFAULT_REPRESENTATIVE_MODEL`, `MAX_REPRESENTATIVES`,
+`representative_model()`), and network-free tests. **Changed** `analyze_artist.py`
+to run the stage after summarization with `--representative-model` and
+`--skip-representatives` flags, and updated the README and docs to describe the
+productionised stage.
+
 ## cd303e5 — 2026-10-11
 
 **Added** a fourth summarization sandbox stage that has an LLM pick each era's

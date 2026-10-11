@@ -71,10 +71,11 @@ OPENROUTER_MODEL=deepseek/deepseek-chat
 
 `.env` is gitignored; never commit real credentials.
 
-`OPENROUTER_API_KEY` enables the LLM lyric summaries attached to each song as
-the final analysis step; without it the analysis runs and summaries are skipped
-with a warning. `OPENROUTER_MODEL` is the summarizer model (default
-`deepseek/deepseek-chat`).
+`OPENROUTER_API_KEY` enables the LLM lyric summaries (and per-era representative
+selection) attached as the final analysis step; without it the analysis runs and
+these steps are skipped with a warning. `OPENROUTER_MODEL` is the summarizer
+model (default `deepseek/deepseek-chat`); `OPENROUTER_REPRESENTATIVE_MODEL`
+optionally points the representative-selection step at a different model.
 
 ## Running the example
 
@@ -98,8 +99,10 @@ selected by pageviews, and each song's relationships are collected: what it
 
 As a final step, each song's lyrics are fetched and summarized with the LLM, and
 the resulting `summary` dict (`overview`, `themes`, `emotional_tone`,
-`key_imagery`) is attached to the song. This step is best-effort: without
-`OPENROUTER_API_KEY` it is skipped with a warning.
+`key_imagery`) is attached to the song. Then, per era, the songs' `themes` and
+`emotional_tone` labels are read at once and the most representative ones (with a
+short rationale) are attached as `era["representative"]`. Both steps are
+best-effort: without `OPENROUTER_API_KEY` they are skipped with a warning.
 
 ```bash
 python src/analyze_artist.py "SWV"
@@ -114,8 +117,11 @@ Useful flags:
   is created; pass a `.json` path to choose the exact file.
 - `--no-cache` — disable the on-disk response cache (`data/cache/`).
 - `--min-interval SECONDS` — client-side throttle between Genius API requests.
-- `--no-summarize` — skip the LLM lyric summarization step.
+- `--no-summarize` — skip both LLM stages (summary + representative selection).
 - `--summarizer-model M` — OpenRouter model for summaries (default `OPENROUTER_MODEL`).
+- `--representative-model M` — OpenRouter model for per-era representative
+  selection (default `OPENROUTER_REPRESENTATIVE_MODEL` or `OPENROUTER_MODEL`).
+- `--skip-representatives` — keep the summaries but skip representative selection.
 
 ## Rendering the visualization
 

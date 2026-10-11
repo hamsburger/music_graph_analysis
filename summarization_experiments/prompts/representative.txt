@@ -10,8 +10,7 @@ Rules:
   beyond what the songs express.
 - Pick the most representative labels, preferring ones shared by or central to
   multiple songs. Aim for 3 to 4 themes and 3 to 4 emotional tones.
-- Explain, in a short paragraph, why the labels you chose best represent the era
-  and note any labels you deliberately left out.
+- Explain, in a short paragraph, why the labels you chose best represent the era.
 - Respond with STRICT JSON only, no prose and no markdown fences.
 
 Return JSON with exactly these keys:
