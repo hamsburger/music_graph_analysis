@@ -32,8 +32,9 @@ and surface what actually characterises the era, and to justify the choice.
 
 - Stage 4 (prompt + `SongSummarizer.select_representative` + CLI + tests):
   **implemented** in production and the sandbox.
-- Renderer integration (`src/music_graph_analysis/render.py`): **pending** until
-  the summarization output has been manually inspected.
+- Renderer integration (`src/music_graph_analysis/render.py`): **implemented**
+  (representative labels for `themes`/`emotional_tone`, frequency fallback, and
+  the era-band reasoning tooltip).
 
 ## Pipeline stage
 
@@ -131,18 +132,18 @@ python summarization_experiments/run_pipeline.py <report.json>
 - `--skip-representatives` keeps the summaries but skips representative
   selection (`--no-summarize` skips both LLM stages).
 
-## Renderer integration (pending)
+## Renderer integration
 
-Planned changes to `src/music_graph_analysis/render.py`, held until the
-summarization output has been checked by hand:
+Implemented in `src/music_graph_analysis/render.py`:
 
 - `REPRESENTATIVE_DIMENSIONS = ("themes", "emotional_tone")`.
 - `era_representative(era, dimension)` -> `normalize_tags(era["representative"], dimension)`.
-- In `build_chart_svg`, for `themes`/`emotional_tone` use the era's
-  representative labels when present and fall back to `counts.most_common`
-  otherwise; `key_imagery` always uses frequency counts.
-- Surface `era["representative"]["reasoning"]` as a native SVG `<title>` on the
-  era band (per-era tooltip); song tooltips stay unchanged.
+- `era_dimension_tags(era, dimension, max_tags)`: for `themes`/`emotional_tone`
+  use the era's representative labels when present, capped at `max_tags`, and
+  fall back to `counts.most_common` otherwise; `key_imagery` always uses
+  frequency counts.
+- `era["representative"]["reasoning"]` is surfaced as a native SVG `<title>` on
+  the era band rect (per-era hover tooltip); song tooltips stay unchanged.
 
 ## Testing
 
@@ -151,5 +152,6 @@ source is faked. Covered in `tests/test_summarize.py`:
 representative parsing/normalisation (string vs list `emotional_tone`, dedupe,
 cap), caching (one call), and per-era `representative` wiring via
 `attach_representatives` (including the error path). The sandbox mirrors these in
-`tests/test_summarization_experiments.py`. Renderer tests are added with the
-pending renderer work.
+`tests/test_summarization_experiments.py`. Renderer coverage lives in
+`tests/test_render.py` (`era_representative`, `era_dimension_tags` representative
+vs frequency selection, and the era-band reasoning `<title>`).

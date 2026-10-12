@@ -85,7 +85,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "memory",
+          "unrequited love",
+          "relationship struggles",
+          "transience"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "hurt",
+          "resigned"
+        ],
+        "reasoning": "The themes 'memory' and 'transience' are central to 'book full of butterflies,' while 'unrequited love' and 'relationship struggles' dominate 'to whom it may concern,' making them representative of the era. Emotionally, 'reflective' captures the wistful tone of the first song, while 'hurt' and 'resigned' align with the emotional pain and resignation expressed in the second song, reflecting the era's overall emotional landscape."
+      }
     },
     {
       "era": 1,
@@ -260,7 +274,22 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "betrayal",
+          "heartbreak",
+          "self-reflection",
+          "toxic love"
+        ],
+        "emotional_tone": [
+          "hurt",
+          "resentful",
+          "reflective",
+          "regretful"
+        ],
+        "reasoning": "The era is dominated by themes of betrayal and heartbreak, often intertwined with toxic love, as seen in multiple songs. Self-reflection is a recurring theme, highlighting introspection amidst emotional turmoil. The emotional tones of hurt, resentment, and regret are central, reflecting the pain and introspection expressed across the songs."
+      }
     },
     {
       "era": 2,
@@ -444,7 +473,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "lost love",
+          "emotional conflict",
+          "self-reflection",
+          "human connection"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "conflicted",
+          "resigned"
+        ],
+        "reasoning": "The era is dominated by themes of lost love and emotional conflict, which appear in multiple songs. Self-reflection and human connection also recur, reflecting introspection and enduring relationships. The emotional tone is consistently reflective and conflicted, with resignation appearing in songs dealing with moving on, making these labels central to the era."
+      }
     },
     {
       "era": 3,
@@ -623,7 +666,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "romantic love",
+          "betrayal",
+          "duality",
+          "gender roles"
+        ],
+        "emotional_tone": [
+          "conflicted",
+          "hurt",
+          "reflective"
+        ],
+        "reasoning": "The themes 'romantic love,' 'betrayal,' 'duality,' and 'gender roles' are central to multiple songs, reflecting the era's focus on complex relationships and societal expectations. The emotional tones 'conflicted,' 'hurt,' and 'reflective' are consistently present across the songs, capturing the era's introspective and emotionally charged nature."
+      }
     },
     {
       "era": 4,
@@ -796,7 +853,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "relationships",
+          "struggle",
+          "societal critique",
+          "self-reflection"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "frustrated",
+          "regretful"
+        ],
+        "reasoning": "The themes 'relationships' and 'struggle' are central to multiple songs, reflecting personal and societal challenges. 'Societal critique' and 'self-reflection' are recurring, highlighting introspection and external commentary. Emotionally, 'reflective' dominates across songs, while 'frustrated' and 'regretful' capture the era's prevalent tones of discontent and sorrow."
+      }
     },
     {
       "era": "unknown",
@@ -872,7 +943,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "lost love",
+          "regret",
+          "love",
+          "selflessness"
+        ],
+        "emotional_tone": [
+          "conflicted",
+          "reflective",
+          "earnest"
+        ],
+        "reasoning": "The era is characterized by themes of love and its complexities, including lost love and regret, as well as acts of kindness and selflessness. The emotional tone is predominantly reflective, with a mix of conflict and earnestness, capturing the introspective and heartfelt nature of the songs."
+      }
     }
   ]
 }

@@ -132,6 +132,11 @@ popularity, each drawn as a shape with its album thumbnail embedded, and a
 dropdown to switch between **themes**, **key imagery**, and **emotional tone**.
 When more than one report is combined, an **artist** dropdown appears too.
 
+Era labels for **themes** and **emotional tone** use each era's LLM-selected
+`representative` labels when the report has them (hover an era band to see the
+rationale); **key imagery** and reports without representatives fall back to the
+top tags by frequency.
+
 ```bash
 # one artist
 python src/render_report.py --in data/report/daniel_caesar.json --out pages/index.html

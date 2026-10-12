@@ -8,6 +8,8 @@ from music_graph_analysis.render import (
     _jitter_for_song,
     _song_y,
     build_chart_svg,
+    era_dimension_tags,
+    era_representative,
     era_tag_counts,
     normalize_tags,
     render_html,
@@ -121,6 +123,88 @@ def test_era_tag_counts_aggregates_across_songs():
     counts = era_tag_counts(era, "themes")
     assert counts["love"] == 2
     assert counts["loss"] == 1
+
+
+def test_era_representative_reads_and_cleans_labels():
+    era = make_result()["eras"][0]
+    era["representative"] = {
+        "themes": ["Devotion", "love", "love"],
+        "emotional_tone": ["Tender", "longing"],
+        "reasoning": "why",
+    }
+    assert era_representative(era, "themes") == ["devotion", "love"]
+    assert era_representative(era, "emotional_tone") == ["tender", "longing"]
+
+
+def test_era_representative_empty_without_selection():
+    era = make_result()["eras"][0]
+    assert era_representative(era, "themes") == []
+    era["representative"] = {"error": "boom"}
+    assert era_representative(era, "themes") == []
+
+
+def test_era_dimension_tags_prefers_representative():
+    era = make_result()["eras"][0]
+    era["representative"] = {"themes": ["yearning", "distance"]}
+    assert era_dimension_tags(era, "themes") == ["yearning", "distance"]
+
+
+def test_era_dimension_tags_caps_representative():
+    era = make_result()["eras"][0]
+    era["representative"] = {"themes": ["a", "b", "c", "d", "e"]}
+    assert era_dimension_tags(era, "themes", max_tags=3) == ["a", "b", "c"]
+
+
+def test_era_dimension_tags_falls_back_when_dimension_absent():
+    era = make_result()["eras"][0]
+    assert era_dimension_tags(era, "themes") == ["love", "loss"]
+    era["representative"] = {"themes": ["yearning"]}
+    assert era_dimension_tags(era, "key_imagery") == ["rain"]
+
+
+def test_build_chart_svg_uses_representative_labels():
+    result = make_result()
+    result["eras"][0]["representative"] = {
+        "themes": ["yearning"],
+        "emotional_tone": ["wistful"],
+        "reasoning": "These recur.",
+    }
+    svg = build_chart_svg(result, {})
+    assert ">yearning</text>" in svg
+    assert ">wistful</text>" in svg
+    assert ">love</text>" not in svg
+
+
+def test_build_chart_svg_falls_back_to_frequency_tags():
+    svg = build_chart_svg(make_result(), {})
+    assert ">love</text>" in svg
+
+
+def test_build_chart_svg_key_imagery_ignores_representative():
+    result = make_result()
+    result["eras"][0]["representative"] = {
+        "themes": ["yearning"],
+        "key_imagery": ["a made up image"],
+        "reasoning": "x",
+    }
+    svg = build_chart_svg(result, {})
+    assert ">rain</text>" in svg
+    assert "a made up image" not in svg
+
+
+def test_build_chart_svg_era_band_shows_reasoning_title():
+    result = make_result()
+    result["eras"][0]["representative"] = {
+        "themes": ["yearning"],
+        "reasoning": "These labels recur across the era.",
+    }
+    svg = build_chart_svg(result, {})
+    assert "<title>These labels recur across the era.</title>" in svg
+
+
+def test_build_chart_svg_omits_reasoning_title_when_absent():
+    svg = build_chart_svg(make_result(), {})
+    assert "<title>" not in svg
 
 
 def test_build_chart_svg_embeds_album_art():

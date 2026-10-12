@@ -38,9 +38,17 @@ network.
 
 - `src/music_graph_analysis/render.py` — pure functions, no I/O:
   - `DIMENSIONS = ("themes", "key_imagery", "emotional_tone")`.
+  - `REPRESENTATIVE_DIMENSIONS = ("themes", "emotional_tone")` — dimensions whose
+    era labels come from the LLM representative selection when available.
   - `normalize_tags(summary, dimension) -> list[str]` — lists used as-is; the
     comma-separated `emotional_tone` is split; trimmed, lowercased, deduped.
   - `era_tag_counts(era, dimension) -> Counter` — tag frequency across an era.
+  - `era_representative(era, dimension) -> list[str]` — the cleaned
+    `era["representative"]` labels (see
+    [representative-selection.md](representative-selection.md)).
+  - `era_dimension_tags(era, dimension, max_tags)` — uses the representative
+    labels for `REPRESENTATIVE_DIMENSIONS` when present, falling back to
+    frequency; `key_imagery` always uses frequency.
   - `build_chart_svg(result, images, *, width, height) -> str` — one SVG per
     artist: era bands, axes, and song shapes in a shared base layer, with album
     art (`images[song_id]`) embedded **once** per song, plus one toggleable
@@ -66,8 +74,12 @@ network.
   down the plot area (staggered between adjacent eras) so shapes do not overlap
   vertically. **Radius** `∝ sqrt(pageviews)`, clamped, so circle size still
   conveys popularity.
-- **Labels per era** = top tags for the selected dimension, by frequency
-  (counts are not shown).
+- **Labels per era** = for `themes` and `emotional_tone`, the LLM's
+  representative labels when the report has `era["representative"]` (falling
+  back to top tags by frequency otherwise); `key_imagery` always uses top tags by
+  frequency. Counts are not shown. When an era has representative `reasoning`, it
+  is emitted as a native SVG `<title>` on the era band so hovering the band shows
+  the rationale.
 - **Hover tooltip** — a JS-driven tooltip on each song shape shows the song
   title, its album name (when available), its `overview` summary text (when
   available), plus its tags for **all three** dimensions, with the currently

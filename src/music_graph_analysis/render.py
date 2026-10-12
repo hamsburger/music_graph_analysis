@@ -23,6 +23,10 @@ from typing import Any, Iterable
 
 DIMENSIONS = ("themes", "key_imagery", "emotional_tone")
 
+# Dimensions whose era labels come from the LLM's representative selection when
+# available (see :func:`era_representative`); ``key_imagery`` stays frequency-based.
+REPRESENTATIVE_DIMENSIONS = ("themes", "emotional_tone")
+
 DIMENSION_LABELS = {
     "themes": "Themes",
     "key_imagery": "Key imagery",
@@ -86,6 +90,39 @@ def era_tag_counts(era: dict[str, Any], dimension: str) -> Counter[str]:
         for tag in normalize_tags(song.get("summary"), dimension):
             counts[tag] += 1
     return counts
+
+
+def era_representative(era: dict[str, Any], dimension: str) -> list[str]:
+    """Return the era's LLM-selected representative labels for ``dimension``.
+
+    Reads ``era["representative"]`` (as produced by
+    :func:`~music_graph_analysis.summarize.attach_representatives`) and cleans
+    it with :func:`normalize_tags`. Returns an empty list when the era has no
+    representative selection (or it errored).
+    """
+    representative = era.get("representative")
+    if not isinstance(representative, dict):
+        return []
+    return normalize_tags(representative, dimension)
+
+
+def era_dimension_tags(
+    era: dict[str, Any],
+    dimension: str,
+    max_tags: int = MAX_TAGS_PER_ERA,
+) -> list[str]:
+    """Return the labels to show for ``dimension`` in ``era``.
+
+    For :data:`REPRESENTATIVE_DIMENSIONS` the era's ``representative`` labels are
+    used when present, capped at ``max_tags``; otherwise (and always for
+    ``key_imagery``) it falls back to the most common tags by frequency.
+    """
+    if dimension in REPRESENTATIVE_DIMENSIONS:
+        representative = era_representative(era, dimension)
+        if representative:
+            return representative[:max_tags]
+    counts = era_tag_counts(era, dimension)
+    return [tag for tag, _ in counts.most_common(max_tags)]
 
 
 def _esc(value: Any) -> str:
@@ -271,10 +308,19 @@ def build_chart_svg(
     for era_index, era in enumerate(eras):
         x0, x1 = era_x(era)
         band_fill = _BAND_FILLS[era_index % len(_BAND_FILLS)]
-        parts.append(
-            f'<rect x="{x0:.1f}" y="{top:.1f}" width="{x1 - x0:.1f}" '
-            f'height="{plot_h:.1f}" fill="{band_fill}"/>'
-        )
+        reasoning = (era.get("representative") or {}).get("reasoning")
+        reasoning = reasoning.strip() if isinstance(reasoning, str) else ""
+        if reasoning:
+            parts.append(
+                f'<rect x="{x0:.1f}" y="{top:.1f}" width="{x1 - x0:.1f}" '
+                f'height="{plot_h:.1f}" fill="{band_fill}">'
+                f"<title>{_esc(reasoning)}</title></rect>"
+            )
+        else:
+            parts.append(
+                f'<rect x="{x0:.1f}" y="{top:.1f}" width="{x1 - x0:.1f}" '
+                f'height="{plot_h:.1f}" fill="{band_fill}"/>'
+            )
 
         title, subtitle = _short_era_label(era)
         center = (x0 + x1) / 2
@@ -333,8 +379,7 @@ def build_chart_svg(
         for era in eras:
             x0, x1 = era_x(era)
             center = (x0 + x1) / 2
-            counts = era_tag_counts(era, dimension)
-            tags = [tag for tag, _ in counts.most_common(max_tags)]
+            tags = era_dimension_tags(era, dimension, max_tags)
             for row, tag in enumerate(tags):
                 y = top + plot_h - 8 - (len(tags) - 1 - row) * 14
                 parts.append(

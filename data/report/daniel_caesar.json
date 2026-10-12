@@ -329,7 +329,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "love",
+          "time",
+          "spirituality",
+          "acceptance"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "passionate",
+          "uplifting"
+        ],
+        "reasoning": "The themes of 'love' and 'time' are central to multiple songs, reflecting the era's focus on relationships and the passage of time. 'Spirituality' and 'acceptance' emerge as recurring motifs, addressing deeper existential questions. The emotional tones of 'reflective', 'passionate', and 'uplifting' dominate, capturing the era's introspective yet hopeful and reverent mood."
+      }
     },
     {
       "era": 1,
@@ -657,7 +671,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "love",
+          "longing",
+          "heartbreak",
+          "emotional dependence"
+        ],
+        "emotional_tone": [
+          "yearning",
+          "resigned",
+          "vulnerable"
+        ],
+        "reasoning": "The era is dominated by themes of love and longing, often intertwined with heartbreak and emotional dependence, as seen in multiple songs. The emotional tone is consistently yearning and vulnerable, with a resigned undertone reflecting the struggles and introspection present in the lyrics."
+      }
     },
     {
       "era": 2,
@@ -910,7 +938,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "self-reflection",
+          "resilience",
+          "existential reflection",
+          "relationship struggles"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "resilient",
+          "introspective"
+        ],
+        "reasoning": "The themes 'self-reflection' and 'resilience' appear in multiple songs, indicating their centrality to this era. 'Existential reflection' and 'relationship struggles' are also prominent, reflecting deeper personal and interpersonal exploration. The emotional tones 'reflective', 'resilient', and 'introspective' are consistently present across songs, capturing the era's contemplative and enduring spirit."
+      }
     },
     {
       "era": 3,
@@ -1084,7 +1126,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "enduring love",
+          "personal growth",
+          "nostalgia",
+          "resilience"
+        ],
+        "emotional_tone": [
+          "hopeful",
+          "reflective",
+          "resolute"
+        ],
+        "reasoning": "The themes 'enduring love,' 'personal growth,' 'nostalgia,' and 'resilience' are central to multiple songs, reflecting a focus on lasting relationships, self-improvement, and overcoming challenges. The emotional tones 'hopeful,' 'reflective,' and 'resolute' consistently appear across the songs, capturing a blend of optimism, introspection, and determination that defines this era."
+      }
     },
     {
       "era": 4,
@@ -1260,7 +1316,21 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "love",
+          "self-reflection",
+          "transformation",
+          "uncertainty"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "yearning",
+          "introspective"
+        ],
+        "reasoning": "The themes of love and self-reflection are central to multiple songs, appearing in 'Who Knows,' 'Rearrange My World,' and 'Moon.' Transformation is a recurring theme in 'Rearrange My World,' while uncertainty is prominent in 'Who Knows.' The emotional tones of reflective, yearning, and introspective are consistently present across most songs, capturing the era's contemplative and emotionally charged nature."
+      }
     },
     {
       "era": "unknown",
@@ -1308,7 +1378,19 @@
             ]
           }
         }
-      ]
+      ],
+      "representative": {
+        "themes": [
+          "loss of innocence",
+          "nostalgia",
+          "personal growth"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "melancholic"
+        ],
+        "reasoning": "The theme 'loss of innocence' is central to the song 'innocence*' and encapsulates the era's focus on transition and maturation. 'Nostalgia' and 'personal growth' further highlight the reflective nature of this period. The emotional tones 'reflective' and 'melancholic' are consistent with the introspective and somber mood conveyed in the song, making them representative of the era as a whole."
+      }
     }
   ]
 }

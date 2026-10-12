@@ -3,7 +3,18 @@
 Brief, reverse-chronological notes on project changes. Each entry is keyed by
 the commit's short hash and labels what was added, changed, or removed.
 
-## d66ef1b — 2026-10-11
+## e5151ed — 2026-10-11
+
+**Added** renderer support for era representative labels: `themes` and
+`emotional_tone` bands use each report's `era["representative"]` when present
+(falling back to frequency), `key_imagery` stays frequency-based, and each era
+band carries a native SVG `<title>` with the representative reasoning. **Added**
+`REPRESENTATIVE_DIMENSIONS`, `era_representative`, and `era_dimension_tags`, with
+tests. **Changed** the regenerated `data/report/*.json` (now including Taylor
+Swift) to carry representatives and updated `pages/index.html`, the README, and
+the Phase 4 / representative docs.
+
+## 2ad94e2 — 2026-10-11
 
 **Added** per-era representative selection to the production package:
 `SongSummarizer.select_representative` and `attach_representatives` read each

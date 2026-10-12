@@ -129,14 +129,21 @@ Pure, side-effect-free logic (no network or file I/O) that is easy to unit test.
 Pure, side-effect-free rendering (no network or file I/O) that returns strings.
 
 - `DIMENSIONS` — `("themes", "key_imagery", "emotional_tone")`.
+- `REPRESENTATIVE_DIMENSIONS` — `("themes", "emotional_tone")`; the dimensions
+  whose era labels prefer the LLM representative selection.
 - `normalize_tags(summary, dimension)` — clean/dedupe tags (splits the
   comma-separated `emotional_tone`).
 - `era_tag_counts(era, dimension)` — tag frequency across an era.
+- `era_representative(era, dimension)` — the cleaned `era["representative"]`
+  labels, or `[]` when absent.
+- `era_dimension_tags(era, dimension, max_tags)` — representative labels for
+  `REPRESENTATIVE_DIMENSIONS` when present, else the top tags by frequency.
 - `build_chart_svg(result, images, ...)` — one SVG per artist: time x-axis with
-  era bands, songs spread evenly down each era (staggered, with a deterministic
-  x-jitter) and sized by `sqrt(pageviews)`, drawn as clipped circles filled
-  with `images[song_id]` (embedded once), and one toggleable tag layer per
-  dimension.
+  era bands (carrying a native `<title>` with the era's representative
+  `reasoning` when present), songs spread evenly down each era (staggered, with a
+  deterministic x-jitter) and sized by `sqrt(pageviews)`, drawn as clipped
+  circles filled with `images[song_id]` (embedded once), and one toggleable tag
+  layer per dimension.
 - `render_html(artists, images, *, title)` — a self-contained page with one SVG
   per artist plus artist/dimension dropdowns and toggle JS.
 

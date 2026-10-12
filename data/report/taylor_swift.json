@@ -1,0 +1,2504 @@
+{
+  "artist": {
+    "id": 1177,
+    "name": "Taylor Swift",
+    "url": "https://genius.com/artists/Taylor-swift"
+  },
+  "span": {
+    "start": "2006-06-19",
+    "end": "2026-09-25",
+    "n_eras": 5
+  },
+  "eras": [
+    {
+      "era": 0,
+      "label": "Era 1 (2006-06-19 to 2010-07-08)",
+      "start": "2006-06-19",
+      "end": "2010-07-08",
+      "total_samples": 34,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 34,
+        "interpolates": 0,
+        "interpolated_by": 21
+      },
+      "songs": [
+        {
+          "id": 98869,
+          "title": "You Belong With Me",
+          "artist_names": "Taylor Swift",
+          "release_date": "2008-11-04",
+          "pageviews": 2114834,
+          "song_art_image_url": "https://images.genius.com/69651d2fbc119d574e4d80425fdb053b.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/69651d2fbc119d574e4d80425fdb053b.300x300x1.jpg",
+          "album": "Fearless",
+          "sample_count": 8,
+          "sampled_by": [
+            {
+              "id": 6944977,
+              "title": "PL4Y Y0UR ROL3 xx",
+              "artist": "Sig.Carlito",
+              "release_date": "2021-09-21"
+            },
+            {
+              "id": 5347186,
+              "title": "DAYBYDAY",
+              "artist": "AOL",
+              "release_date": "2019-02-28"
+            },
+            {
+              "id": 4461286,
+              "title": "Q",
+              "artist": "EPIC // 555",
+              "release_date": "2019-02-05"
+            },
+            {
+              "id": 9906453,
+              "title": "She wears High Heels, I Wear New Rocks",
+              "artist": "Haunt (electronic)",
+              "release_date": "2023-12-27"
+            },
+            {
+              "id": 9142872,
+              "title": "my friends are so weird",
+              "artist": "‍xaev",
+              "release_date": "2023-05-18"
+            },
+            {
+              "id": 8666114,
+              "title": "Kagayakashiki Nichijou",
+              "artist": "Maki Ligon",
+              "release_date": "2020-07-01"
+            },
+            {
+              "id": 13197139,
+              "title": "Taylor Swift",
+              "artist": "The Midnight Beast",
+              "release_date": "2014-11-22"
+            },
+            {
+              "id": 732355,
+              "title": "United State of Pop 2009 (Blame It On the Pop)",
+              "artist": "DJ Earworm",
+              "release_date": "2009-12-27"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 5435987,
+              "title": "BiG KIDS",
+              "artist": "FROMTHEHEART (Ft. ana kennedy & jedwill)",
+              "release_date": "2020-04-08"
+            },
+            {
+              "id": 3805264,
+              "title": "Dumb Slut (Fever)",
+              "artist": "Juice WRLD",
+              "release_date": null
+            },
+            {
+              "id": 3726375,
+              "title": "Chitty Bang",
+              "artist": "Erika Costell (Ft. Jake Paul)",
+              "release_date": "2018-05-18"
+            },
+            {
+              "id": 5619033,
+              "title": "Food Belongs in Me",
+              "artist": "Nuclear Bubble Wrap (Ft. Johnna Day)",
+              "release_date": "2010-06-15"
+            },
+            {
+              "id": 13554394,
+              "title": "I’m not like other boys",
+              "artist": "Matt Storer",
+              "release_date": "2024-04-23"
+            },
+            {
+              "id": 11496173,
+              "title": "You Belong With Me (Parody)",
+              "artist": "Sabrina Carpenter, Heidi Gardner, Ego Nwodim, Sarah Sherman, Marcello Hernández & Saturday Night Live",
+              "release_date": "2025-02-16"
+            },
+            {
+              "id": 13058480,
+              "title": "Here In Iron 3",
+              "artist": "Fulham",
+              "release_date": "2026-02-01"
+            },
+            {
+              "id": 592646,
+              "title": "TMZ",
+              "artist": "\"Weird Al\" Yankovic (Ft. Tom Kenny)",
+              "release_date": "2011-06-21"
+            },
+            {
+              "id": 11494029,
+              "title": "Domingo (Vow Renewal)",
+              "artist": "Saturday Night Live (Ft. Andrew Dismukes, Andy Samberg, Bad Bunny, Beck Bennett, Bowen Yang, Chloe Fineman, Ego Nwodim, Heidi Gardner, Kyle M, Marcello Hernández, Martin Short, Molly Shannon, Pedro Pascal, Sabrina Carpenter & Sarah Sherman)",
+              "release_date": "2025-02-16"
+            },
+            {
+              "id": 10192552,
+              "title": "We Found Love [Leondis Remix] /  You Belong With Me (Mixed)",
+              "artist": "Taylor Swift & Rihanna (Ft. Calvin Harris)",
+              "release_date": "2024-03-14"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a deep connection and understanding with someone who is currently in a relationship with another person. The speaker contrasts themselves with the current girlfriend, highlighting their shared humor ('she doesn't get your humor like I do'), music preferences ('listening to the kind of music she doesn't like'), and intimate knowledge of the person's life ('she'll never know your story like I do'). The speaker believes they are the better match, as they understand the person more deeply ('I'm the one who understands you') and have been consistently present ('Been here all along'). They envision a simpler, happier life together ('Walk in the streets with you and your worn-out jeans', 'Laughing on a park bench, thinking to myself'). The speaker recalls shared moments ('Oh, I remember you driving to my house') and emotional support ('I'm the one who makes you laugh when you know you're 'bout to cry'), reinforcing their belief that the person belongs with them ('You belong with me').",
+            "themes": [
+              "unrequited love",
+              "longing",
+              "comparison",
+              "emotional connection"
+            ],
+            "emotional_tone": "yearning, hopeful, slightly frustrated",
+            "key_imagery": [
+              "typical Tuesday night",
+              "worn-out jeans",
+              "park bench",
+              "smile that can light up this whole town",
+              "driving to my house in the middle of the night"
+            ]
+          }
+        },
+        {
+          "id": 98867,
+          "title": "Love Story",
+          "artist_names": "Taylor Swift",
+          "release_date": "2008-09-12",
+          "pageviews": 2041317,
+          "song_art_image_url": "https://images.genius.com/117f4c032fa50c3be689a2694a7c9a9b.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/117f4c032fa50c3be689a2694a7c9a9b.300x300x1.jpg",
+          "album": "Fearless",
+          "sample_count": 25,
+          "sampled_by": [
+            {
+              "id": 8995934,
+              "title": "Homeswitcher",
+              "artist": "9851",
+              "release_date": "2023-04-07"
+            },
+            {
+              "id": 8939486,
+              "title": "I’d do anything for you",
+              "artist": "yung van",
+              "release_date": "2017-11-26"
+            },
+            {
+              "id": 8906951,
+              "title": "Don’t go",
+              "artist": "yandere",
+              "release_date": "2021-09-01"
+            },
+            {
+              "id": 8515259,
+              "title": "OBSESSED POST-FRAILTY EXTENDED MIX",
+              "artist": "Jane Remover",
+              "release_date": "2021-11-12"
+            },
+            {
+              "id": 8136341,
+              "title": "i started the UTSC to dariacore pipeline",
+              "artist": "‍xaev",
+              "release_date": "2021-12-27"
+            },
+            {
+              "id": 8136315,
+              "title": "‍u can’t look at my priv twitter sorry",
+              "artist": "‍xaev",
+              "release_date": "2021-12-27"
+            },
+            {
+              "id": 6795585,
+              "title": "Decade of Pop: The 2000s (100 Song Mashup)",
+              "artist": "DJ Earworm",
+              "release_date": "2021-04-19"
+            },
+            {
+              "id": 6780601,
+              "title": "Juliet",
+              "artist": "Shiki XO",
+              "release_date": "2021-05-05"
+            },
+            {
+              "id": 6181019,
+              "title": "Sadies pocket dimension",
+              "artist": "Abdullah Salah",
+              "release_date": "2020-11-17"
+            },
+            {
+              "id": 5559230,
+              "title": "Find My Way To You",
+              "artist": "Myles Parrish (Ft. Shalom Margaret)",
+              "release_date": "2020-04-28"
+            },
+            {
+              "id": 5347574,
+              "title": "DEATHDROP HA",
+              "artist": "AOL",
+              "release_date": "2019-02-28"
+            },
+            {
+              "id": 4030271,
+              "title": "剣山 Nu-Luv",
+              "artist": "Fla.mingo (NY)",
+              "release_date": "2016-08-26"
+            },
+            {
+              "id": 13736498,
+              "title": "#LoveStory",
+              "artist": "Yung Frendi",
+              "release_date": "2026-06-19"
+            },
+            {
+              "id": 4148477,
+              "title": "1989: Perfect Fight Song 2.0 (Taylor Swift Mashup)",
+              "artist": "AnDyWuMUSICLAND",
+              "release_date": "2015-01-01"
+            },
+            {
+              "id": 13197139,
+              "title": "Taylor Swift",
+              "artist": "The Midnight Beast",
+              "release_date": "2014-11-22"
+            },
+            {
+              "id": 13123739,
+              "title": "AMOR HISTORIA",
+              "artist": "Teardrv",
+              "release_date": null
+            },
+            {
+              "id": 12851268,
+              "title": "Eu Ainda Estou Aqui",
+              "artist": "LIL ESK",
+              "release_date": "2025-11-07"
+            },
+            {
+              "id": 732355,
+              "title": "United State of Pop 2009 (Blame It On the Pop)",
+              "artist": "DJ Earworm",
+              "release_date": "2009-12-27"
+            },
+            {
+              "id": 11920291,
+              "title": "luv story",
+              "artist": "9ael",
+              "release_date": "2025-05-20"
+            },
+            {
+              "id": 11871154,
+              "title": "回答 (Hui Da)",
+              "artist": "YOUNG建坤 (CHN)",
+              "release_date": "2022-11-06"
+            },
+            {
+              "id": 7801465,
+              "title": "please just give me some time",
+              "artist": "lil yu",
+              "release_date": null
+            },
+            {
+              "id": 10361643,
+              "title": "PERFUME But iCarlyRaeJepsen",
+              "artist": "TwerkNation28 (Ft. leroy)",
+              "release_date": "2022-01-31"
+            },
+            {
+              "id": 10655002,
+              "title": "Love Story - Remix",
+              "artist": "YGT, 42 & YAYA (DEU)",
+              "release_date": "2024-04-05"
+            },
+            {
+              "id": 10361652,
+              "title": "Computer City",
+              "artist": "TwerkNation28",
+              "release_date": "2022-01-15"
+            },
+            {
+              "id": 14398186,
+              "title": "Relay",
+              "artist": "zai & suban",
+              "release_date": "2026-10-07"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 6478833,
+              "title": "Love Story (Taylor’s Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2021-02-12"
+            },
+            {
+              "id": 9757927,
+              "title": "##LoveStory3",
+              "artist": "vin0 (Ft. whyhaze)",
+              "release_date": "2023-11-20"
+            },
+            {
+              "id": 7179724,
+              "title": "Love Story (Sad Version)",
+              "artist": "Sarah Cothran",
+              "release_date": null
+            },
+            {
+              "id": 5059934,
+              "title": "Lovestory",
+              "artist": "SEBii",
+              "release_date": "2019-11-27"
+            },
+            {
+              "id": 5834064,
+              "title": "Preface",
+              "artist": "AOL",
+              "release_date": "2020-07-01"
+            },
+            {
+              "id": 5832817,
+              "title": "Sw1ftly",
+              "artist": "ratgirlforever",
+              "release_date": "2020-07-31"
+            },
+            {
+              "id": 12736033,
+              "title": "Epoch of Affection (Ye Olde Version of ”Love Story”)",
+              "artist": "Liv Pearsall (Ft. Lonnie Marts IIV)",
+              "release_date": "2023-01-05"
+            },
+            {
+              "id": 11478978,
+              "title": "Rizz Story",
+              "artist": "Jelly House",
+              "release_date": "2025-02-14"
+            },
+            {
+              "id": 10520490,
+              "title": "Love Story",
+              "artist": "Winno",
+              "release_date": "2024-02-14"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker recalls a youthful romance, comparing it to the story of Romeo and Juliet. They describe meeting their love at a party ('See the lights, see the party, the ball gowns') and facing opposition from their father ('And my daddy said, 'Stay away from Juliet''). The speaker expresses a desire to escape with their love ('Romeo, take me somewhere we can be alone') and envisions a fairy-tale relationship ('You'll be the prince and I'll be the princess'). Despite challenges ('This love is difficult, but it's real'), the speaker remains hopeful ('Don't be afraid, we'll make it out of this mess'). The song concludes with a proposal ('Marry me, Juliet, you'll never have to be alone'), affirming their commitment.",
+            "themes": [
+              "young love",
+              "opposition",
+              "escapism",
+              "commitment"
+            ],
+            "emotional_tone": "hopeful and nostalgic",
+            "key_imagery": [
+              "balcony in summer air",
+              "throwing pebbles",
+              "scarlet letter",
+              "white dress"
+            ]
+          }
+        },
+        {
+          "id": 98890,
+          "title": "Fearless",
+          "artist_names": "Taylor Swift",
+          "release_date": "2008-10-14",
+          "pageviews": 402607,
+          "song_art_image_url": "https://images.genius.com/f661e7993a637ad2b7f87ac2a2b88882.867x867x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/f661e7993a637ad2b7f87ac2a2b88882.300x300x1.png",
+          "album": "Fearless",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 7593153,
+              "title": "Taylor Swift",
+              "artist": "Matt Cooper",
+              "release_date": "2022-01-14"
+            },
+            {
+              "id": 6478825,
+              "title": "Fearless (Taylor’s Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2021-04-09"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a series of intimate moments with a romantic partner, expressing a deep sense of admiration and infatuation. They highlight small, vivid details like 'the glow off the pavement' after rain and the partner's actions, such as 'run your hands through your hair,' which intensify their attraction. The speaker repeatedly emphasizes their willingness to embrace spontaneity and vulnerability with this person, stating they'd 'dance in a storm, in my best dress, fearless.' The lyrics capture a moment of bravery during a 'first kiss,' described as 'flawless, really somethin'.' The speaker cherishes the present, wanting to 'capture it, remember it,' and questions how 'it gets better than this,' suggesting a peak emotional experience.",
+            "themes": [
+              "romantic infatuation",
+              "spontaneity",
+              "living in the moment",
+              "vulnerability"
+            ],
+            "emotional_tone": "adoring, exhilarated, fearless",
+            "key_imagery": [
+              "glow off the pavement",
+              "dance in a storm, in my best dress",
+              "first kiss, it's flawless",
+              "drive slow 'til we run out of road"
+            ]
+          }
+        },
+        {
+          "id": 132077,
+          "title": "Tim McGraw",
+          "artist_names": "Taylor Swift",
+          "release_date": "2006-06-19",
+          "pageviews": 376168,
+          "song_art_image_url": "https://images.genius.com/ed1207d8ff9acc5d9609511d2da11694.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/ed1207d8ff9acc5d9609511d2da11694.300x300x1.jpg",
+          "album": "Taylor Swift",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past summer romance, expressing nostalgia and longing for the person they were with. They recall specific moments, such as dancing to a favorite song ('The one we danced to all night long') and the imagery of the moon on the lake ('The moon like a spotlight on the lake'). The speaker hopes that when the other person thinks of Tim McGraw, they will remember them ('When you think Tim McGraw, I hope you think of me'). The relationship ended with sadness ('September saw a month of tears'), but the speaker cherishes memories like the little black dress and faded blue jeans ('When you think happiness, I hope you think that little black dress'). The speaker leaves a letter on the person's doorstep, reiterating their desire to be remembered ('And there's a letter left on your doorstep').",
+            "themes": [
+              "nostalgia",
+              "longing",
+              "memory",
+              "romance"
+            ],
+            "emotional_tone": "bittersweet",
+            "key_imagery": [
+              "The moon like a spotlight on the lake",
+              "little black dress",
+              "faded blue jeans",
+              "Georgia stars"
+            ]
+          }
+        },
+        {
+          "id": 132097,
+          "title": "Our Song",
+          "artist_names": "Taylor Swift",
+          "release_date": "2006-10-24",
+          "pageviews": 368436,
+          "song_art_image_url": "https://images.genius.com/c55a605a5f0e3306e0f58429f310bcf9.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c55a605a5f0e3306e0f58429f310bcf9.300x300x1.png",
+          "album": "Taylor Swift",
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 10039190,
+              "title": "My Asshole Schtink - 12 Years A Slave (my wife’s boyfriend says I’m a victim of consumerism , I don’t know what those words mean)",
+              "artist": "The Great Big Ben (Ft. Sigma ULTERNA)",
+              "release_date": "2024-03-03"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a romantic relationship, describing moments that define their connection. In the car, the speaker mentions they 'don't have a song,' prompting their partner to describe their shared experiences as their song: 'Our song is a slammin' screen door' and 'the way you laugh.' These moments include sneaking out late, talking on the phone, and reflecting on missed opportunities like 'I didn't kiss her and I should have.' After a difficult day, the speaker finds roses and a note from their partner, reinforcing their bond. The speaker concludes by writing down their song, emphasizing its personal significance: 'I wrote down our song.'",
+            "themes": [
+              "romantic connection",
+              "shared memories",
+              "personal significance"
+            ],
+            "emotional_tone": "nostalgic and affectionate",
+            "key_imagery": [
+              "slammin' screen door",
+              "tappin' on your window",
+              "the way you laugh",
+              "roses and the note"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "romantic connection",
+          "longing",
+          "nostalgia",
+          "young love"
+        ],
+        "emotional_tone": [
+          "hopeful",
+          "nostalgic",
+          "yearning"
+        ],
+        "reasoning": "The era is dominated by themes of romantic connection and longing, often intertwined with nostalgia and young love, as seen in songs like 'You Belong With Me,' 'Love Story,' and 'Tim McGraw.' The emotional tone is consistently hopeful, nostalgic, and yearning, reflecting the artist's focus on romantic aspirations and reflective memories."
+      }
+    },
+    {
+      "era": 1,
+      "label": "Era 2 (2010-07-08 to 2014-07-28)",
+      "start": "2010-07-08",
+      "end": "2014-07-28",
+      "total_samples": 32,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 32,
+        "interpolates": 0,
+        "interpolated_by": 16
+      },
+      "songs": [
+        {
+          "id": 84880,
+          "title": "We Are Never Ever Getting Back Together",
+          "artist_names": "Taylor Swift",
+          "release_date": "2012-08-13",
+          "pageviews": 2193636,
+          "song_art_image_url": "https://images.genius.com/c51dab82cef9aff1d570453d4dd1fe60.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c51dab82cef9aff1d570453d4dd1fe60.300x300x1.png",
+          "album": "Red",
+          "sample_count": 14,
+          "sampled_by": [
+            {
+              "id": 7767427,
+              "title": "2SP00KY4FR33",
+              "artist": "RAWINTHEVOID",
+              "release_date": "2020-10-03"
+            },
+            {
+              "id": 7687311,
+              "title": "good 4 u is a new and original song which doesn’t plagiarize at all",
+              "artist": "Triple-Q (Ft. Aisha, BigGayRapper, Billie Joe Armstrong, Hayley Williams, Jimmy Urine, Johnny Gioeli, Mike Dirnt, Olivia Rodrigo, Robert Plant & Taylor Swift)",
+              "release_date": "2022-02-07"
+            },
+            {
+              "id": 7555254,
+              "title": "Bouquet",
+              "artist": "Cacola",
+              "release_date": "2022-01-01"
+            },
+            {
+              "id": 7107046,
+              "title": "Never Ever (Selling Back to Tether)",
+              "artist": "Lil Bubble",
+              "release_date": "2020-11-26"
+            },
+            {
+              "id": 6806428,
+              "title": "Weeze Day",
+              "artist": "Pluffaduff",
+              "release_date": "2021-04-13"
+            },
+            {
+              "id": 5442223,
+              "title": "Always With You",
+              "artist": "ColBreakz & Loxive",
+              "release_date": "2018-07-13"
+            },
+            {
+              "id": 4261748,
+              "title": "Made in 2013",
+              "artist": "Victor Lin",
+              "release_date": "2013-11-30"
+            },
+            {
+              "id": 4148477,
+              "title": "1989: Perfect Fight Song 2.0 (Taylor Swift Mashup)",
+              "artist": "AnDyWuMUSICLAND",
+              "release_date": "2015-01-01"
+            },
+            {
+              "id": 13285904,
+              "title": "Bouquet (Alt version)",
+              "artist": "Cacola",
+              "release_date": "2022-01-01"
+            },
+            {
+              "id": 13197139,
+              "title": "Taylor Swift",
+              "artist": "The Midnight Beast",
+              "release_date": "2014-11-22"
+            },
+            {
+              "id": 12696973,
+              "title": "(Woody’s Got) Taylor Swift - Wood",
+              "artist": "WowPoops",
+              "release_date": "2025-10-31"
+            },
+            {
+              "id": 453038,
+              "title": "United State of Pop 2012 (Shine Brighter)",
+              "artist": "DJ Earworm",
+              "release_date": "2012-12-17"
+            },
+            {
+              "id": 10112602,
+              "title": "i get gender envy from shadow the hedgehog",
+              "artist": "marshall4",
+              "release_date": "2022-06-03"
+            },
+            {
+              "id": 8739524,
+              "title": "they have a crush on you",
+              "artist": "lanelanelane",
+              "release_date": "2022-02-20"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 7261132,
+              "title": "Leave the Nether",
+              "artist": "NateWantsToBattle",
+              "release_date": "2012-08-26"
+            },
+            {
+              "id": 7593153,
+              "title": "Taylor Swift",
+              "artist": "Matt Cooper",
+              "release_date": "2022-01-14"
+            },
+            {
+              "id": 2818833,
+              "title": "Never Ever Going to the Nether",
+              "artist": "DanTDM",
+              "release_date": "2012-09-26"
+            },
+            {
+              "id": 2013887,
+              "title": "We Are Never Ever Getting Back To The Playoffs",
+              "artist": "Melody Martin",
+              "release_date": null
+            },
+            {
+              "id": 4769998,
+              "title": "Breakup Mashup",
+              "artist": "Pomplamoose (Ft. dodie)",
+              "release_date": "2019-01-31"
+            },
+            {
+              "id": 4277333,
+              "title": "ISCF Camp 2013",
+              "artist": "ISCF North Sydney High School",
+              "release_date": "2013-03-14"
+            },
+            {
+              "id": 3581974,
+              "title": "Ultimate Breakup Medley",
+              "artist": "Smosh (Ft. Tara Jayne Sissom)",
+              "release_date": "2014-02-20"
+            },
+            {
+              "id": 12360186,
+              "title": "clear again",
+              "artist": "esla froZanni",
+              "release_date": null
+            },
+            {
+              "id": 11759265,
+              "title": "Wonka X Howl",
+              "artist": "Vylet Pony",
+              "release_date": "2025-07-11"
+            },
+            {
+              "id": 2878637,
+              "title": "We Were Never Actually Together",
+              "artist": "The Key of Awesome",
+              "release_date": "2012-10-19"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a tumultuous, on-and-off relationship, expressing frustration and exhaustion over repeated breakups and reconciliations. They recall a specific instance where their partner claimed to miss them and promised to change, only for the reconciliation to last 'for a day.' The speaker repeatedly emphasizes their resolve to end the cycle, declaring, 'We are never, ever, ever getting back together.' They also mention missing the drama of the relationship, such as 'picking fights' and their partner's preference for 'some indie record that's much cooler than mine,' but ultimately reaffirm their decision to move on.",
+            "themes": [
+              "breakup",
+              "relationship cycles",
+              "resolve",
+              "exhaustion"
+            ],
+            "emotional_tone": "frustrated, resolute, exhausted",
+            "key_imagery": [
+              "'We are never, ever, ever getting back together'",
+              "'some indie record that's much cooler than mine'",
+              "'This is exhausting'"
+            ]
+          }
+        },
+        {
+          "id": 102705,
+          "title": "22",
+          "artist_names": "Taylor Swift",
+          "release_date": "2012-10-22",
+          "pageviews": 1853700,
+          "song_art_image_url": "https://images.genius.com/c2e3e016658c7a4a5a6595510d8ce017.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c2e3e016658c7a4a5a6595510d8ce017.300x300x1.png",
+          "album": "Red",
+          "sample_count": 13,
+          "sampled_by": [
+            {
+              "id": 8039132,
+              "title": "Blissom birthday cypher",
+              "artist": "sleepy.zone (Ft. 3moon, Accessgranted, Afraid of The Dark?, anem0s, Appl3maggot, CAT.FLP, Flexii., futureseeker, jauntsen, leastfavorite!, livewiress, OG Lost, P3tro, Sc2un-sh4re, shibes & vai5000)",
+              "release_date": "2022-05-25"
+            },
+            {
+              "id": 6979569,
+              "title": "starbucks employee vs. niche twitter personality @c0ncernn",
+              "artist": "leroy",
+              "release_date": "2021-07-05"
+            },
+            {
+              "id": 6631249,
+              "title": "カウントダウン (Countdown)",
+              "artist": "RAWINTHEVOID",
+              "release_date": "2019-05-24"
+            },
+            {
+              "id": 13791979,
+              "title": "OFF",
+              "artist": "Angel Emoji",
+              "release_date": "2024-04-05"
+            },
+            {
+              "id": 3051602,
+              "title": "22's",
+              "artist": "Water Will",
+              "release_date": "2016-04-05"
+            },
+            {
+              "id": 13197139,
+              "title": "Taylor Swift",
+              "artist": "The Midnight Beast",
+              "release_date": "2014-11-22"
+            },
+            {
+              "id": 13111925,
+              "title": "CITY OF TANKED (HAUS OF TANKED 2) - THE SINGLE",
+              "artist": "SPICY GIRLS",
+              "release_date": "2026-02-12"
+            },
+            {
+              "id": 7235138,
+              "title": "DARIACORE FOR MY FRIEND WEED, BECAUSE IT IS HIS 22ND BIRTHDAY",
+              "artist": "Syzy",
+              "release_date": "2021-09-16"
+            },
+            {
+              "id": 9899196,
+              "title": "200",
+              "artist": "KITTI DUBZ",
+              "release_date": "2023-12-31"
+            },
+            {
+              "id": 9722403,
+              "title": "perfect night",
+              "artist": "Sath4",
+              "release_date": "2023-09-28"
+            },
+            {
+              "id": 8992147,
+              "title": "i have a little fun",
+              "artist": "steej",
+              "release_date": null
+            },
+            {
+              "id": 8334058,
+              "title": "everyone SHUT UP. i have something to say...",
+              "artist": "steej",
+              "release_date": "2022-05-15"
+            },
+            {
+              "id": 9530326,
+              "title": "Amy Rose",
+              "artist": "Cacola",
+              "release_date": "2019-12-31"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 3581974,
+              "title": "Ultimate Breakup Medley",
+              "artist": "Smosh (Ft. Tara Jayne Sissom)",
+              "release_date": "2014-02-20"
+            },
+            {
+              "id": 7261138,
+              "title": "Pikachu",
+              "artist": "NateWantsToBattle",
+              "release_date": "2013-06-19"
+            },
+            {
+              "id": 7338021,
+              "title": "Blue",
+              "artist": "avocados n vespas, ⚡ tbh laci ⚡ & miloml",
+              "release_date": "2021-11-04"
+            },
+            {
+              "id": 370981,
+              "title": "22 Parody",
+              "artist": "Bart Baker",
+              "release_date": "2013-04-20"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a night filled with spontaneity and carefree energy, emphasizing a desire to escape routine and embrace the moment. They suggest activities like 'dress[ing] up like hipsters,' 'mak[ing] fun of our exes,' and 'fall[ing] in love with strangers,' highlighting a sense of youthful freedom. The speaker reflects on conflicting emotions, stating they feel 'happy, free, confused, and lonely at the same time,' and describes the night as both 'miserable and magical.' The chorus reinforces a feeling of optimism and connection, with the repeated line 'Everything will be alright if you keep me next to you,' suggesting comfort in companionship. The speaker also expresses a desire to 'ditch the whole scene' and 'end up dreamin' instead of sleeping,' further emphasizing a rejection of constraints and a focus on living in the moment.",
+            "themes": [
+              "youthful freedom",
+              "escapism",
+              "companionship",
+              "conflicting emotions"
+            ],
+            "emotional_tone": "optimistic and carefree, with undertones of confusion and longing",
+            "key_imagery": [
+              "dress up like hipsters",
+              "fall in love with strangers",
+              "happy, free, confused, and lonely",
+              "ditch the whole scene",
+              "dancing like we're twenty-two"
+            ]
+          }
+        },
+        {
+          "id": 102701,
+          "title": "All Too Well",
+          "artist_names": "Taylor Swift",
+          "release_date": "2012-10-22",
+          "pageviews": 1664594,
+          "song_art_image_url": "https://images.genius.com/341214eeb78c133a8170a932919a66aa.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/341214eeb78c133a8170a932919a66aa.300x300x1.png",
+          "album": "Red",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 4276058,
+              "title": "The Red Tour, March 29th, 2013",
+              "artist": "Patrick Roche",
+              "release_date": null
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, recalling vivid memories of shared moments, such as 'singing in the car, getting lost upstate' and 'dancing ‘round the kitchen in the refrigerator light.' They acknowledge the relationship's end, stating, 'I know it's long gone and that magic's not here no more,' but still feel deeply affected, admitting, 'I might be okay, but I'm not fine at all.' The speaker reminisces about specific details, like the scarf left at the partner's sister's house, which 'reminds you of innocence and it smells like me.' They also express pain over the breakup, describing the partner as 'casually cruel in the name of being honest' and feeling like 'a crumpled up piece of paper lying here.' Despite the passage of time, the speaker remains haunted by the memories, saying, 'I remember it all too well.'",
+            "themes": [
+              "nostalgia",
+              "heartbreak",
+              "memory",
+              "lost love"
+            ],
+            "emotional_tone": "melancholic and reflective",
+            "key_imagery": [
+              "autumn leaves falling down like pieces into place",
+              "dancing ‘round the kitchen in the refrigerator light",
+              "crumpled up piece of paper",
+              "scarf that reminds you of innocence"
+            ]
+          }
+        },
+        {
+          "id": 61663,
+          "title": "Enchanted",
+          "artist_names": "Taylor Swift",
+          "release_date": "2010-10-25",
+          "pageviews": 1118083,
+          "song_art_image_url": "https://images.genius.com/1199f82a0aade107d6bd6f0f6bef9edc.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/1199f82a0aade107d6bd6f0f6bef9edc.300x300x1.png",
+          "album": "Speak Now",
+          "sample_count": 4,
+          "sampled_by": [
+            {
+              "id": 5343196,
+              "title": "if i were u",
+              "artist": "blackbear & LAUV",
+              "release_date": "2020-08-19"
+            },
+            {
+              "id": 4751066,
+              "title": "Blazing Fire",
+              "artist": "Lucas Giello",
+              "release_date": null
+            },
+            {
+              "id": 8737049,
+              "title": "she giddied up!! someone help her",
+              "artist": "lanelanelane",
+              "release_date": null
+            },
+            {
+              "id": 13480398,
+              "title": "Unwashable Scars",
+              "artist": "Luhh Dyl",
+              "release_date": "2026-05-01"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 12567752,
+              "title": "Van Gogh",
+              "artist": "Gaustad",
+              "release_date": "2025-10-17"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a transformative encounter at a social gathering, where they felt lonely and insincere until meeting someone captivating. The meeting is described as 'enchanting' and 'wonderstruck,' with vivid details like 'your silhouette starts to make its way to me' and 'passing notes in secrecy.' The speaker is left longing and restless, pacing at night wondering if the feeling is mutual: '2 a.m., who do you love?' They express deep hope that the person isn't already committed, pleading, 'Please, don't be in love with someone else.' The night is repeatedly called 'sparklin'' and 'flawless,' emphasizing its magical quality.",
+            "themes": [
+              "love at first sight",
+              "longing",
+              "romantic hope",
+              "fleeting connection"
+            ],
+            "emotional_tone": "enchanted, wistful, yearning",
+            "key_imagery": [
+              "Walls of insincerity",
+              "Shifting eyes and vacancy",
+              "passing notes in secrecy",
+              "sparklin' night",
+              "blushin' all the way home"
+            ]
+          }
+        },
+        {
+          "id": 132663,
+          "title": "Long Live",
+          "artist_names": "Taylor Swift",
+          "release_date": "2010-10-25",
+          "pageviews": 970305,
+          "song_art_image_url": "https://images.genius.com/1199f82a0aade107d6bd6f0f6bef9edc.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/1199f82a0aade107d6bd6f0f6bef9edc.300x300x1.png",
+          "album": "Speak Now",
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 9215639,
+              "title": "Long Night",
+              "artist": "David0Mario",
+              "release_date": null
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a pivotal, triumphant moment shared with another person, marked by public recognition and celebration. They recall standing together with 'shaking hands' as 'the crowds in stands went wild,' emphasizing their elevated status as 'the kings and the queens.' The lyrics describe this as 'the end of a decade but the start of an age,' suggesting both an ending and a new beginning. The chorus celebrates their shared achievements ('Long live the walls we crashed through') and the lasting impact of their bond ('One day, we will be remembered'). The second verse revisits this memory through photographs, highlighting their rise from 'wishing for right now' to holding up trophies for their town, despite cynics calling it 'absurd.' The bridge introduces a plea to hold onto these memories forever, even speculating about future generations hearing their story ('tell 'em my name'). The emotional climax reiterates the joy and defiance of their shared journey ('I had the time of my life fighting dragons with you').",
+            "themes": [
+              "triumph",
+              "memory",
+              "legacy",
+              "defiance",
+              "camaraderie"
+            ],
+            "emotional_tone": "nostalgic, celebratory, defiant, hopeful",
+            "key_imagery": [
+              "shaking hands",
+              "crowds in stands went wild",
+              "kings and the queens",
+              "history book page",
+              "ripped up jeans",
+              "fighting dragons",
+              "confetti falls to the ground"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "heartbreak",
+          "nostalgia",
+          "relationship cycles",
+          "romantic hope"
+        ],
+        "emotional_tone": [
+          "melancholic",
+          "yearning",
+          "resolute"
+        ],
+        "reasoning": "The era is dominated by themes of heartbreak and nostalgia, as seen in 'All Too Well' and 'We Are Never Ever Getting Back Together,' which also highlight relationship cycles. Romantic hope is a recurring theme in 'Enchanted' and 'Long Live.' Emotionally, the era is marked by melancholic tones, yearning, and a resolute attitude, reflecting the artist's exploration of love, loss, and personal growth."
+      }
+    },
+    {
+      "era": 2,
+      "label": "Era 3 (2014-07-28 to 2018-08-16)",
+      "start": "2014-07-28",
+      "end": "2018-08-16",
+      "total_samples": 55,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 55,
+        "interpolates": 2,
+        "interpolated_by": 26
+      },
+      "songs": [
+        {
+          "id": 542389,
+          "title": "Blank Space",
+          "artist_names": "Taylor Swift",
+          "release_date": "2014-10-27",
+          "pageviews": 2348778,
+          "song_art_image_url": "https://images.genius.com/7a2e2a1c58fdef042933c16b41a5c277.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7a2e2a1c58fdef042933c16b41a5c277.300x300x1.png",
+          "album": "1989",
+          "sample_count": 21,
+          "sampled_by": [
+            {
+              "id": 8257716,
+              "title": "⁣look idk what to call this song just give me plays",
+              "artist": "‍xaev",
+              "release_date": "2022-07-23"
+            },
+            {
+              "id": 9440734,
+              "title": "End Of",
+              "artist": "David0Mario",
+              "release_date": null
+            },
+            {
+              "id": 8863661,
+              "title": "daria math",
+              "artist": "‍xaev",
+              "release_date": "2023-02-23"
+            },
+            {
+              "id": 9323675,
+              "title": "Blank space",
+              "artist": "22december",
+              "release_date": "2023-07-11"
+            },
+            {
+              "id": 8136314,
+              "title": "who wanna share gamer juice",
+              "artist": "‍xaev",
+              "release_date": "2021-12-27"
+            },
+            {
+              "id": 7497031,
+              "title": "vain",
+              "artist": "fleurine francis",
+              "release_date": "2021-12-16"
+            },
+            {
+              "id": 6777302,
+              "title": "LIPSTICK RESPONSE",
+              "artist": "death’s dynamic shroud",
+              "release_date": "2015-05-31"
+            },
+            {
+              "id": 6281722,
+              "title": "2000-2019 mashup | 200 songs from the last 20 years",
+              "artist": "YamiNoBahamut",
+              "release_date": "2019-12-26"
+            },
+            {
+              "id": 583593,
+              "title": "Woody Harrelson 1989 Monologue",
+              "artist": "Saturday Night Live (Ft. Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth & Woody Harrelson)",
+              "release_date": "2014-11-15"
+            },
+            {
+              "id": 700127,
+              "title": "Blank Space",
+              "artist": "YONAS",
+              "release_date": "2015-01-01"
+            },
+            {
+              "id": 698029,
+              "title": "Blank Space Remix",
+              "artist": "YONAS",
+              "release_date": "2015-02-03"
+            },
+            {
+              "id": 8257708,
+              "title": "⁣...i know what you are",
+              "artist": "‍xaev",
+              "release_date": "2022-06-04"
+            },
+            {
+              "id": 4148477,
+              "title": "1989: Perfect Fight Song 2.0 (Taylor Swift Mashup)",
+              "artist": "AnDyWuMUSICLAND",
+              "release_date": "2015-01-01"
+            },
+            {
+              "id": 13198546,
+              "title": "TKtkamelo",
+              "artist": "emilio valentino & Tiago 75",
+              "release_date": "2026-03-02"
+            },
+            {
+              "id": 13197139,
+              "title": "Taylor Swift",
+              "artist": "The Midnight Beast",
+              "release_date": "2014-11-22"
+            },
+            {
+              "id": 12911668,
+              "title": "Rhythm Refresh",
+              "artist": "Chongo",
+              "release_date": "2019-09-23"
+            },
+            {
+              "id": 5128546,
+              "title": "PopJustice - Kim Kardashian (WonderButt) vs Taylor Swift (SwiftGirl)",
+              "artist": "PopToonsTV",
+              "release_date": null
+            },
+            {
+              "id": 10333134,
+              "title": "Taylor Swift - The Complete Mashography (59 MVs)",
+              "artist": "DJ Earworm",
+              "release_date": "2024-04-26"
+            },
+            {
+              "id": 11269529,
+              "title": "b4893ad8de687bcd7e34c731e1d9b7dc1cb7d0e60fef8a2fc6049a54e74ac4ab:And if u`ve ever fucked with me i still love you",
+              "artist": "‍xaev",
+              "release_date": "2024-12-25"
+            },
+            {
+              "id": 11367742,
+              "title": "Can’t Stop",
+              "artist": "Leakionn",
+              "release_date": "2025-01-20"
+            },
+            {
+              "id": 6003404,
+              "title": "Girl Power Riff-Off",
+              "artist": "Cimorelli",
+              "release_date": "2020-09-25"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 9334776,
+              "title": "Blank Space",
+              "artist": "Ashli Willow",
+              "release_date": "2023-07-16"
+            },
+            {
+              "id": 5017935,
+              "title": "Blank Space (Parody)",
+              "artist": "PopToonsTV",
+              "release_date": "2015-03-20"
+            },
+            {
+              "id": 3761622,
+              "title": "Hookah Kartell",
+              "artist": "Sun Diego",
+              "release_date": "2018-06-29"
+            },
+            {
+              "id": 8793725,
+              "title": "Blank Page",
+              "artist": "Insane Ian",
+              "release_date": "2021-12-03"
+            },
+            {
+              "id": 2415117,
+              "title": "Blank Page",
+              "artist": "NateWantsToBattle",
+              "release_date": "2015-03-19"
+            },
+            {
+              "id": 6989117,
+              "title": "Look At Me",
+              "artist": "Gods Wisdom (Ft. Sen Morimoto)",
+              "release_date": "2016-10-03"
+            },
+            {
+              "id": 5367468,
+              "title": "Google Translate Sings: ‘’Blank Space’’ by Taylor Swift",
+              "artist": "Twisted Translations (Ft. MALINDA)",
+              "release_date": "2015-08-05"
+            },
+            {
+              "id": 2828620,
+              "title": "Ride for AIDS",
+              "artist": "Willam (Ft. Alaska Thunderfuck)",
+              "release_date": "2015-05-29"
+            },
+            {
+              "id": 12701871,
+              "title": "2018",
+              "artist": "BHZ, Monk, Longus Mongus, Big Pat & Ion Miles",
+              "release_date": "2025-11-20"
+            },
+            {
+              "id": 11318607,
+              "title": "Blank Space (Karaoke Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2015-02-01"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a passionate but volatile relationship, acknowledging their own reputation for intense, short-lived romances. They invite the listener into a world of 'magic, madness, heaven, sin' and frame love as a risky game: 'Love's a game, wanna play?'. The speaker is self-aware about their destructive tendencies, admitting 'I'm dying to see how this one ends' and 'I can make the bad guys good for a weekend'. The chorus presents a dichotomy—either the relationship will last 'forever' or 'go down in flames'—and highlights the speaker's history of failed relationships: 'Got a long list of ex-lovers / They'll tell you I'm insane'. The speaker embraces recklessness: 'Cause we're young and we're reckless / We'll take this way too far'. In the second verse, the speaker alternates between allure ('Cherry lips, crystal skies') and warning ('the worst is yet to come'), admitting to jealousy and emotional turbulence: 'I get drunk on jealousy' and 'I'm a nightmare dressed like a daydream'. The bridge reinforces the idea of love as painful: 'Boys only want love if it's torture'.",
+            "themes": [
+              "volatile love",
+              "recklessness",
+              "self-awareness",
+              "game-playing in relationships"
+            ],
+            "emotional_tone": "intense, seductive, and self-destructive",
+            "key_imagery": [
+              "magic, madness, heaven, sin",
+              "Love's a game",
+              "blank space",
+              "Rose garden filled with thorns",
+              "nightmare dressed like a daydream"
+            ]
+          }
+        },
+        {
+          "id": 3221550,
+          "title": "...Ready for It?",
+          "artist_names": "Taylor Swift",
+          "release_date": "2017-09-03",
+          "pageviews": 2269775,
+          "song_art_image_url": "https://images.genius.com/786d78d4e16933ad463642f1d2923521.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/786d78d4e16933ad463642f1d2923521.300x300x1.png",
+          "album": "reputation",
+          "sample_count": 7,
+          "sampled_by": [
+            {
+              "id": 5701659,
+              "title": "The Right Side",
+              "artist": "NerdOut",
+              "release_date": "2017-12-14"
+            },
+            {
+              "id": 3790260,
+              "title": "TECH it NO it LO it GIC it",
+              "artist": "Duuzu",
+              "release_date": "2018-02-21"
+            },
+            {
+              "id": 3618049,
+              "title": "In The Wild",
+              "artist": "Glad Rapper",
+              "release_date": "2018-04-01"
+            },
+            {
+              "id": 4263837,
+              "title": "Daft Meme (Technologic)",
+              "artist": "Duuzu",
+              "release_date": null
+            },
+            {
+              "id": 10333134,
+              "title": "Taylor Swift - The Complete Mashography (59 MVs)",
+              "artist": "DJ Earworm",
+              "release_date": "2024-04-26"
+            },
+            {
+              "id": 11794742,
+              "title": "Lafayette Superstar",
+              "artist": "Ford Anastasia",
+              "release_date": "2025-04-25"
+            },
+            {
+              "id": 10819633,
+              "title": "are you ready for it?",
+              "artist": "Katherine Jayne",
+              "release_date": "2024-12-04"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 7361209,
+              "title": "Sing 2 Audition Medley",
+              "artist": "SING 2 Cast",
+              "release_date": "2021-12-17"
+            },
+            {
+              "id": 11324974,
+              "title": "...Ready For It? (Karaoke Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2018-03-09"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a magnetic, dangerous attraction to someone they perceive as a 'killer' who has 'loved and left haunted' others. They express a desire to hold this person 'for ransom' and keep them 'forever,' likening their connection to a 'vendetta.' The speaker acknowledges their own role as a 'robber' who steals hearts and envisions a shared future on an 'island' where their partner could be their 'jailer.' The relationship is portrayed as secretive ('No one has to know') and intense, with vivid dreams of their connection ('In the middle of the night, in my dreams'). The refrain repeatedly invites the partner to 'let the games begin,' emphasizing a playful yet competitive dynamic.",
+            "themes": [
+              "attraction",
+              "danger",
+              "secrecy",
+              "competition"
+            ],
+            "emotional_tone": "intense, playful, possessive",
+            "key_imagery": [
+              "killer",
+              "phantom",
+              "ransom",
+              "island",
+              "jailer",
+              "games begin"
+            ]
+          }
+        },
+        {
+          "id": 3210592,
+          "title": "Look What You Made Me Do",
+          "artist_names": "Taylor Swift",
+          "release_date": "2017-08-25",
+          "pageviews": 2242619,
+          "song_art_image_url": "https://images.genius.com/0a1e9278ea8bdecbbba6c3ff901f76ca.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/0a1e9278ea8bdecbbba6c3ff901f76ca.300x300x1.jpg",
+          "album": "reputation",
+          "sample_count": 13,
+          "sampled_by": [
+            {
+              "id": 6926672,
+              "title": "The Bad Guy Made Me Wait",
+              "artist": "Cosmic Latte",
+              "release_date": "2021-01-10"
+            },
+            {
+              "id": 6638094,
+              "title": "Symphony of Distraction",
+              "artist": "PhucYoou",
+              "release_date": "2018-04-27"
+            },
+            {
+              "id": 3311655,
+              "title": "Look What You Made Me Do",
+              "artist": "R.A. The Rugged Man",
+              "release_date": "2017-09-12"
+            },
+            {
+              "id": 4000274,
+              "title": "Look What You Made Me Do (Tangled Style)",
+              "artist": "Whitney Avalon",
+              "release_date": "2018-07-28"
+            },
+            {
+              "id": 3249645,
+              "title": "Episode 1 (PILOT) - “Let’s Get Sued!” + VMAs + The Single Life",
+              "artist": "Sin City Radio (Ft. Cey LaVie & VonJune)",
+              "release_date": "2017-09-08"
+            },
+            {
+              "id": 3215090,
+              "title": "Better watch out  REMIX",
+              "artist": "MT2.1 (Ft. SR CITY)",
+              "release_date": "2017-07-28"
+            },
+            {
+              "id": 8839108,
+              "title": "Look What You Made Me Smooth",
+              "artist": "David0Mario",
+              "release_date": null
+            },
+            {
+              "id": 9019484,
+              "title": "Happy",
+              "artist": "Cacola",
+              "release_date": "2023-04-21"
+            },
+            {
+              "id": 12911668,
+              "title": "Rhythm Refresh",
+              "artist": "Chongo",
+              "release_date": "2019-09-23"
+            },
+            {
+              "id": 12981786,
+              "title": "Rhythm Nirvana",
+              "artist": "Chongo",
+              "release_date": "2019-01-28"
+            },
+            {
+              "id": 5128546,
+              "title": "PopJustice - Kim Kardashian (WonderButt) vs Taylor Swift (SwiftGirl)",
+              "artist": "PopToonsTV",
+              "release_date": null
+            },
+            {
+              "id": 10333134,
+              "title": "Taylor Swift - The Complete Mashography (59 MVs)",
+              "artist": "DJ Earworm",
+              "release_date": "2024-04-26"
+            },
+            {
+              "id": 3367204,
+              "title": "United State of Pop 2017 (How We Do It)",
+              "artist": "DJ Earworm",
+              "release_date": "2017-12-13"
+            }
+          ],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 83166,
+              "title": "Innocent",
+              "artist": "Taylor Swift",
+              "release_date": "2010-09-12"
+            },
+            {
+              "id": 133585,
+              "title": "I’m Too Sexy",
+              "artist": "Right Said Fred",
+              "release_date": "1991-07-15"
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 6780289,
+              "title": "Mega Meme Medley - Otamatone Cover #100",
+              "artist": "TheRealSullyG",
+              "release_date": "2020-12-29"
+            },
+            {
+              "id": 3471015,
+              "title": "Google Translate Sings: “Look What You Made Me Do” by Taylor Swift",
+              "artist": "Twisted Translations",
+              "release_date": "2017-08-30"
+            },
+            {
+              "id": 9057488,
+              "title": "#say #wassup",
+              "artist": "Dazegxd & quinn",
+              "release_date": "2023-04-26"
+            },
+            {
+              "id": 3346645,
+              "title": "VELCRO",
+              "artist": "Felony Steve (Ft. Lil Kidz Bop & Troy Facism)",
+              "release_date": "2017-12-02"
+            },
+            {
+              "id": 11324996,
+              "title": "Look What You Made Me Do (Karaoke Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2018-03-09"
+            },
+            {
+              "id": 11794742,
+              "title": "Lafayette Superstar",
+              "artist": "Ford Anastasia",
+              "release_date": "2025-04-25"
+            },
+            {
+              "id": 5143233,
+              "title": "Look What You Made Me Do (Parody)",
+              "artist": "PopToonsTV",
+              "release_date": "2017-10-17"
+            },
+            {
+              "id": 3271526,
+              "title": "Bendy and the Ink Machine Chapter 3: The Musical",
+              "artist": "lhugueny (Ft. Whitney Di Stefano)",
+              "release_date": "2017-10-08"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 83166,
+              "title": "Innocent",
+              "artist": "Taylor Swift",
+              "release_date": "2010-09-12"
+            },
+            {
+              "id": 133585,
+              "title": "I’m Too Sexy",
+              "artist": "Right Said Fred",
+              "release_date": "1991-07-15"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker expresses strong dislike for someone's manipulative behavior, referencing 'little games', 'tilted stage', and being made to play 'the fool'. They accuse this person of deceit ('perfect crime', 'laugh when you lie') and shifting blame ('said the gun was mine'). The speaker claims personal growth ('got smarter, got harder') and resilience ('rose up from the dead'), while hinting at revenge ('list of names', 'yours is in red, underlined'). They reflect on betrayal ('asked me for a place to sleep', 'locked me out and threw a feast') and focus on karma ('all I think about is karma', 'you'll all get yours'). The chorus repeatedly blames the subject for the speaker's actions ('look what you made me do'). Distrust is a recurring theme ('I don't trust nobody'), with the speaker embracing a vengeful persona ('actress starrin' in your bad dreams'). The interlude suggests a symbolic death of their former self ('the old Taylor can't come to the phone', 'she's dead').",
+            "themes": [
+              "betrayal",
+              "revenge",
+              "personal growth",
+              "deception",
+              "karma"
+            ],
+            "emotional_tone": "defiant, vengeful, resentful",
+            "key_imagery": [
+              "'little games'",
+              "'tilted stage'",
+              "'rose up from the dead'",
+              "'list of names'",
+              "'actress starrin' in your bad dreams'",
+              "'the old Taylor can't come to the phone'"
+            ]
+          }
+        },
+        {
+          "id": 542390,
+          "title": "Style",
+          "artist_names": "Taylor Swift",
+          "release_date": "2014-10-27",
+          "pageviews": 2103029,
+          "song_art_image_url": "https://images.genius.com/759d12dcad3028566a2a53fbc84b5fa4.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/759d12dcad3028566a2a53fbc84b5fa4.300x300x1.png",
+          "album": "1989",
+          "sample_count": 11,
+          "sampled_by": [
+            {
+              "id": 9215646,
+              "title": "Style Horror",
+              "artist": "David0Mario",
+              "release_date": null
+            },
+            {
+              "id": 8274959,
+              "title": "Target the Fading Memory",
+              "artist": "death’s dynamic shroud",
+              "release_date": "2022-08-07"
+            },
+            {
+              "id": 3962486,
+              "title": "Pennington Acres",
+              "artist": "death’s dynamic shroud",
+              "release_date": "2017-08-15"
+            },
+            {
+              "id": 7646007,
+              "title": "Head Lice",
+              "artist": "jacksfilms",
+              "release_date": "2022-01-27"
+            },
+            {
+              "id": 6777302,
+              "title": "LIPSTICK RESPONSE",
+              "artist": "death’s dynamic shroud",
+              "release_date": "2015-05-31"
+            },
+            {
+              "id": 2347397,
+              "title": "Paradise",
+              "artist": "Lil Uzi Vert",
+              "release_date": "2015-10-30"
+            },
+            {
+              "id": 13102702,
+              "title": "Palm Tree",
+              "artist": "hollowtiphero",
+              "release_date": "2025-05-02"
+            },
+            {
+              "id": 4148477,
+              "title": "1989: Perfect Fight Song 2.0 (Taylor Swift Mashup)",
+              "artist": "AnDyWuMUSICLAND",
+              "release_date": "2015-01-01"
+            },
+            {
+              "id": 11328546,
+              "title": "The Second Coming of Jesus Christ [Interlude]",
+              "artist": "Colson Lin",
+              "release_date": "2025-01-11"
+            },
+            {
+              "id": 9340922,
+              "title": "that was then, this is dumb",
+              "artist": "Chronix (Pop)",
+              "release_date": "2022-08-24"
+            },
+            {
+              "id": 9287092,
+              "title": "Sorry Pt. 2 (Parting Ways)",
+              "artist": "death’s dynamic shroud",
+              "release_date": "2023-06-30"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 7224919,
+              "title": "with me",
+              "artist": "Ken Rodriguez",
+              "release_date": "2020-10-16"
+            },
+            {
+              "id": 3409387,
+              "title": "Balance Overkill",
+              "artist": "Instalok",
+              "release_date": "2015-03-07"
+            },
+            {
+              "id": 11318620,
+              "title": "Style (Karaoke Version)",
+              "artist": "Taylor Swift",
+              "release_date": "2015-02-01"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a tumultuous yet enduring relationship characterized by repeated cycles of attraction and conflict. They acknowledge the potential for disaster ('Could end in burning flames or paradise') but are drawn back to each other ('we come back every time'). The speaker reflects on their partner's infidelity ('you've been out and about with some other girl') but admits mutual longing ('Can't stop thinking 'bout you and I'). The relationship is framed as timeless and unstoppable ('we never go out of style').",
+            "themes": [
+              "enduring love",
+              "conflict",
+              "attraction",
+              "infidelity"
+            ],
+            "emotional_tone": "conflicted yet nostalgic",
+            "key_imagery": [
+              "James Dean daydream look in your eye",
+              "red lip classic thing",
+              "crashing down",
+              "never go out of style"
+            ]
+          }
+        },
+        {
+          "id": 3281773,
+          "title": "End Game",
+          "artist_names": "Taylor Swift (Ft. Ed Sheeran & Future)",
+          "release_date": "2017-11-10",
+          "pageviews": 1820624,
+          "song_art_image_url": "https://images.genius.com/d6eba083b40fcec8b16ab1b4489fe057.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/d6eba083b40fcec8b16ab1b4489fe057.300x300x1.png",
+          "album": "reputation",
+          "sample_count": 3,
+          "sampled_by": [
+            {
+              "id": 5429831,
+              "title": "Logan Paul Sings A Song",
+              "artist": "Aaron Fraser-Nash",
+              "release_date": null
+            },
+            {
+              "id": 4146623,
+              "title": "Nonstop Pop 2018",
+              "artist": "Isosine",
+              "release_date": "2018-12-08"
+            },
+            {
+              "id": 8934066,
+              "title": "The Eras Tour Intro (It’s Been a Long Time Coming)",
+              "artist": "Taylor Swift",
+              "release_date": "2023-03-17"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 4135986,
+              "title": "Loka de Pinga",
+              "artist": "Kika Boom & Danny Bond",
+              "release_date": "2018-11-28"
+            },
+            {
+              "id": 3509299,
+              "title": "Late Game",
+              "artist": "Instalok",
+              "release_date": "2018-02-08"
+            },
+            {
+              "id": 11324992,
+              "title": "End Game (Karaoke Version)",
+              "artist": "Taylor Swift (Ft. Ed Sheeran & Future)",
+              "release_date": "2018-03-09"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a desire to be a significant, lasting partner ('I wanna be your end game') and a top priority ('I wanna be your first string'). They acknowledge their and their partner's notable reputations ('Big reputation, big reputation') and the rumors surrounding them ('Reputation precedes me, in rumours, I'm knee-deep'). The speaker emphasizes a mutual attraction despite their flaws ('You love it, I love it too 'cause you my type') and a wish to avoid typical relationship pitfalls ('I don't wanna miss you like the other girls do'). They reflect on past connections and conflicts ('Knew her when I was young, reconnected when we were little bit older') and the intensity of their bond ('It's like your eyes are liquor, it's like your body is gold'). The speaker also admits to personal struggles ('I got issues and chips on both of my shoulders') and a complicated relationship with drama ('I swear I don't love the drama, it loves me').",
+            "themes": [
+              "desire for lasting love",
+              "reputation",
+              "mutual attraction",
+              "personal flaws",
+              "relationship challenges"
+            ],
+            "emotional_tone": "passionate, conflicted, determined",
+            "key_imagery": [
+              "end game",
+              "first string",
+              "A-Team",
+              "big reputation",
+              "handprints on my soul",
+              "eyes are liquor",
+              "body is gold"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "volatile love",
+          "betrayal",
+          "desire for lasting love",
+          "attraction"
+        ],
+        "emotional_tone": [
+          "intense",
+          "defiant",
+          "passionate"
+        ],
+        "reasoning": "The themes 'volatile love,' 'betrayal,' 'desire for lasting love,' and 'attraction' are central to multiple songs in this era, reflecting recurring narratives of complex relationships and personal struggles. The emotional tones 'intense,' 'defiant,' and 'passionate' dominate across the songs, capturing the heightened emotions and assertive attitudes that characterize this period of the artist's career."
+      }
+    },
+    {
+      "era": 3,
+      "label": "Era 4 (2018-08-16 to 2022-09-05)",
+      "start": "2018-08-16",
+      "end": "2022-09-05",
+      "total_samples": 6,
+      "totals": {
+        "samples": 1,
+        "sampled_in": 6,
+        "interpolates": 1,
+        "interpolated_by": 5
+      },
+      "songs": [
+        {
+          "id": 7076626,
+          "title": "All Too Well (10 Minute Version) (Taylor’s Version) [From The Vault]",
+          "artist_names": "Taylor Swift",
+          "release_date": "2021-11-12",
+          "pageviews": 6692947,
+          "song_art_image_url": "https://images.genius.com/73d1cdd8620992686cda0642e463906b.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/73d1cdd8620992686cda0642e463906b.300x300x1.png",
+          "album": "Red (Taylor’s Version)",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [
+            {
+              "id": 937254,
+              "title": "Like a Cat",
+              "artist": "Cyndi Lauper",
+              "release_date": "1989"
+            }
+          ],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [
+            {
+              "id": 937254,
+              "title": "Like a Cat",
+              "artist": "Cyndi Lauper",
+              "release_date": "1989"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, vividly recalling moments of intimacy, joy, and heartbreak. They describe shared experiences, such as singing in the car, dancing in the kitchen, and skipping town, which are now tinged with nostalgia and pain. The speaker acknowledges the relationship's end, expressing feelings of loss, shame, and longing. They question the authenticity of their connection and the impact it had on both parties, while also grappling with the lingering memories and emotional scars. The scarf serves as a symbol of their shared past, a reminder of innocence and the bond they once had.",
+            "themes": [
+              "nostalgia",
+              "heartbreak",
+              "memory",
+              "loss",
+              "longing"
+            ],
+            "emotional_tone": "melancholic and reflective",
+            "key_imagery": [
+              "wind in my hair",
+              "autumn leaves fallin' down",
+              "kitchen in the refrigerator light",
+              "crumpled-up piece of paper",
+              "first fall of snow"
+            ]
+          }
+        },
+        {
+          "id": 7394358,
+          "title": "All Too Well (10 Minute Version) (Taylor’s Version) [Live Acoustic]",
+          "artist_names": "Taylor Swift",
+          "release_date": "2021-11-15",
+          "pageviews": 4295094,
+          "song_art_image_url": "https://images.genius.com/ef6f08e1c98947d292c991fd4ac9a8a3.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/ef6f08e1c98947d292c991fd4ac9a8a3.300x300x1.jpg",
+          "album": null,
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship filled with vivid memories, both joyful and painful. They recall specific moments, such as 'singing in the car, getting lost upstate' and 'dancing 'round the kitchen in the refrigerator light,' which evoke a sense of nostalgia. However, the relationship has ended, and the speaker grapples with the lingering emotions, stating, 'I might be okay, but I'm not fine at all.' The speaker also acknowledges the relationship's complexities, including being kept 'like a secret' and the partner's 'casually cruel' honesty. The scarf from the first week symbolizes the innocence and connection they once shared, as it 'reminds you of innocence and it smells like me.' Despite the passage of time, the speaker remains haunted by the memories, admitting, 'I remember it all too well.'",
+            "themes": [
+              "nostalgia",
+              "heartbreak",
+              "memory",
+              "lost love",
+              "emotional pain"
+            ],
+            "emotional_tone": "bittersweet",
+            "key_imagery": [
+              "wind in my hair",
+              "autumn leaves falling down",
+              "dancing 'round the kitchen in the refrigerator light",
+              "crumpled up piece of paper",
+              "scarf from that very first week"
+            ]
+          }
+        },
+        {
+          "id": 5793984,
+          "title": "cardigan",
+          "artist_names": "Taylor Swift",
+          "release_date": "2020-07-24",
+          "pageviews": 3649368,
+          "song_art_image_url": "https://images.genius.com/f53ab91b44685528a335b76352eb19b5.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/f53ab91b44685528a335b76352eb19b5.300x300x1.jpg",
+          "album": "folklore",
+          "sample_count": 4,
+          "sampled_by": [
+            {
+              "id": 7305208,
+              "title": "Don’t Call Me Ur Angel",
+              "artist": "Charlie Kurd",
+              "release_date": "2021-11-05"
+            },
+            {
+              "id": 8837294,
+              "title": "Autómata",
+              "artist": "Clutchill, Leston & Sticky M.A. (Ft. Steve Lean)",
+              "release_date": "2023-04-07"
+            },
+            {
+              "id": 9020994,
+              "title": "Cranberry",
+              "artist": "David0Mario",
+              "release_date": null
+            },
+            {
+              "id": 14321296,
+              "title": "omg it’s meeeeee",
+              "artist": "dielle (dariacore)",
+              "release_date": "2025-06-14"
+            }
+          ],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 5809033,
+              "title": "cardigan (songwriting voice memo)",
+              "artist": "Taylor Swift",
+              "release_date": "2020"
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 7036555,
+              "title": "cardigan (ariana’s version)",
+              "artist": "Dangerous Seven",
+              "release_date": "2020-11-06"
+            },
+            {
+              "id": 7417505,
+              "title": "almost",
+              "artist": "miloml",
+              "release_date": "2021-12-08"
+            },
+            {
+              "id": 6354339,
+              "title": "Secret Admirer",
+              "artist": "Monolyth & Beanpole Records",
+              "release_date": "2023-08-22"
+            },
+            {
+              "id": 5816082,
+              "title": "cardigan (cabin in candlelight version)",
+              "artist": "Taylor Swift",
+              "release_date": "2020-07-30"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 5809033,
+              "title": "cardigan (songwriting voice memo)",
+              "artist": "Taylor Swift",
+              "release_date": "2020"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on a past relationship, emphasizing how others underestimated their understanding due to their youth. They recall intimate moments, such as 'Dancin' in your Levi's' and 'Hand under my sweatshirt,' and express how their partner made them feel valued, as in 'You put me on and said I was your favorite.' However, the relationship ends painfully, with the speaker noting, 'You drew stars around my scars / But now I'm bleedin'' and 'Leavin' like a father / Running like water.' Despite the heartbreak, the speaker foresees their partner returning, stating, 'And I knew you'd come back to me.'",
+            "themes": [
+              "youth and misunderstanding",
+              "intimacy",
+              "heartbreak",
+              "longing"
+            ],
+            "emotional_tone": "nostalgic and bittersweet",
+            "key_imagery": [
+              "old cardigan under someone's bed",
+              "stars around my scars",
+              "linger like a tattoo kiss",
+              "chasin' shadows in the grocery line"
+            ]
+          }
+        },
+        {
+          "id": 4508914,
+          "title": "Lover",
+          "artist_names": "Taylor Swift",
+          "release_date": "2019-08-16",
+          "pageviews": 2904224,
+          "song_art_image_url": "https://images.genius.com/ef7309e1b3e6fae42a331b84076f68e6.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/ef7309e1b3e6fae42a331b84076f68e6.300x300x1.jpg",
+          "album": "Lover",
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 8934066,
+              "title": "The Eras Tour Intro (It’s Been a Long Time Coming)",
+              "artist": "Taylor Swift",
+              "release_date": "2023-03-17"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 4808454,
+              "title": "Lover (Piano/Vocal)",
+              "artist": "Taylor Swift",
+              "release_date": "2019-08-23"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses a deep, enduring connection with their lover, emphasizing their shared space and autonomy ('this is our place, we make the rules'). They describe a sense of timelessness in their relationship ('Have I known you twenty seconds or twenty years?') and a desire for permanence ('Can we always be this close?'). The speaker acknowledges their lover's allure ('I'm highly suspicious that everyone who sees you wants you') and their own commitment ('I take this magnetic force of a man to be my lover'). They also highlight playful intimacy ('you'll save all your dirtiest jokes for me') and devotion ('at every table, I'll save you a seat, lover').",
+            "themes": [
+              "love",
+              "commitment",
+              "intimacy",
+              "timelessness"
+            ],
+            "emotional_tone": "devoted, affectionate, longing",
+            "key_imagery": [
+              "Christmas lights up 'til January",
+              "dazzling haze",
+              "magnetic force of a man",
+              "guitar string scar on my hand"
+            ]
+          }
+        },
+        {
+          "id": 5793983,
+          "title": "exile",
+          "artist_names": "Taylor Swift (Ft. Bon Iver)",
+          "release_date": "2020-07-24",
+          "pageviews": 2891746,
+          "song_art_image_url": "https://images.genius.com/4a6a06f7e361703062b0db46d0e4ec36.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/4a6a06f7e361703062b0db46d0e4ec36.300x300x1.png",
+          "album": "folklore",
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 13925080,
+              "title": "๋࣭⚝my mind,, subsiding macrocosms 🀦₊✧",
+              "artist": "Kyeler W",
+              "release_date": "2026-07-19"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes witnessing their former partner with someone new, feeling hurt and abandoned ('I can see you standing, honey / With his arms around your body'). They express a sense of déjà vu and resignation, recognizing a familiar, painful pattern ('I think I've seen this film before / And I didn't like the ending'). The relationship is metaphorically compared to a lost homeland or crown, emphasizing its former importance ('You were my town, now I'm in exile'). The speaker reflects on unmet expectations and unheeded warnings ('You never gave a warning sign / I gave so many signs'), ultimately deciding to leave ('So I'm leaving out the side door').",
+            "themes": [
+              "heartbreak",
+              "resignation",
+              "failed communication",
+              "letting go"
+            ],
+            "emotional_tone": "melancholic, resigned, and reflective",
+            "key_imagery": [
+              "film before",
+              "homeland",
+              "town",
+              "crown",
+              "exile",
+              "warning signs",
+              "side door"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "heartbreak",
+          "nostalgia",
+          "longing",
+          "intimacy"
+        ],
+        "emotional_tone": [
+          "melancholic",
+          "bittersweet",
+          "reflective"
+        ],
+        "reasoning": "The themes of heartbreak, nostalgia, longing, and intimacy are central to multiple songs in this era, reflecting a focus on past relationships and emotional depth. The emotional tones of melancholic, bittersweet, and reflective are consistently present, capturing the introspective and emotionally charged nature of the songs."
+      }
+    },
+    {
+      "era": 4,
+      "label": "Era 5 (2022-09-05 to 2026-09-25)",
+      "start": "2022-09-05",
+      "end": "2026-09-25",
+      "total_samples": 4,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 4,
+        "interpolates": 1,
+        "interpolated_by": 10
+      },
+      "songs": [
+        {
+          "id": 12274793,
+          "title": "Wood",
+          "artist_names": "Taylor Swift",
+          "release_date": "2025-10-03",
+          "pageviews": 4690159,
+          "song_art_image_url": "https://images.genius.com/c4336a93ab25e17fcace592cb9bba51a.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c4336a93ab25e17fcace592cb9bba51a.300x300x1.png",
+          "album": "The Life of a Showgirl",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 14109116,
+              "title": "P.I.Z.D.A. (More Minutes Verison) [From The Valut] (Wood Edition)",
+              "artist": "Lipgloss Stars",
+              "release_date": "2025-12-23"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on past superstitions and bad luck, acknowledging their reliance on signs like 'knocking on wood' and 'wishing on a falling star,' which 'never did me any good.' They describe a transformative relationship where their partner's love ('His love was the key that opened my thighs') and presence ('you and me forever dancing in the dark') have replaced their need for superstition. The speaker expresses confidence in their newfound luck ('we make our own luck') and a sense of empowerment ('New Heights of manhood').",
+            "themes": [
+              "superstition",
+              "love",
+              "transformation",
+              "empowerment"
+            ],
+            "emotional_tone": "confident, reflective, liberated",
+            "key_imagery": [
+              "knocking on wood",
+              "wishing on a falling star",
+              "dancing in the dark",
+              "Redwood tree",
+              "His love was the key that opened my thighs"
+            ]
+          }
+        },
+        {
+          "id": 12287956,
+          "title": "The Fate of Ophelia",
+          "artist_names": "Taylor Swift",
+          "release_date": "2025-10-03",
+          "pageviews": 4331755,
+          "song_art_image_url": "https://images.genius.com/20137020caed6518eafd30ae87b0c216.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/20137020caed6518eafd30ae87b0c216.300x300x1.png",
+          "album": "The Life of a Showgirl",
+          "sample_count": 3,
+          "sampled_by": [
+            {
+              "id": 13508195,
+              "title": "Cobaltite",
+              "artist": "Colson Lin",
+              "release_date": null
+            },
+            {
+              "id": 13508193,
+              "title": "Love Story",
+              "artist": "Colson Lin",
+              "release_date": null
+            },
+            {
+              "id": 13508184,
+              "title": "Dumatology",
+              "artist": "Colson Lin",
+              "release_date": null
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 12540239,
+              "title": "The Fate of Sgnarly",
+              "artist": "BritishJuggernaut",
+              "release_date": null
+            },
+            {
+              "id": 13883763,
+              "title": "Teratophilia",
+              "artist": "Dr. Memento",
+              "release_date": "2026-06-06"
+            },
+            {
+              "id": 13508195,
+              "title": "Cobaltite",
+              "artist": "Colson Lin",
+              "release_date": null
+            },
+            {
+              "id": 13232878,
+              "title": "300 BPM",
+              "artist": "peacock (CA)",
+              "release_date": "2026-04-01"
+            },
+            {
+              "id": 13108173,
+              "title": "Sina de Ofélia (Ao Vivo)",
+              "artist": "Natanzinho Lima",
+              "release_date": "2026-02-07"
+            },
+            {
+              "id": 12574052,
+              "title": "Domingo (Cold Open)",
+              "artist": "Saturday Night Live (Ft. Ashley Padilla, Chloe Fineman, Marcello Hernández, Sabrina Carpenter, Sarah Sherman & Veronika Slowikowska)",
+              "release_date": "2025-10-18"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a transformative relationship that rescued them from isolation and despair. Initially, they describe being alone ('I sat alone in my tower') and vulnerable ('I might've drowned in the melancholy'). The other person is depicted as powerful ('You were just honing your powers') and destructive ('You light the match to watch it blow'), yet ultimately redemptive ('You dug me out of my grave and saved my heart'). The speaker pledges loyalty ('Pledge allegiance to your hands, your team, your vibes') and acknowledges the other's role in their salvation ('All because you came for me'). The song draws parallels to the tragic figure of Ophelia ('The fate of Ophelia'), emphasizing themes of rescue and renewal.",
+            "themes": [
+              "rescue",
+              "loyalty",
+              "transformation",
+              "isolation",
+              "redemption"
+            ],
+            "emotional_tone": "grateful and reflective",
+            "key_imagery": [
+              "tower",
+              "grave",
+              "Ophelia",
+              "chain, crown, vine",
+              "fire"
+            ]
+          }
+        },
+        {
+          "id": 10024009,
+          "title": "Fortnight",
+          "artist_names": "Taylor Swift (Ft. Post Malone)",
+          "release_date": "2024-04-19",
+          "pageviews": 4293828,
+          "song_art_image_url": "https://images.genius.com/9e602eb80c004d0302187f908fa5afea.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/9e602eb80c004d0302187f908fa5afea.300x300x1.png",
+          "album": "THE TORTURED POETS DEPARTMENT",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [
+            {
+              "id": 3030273,
+              "title": "Apocalypse",
+              "artist": "Cigarettes After Sex",
+              "release_date": "2017-03-20"
+            }
+          ],
+          "interpolated_by": [
+            {
+              "id": 10297516,
+              "title": "Lost Her (Fortnight)",
+              "artist": "Sinneyy",
+              "release_date": "2024-04-20"
+            },
+            {
+              "id": 11224573,
+              "title": "United State of Pop 2024 (Blame It On The Whiskey)",
+              "artist": "DJ Earworm",
+              "release_date": "2024-12-11"
+            }
+          ],
+          "inspired_by": [
+            {
+              "id": 3030273,
+              "title": "Apocalypse",
+              "artist": "Cigarettes After Sex",
+              "release_date": "2017-03-20"
+            }
+          ],
+          "summary": {
+            "overview": "The speaker reflects on a past intense but brief relationship ('for a fortnight there, we were forever') that continues to haunt them. They express unresolved feelings and jealousy, noting the former lover's current domestic life ('Your wife waters flowers, I wanna kill her') and their own emotional turmoil ('I love you, it's ruining my life'). The speaker also mentions personal struggles, such as alcoholism ('I was a functioning alcoholic') and a sense of stagnation ('All my mornings are Mondays stuck in an endless February'). The relationship's fleeting nature ('I touched you for only a fortnight') contrasts with its lasting emotional impact.",
+            "themes": [
+              "unrequited love",
+              "jealousy",
+              "emotional turmoil",
+              "fleeting relationships"
+            ],
+            "emotional_tone": "anguished, resentful, nostalgic",
+            "key_imagery": [
+              "functioning alcoholic",
+              "endless February",
+              "fortnight there, we were forever",
+              "wife waters flowers, I wanna kill her",
+              "miracle move-on drug"
+            ]
+          }
+        },
+        {
+          "id": 10024526,
+          "title": "loml",
+          "artist_names": "Taylor Swift",
+          "release_date": "2024-04-19",
+          "pageviews": 3324308,
+          "song_art_image_url": "https://images.genius.com/48394cc3d17656b89aec73549d8863b6.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/48394cc3d17656b89aec73549d8863b6.300x300x1.png",
+          "album": "THE TORTURED POETS DEPARTMENT",
+          "sample_count": 1,
+          "sampled_by": [
+            {
+              "id": 10377814,
+              "title": "Intro / But Daddy I Love Him / So High School",
+              "artist": "Taylor Swift",
+              "release_date": "2024-05-09"
+            }
+          ],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a tumultuous, passionate relationship that was both intense and destructive. They describe rekindling old flames ('Who's gonna stop us from waltzing back into rekindled flames') and the idealized memories they created ('We embroidered the memories of the time I was away'). The relationship is portrayed as legendary yet fleeting ('If you know it in one glimpse, it's legendary') and marked by deception ('When your impressionist paintings of heaven turned out to be fakes'). The speaker grapples with the pain of betrayal ('You shit-talked me under the table') and the lingering emotional impact ('I can't get out of bed 'Cause something counterfeit's dead'). The relationship ultimately ends in disillusionment ('Our field of dreams engulfed in fire').",
+            "themes": [
+              "love",
+              "betrayal",
+              "memory",
+              "illusion",
+              "loss"
+            ],
+            "emotional_tone": "bittersweet, disillusioned, nostalgic",
+            "key_imagery": [
+              "rekindled flames",
+              "embroidered memories",
+              "impressionist paintings of heaven",
+              "dancing phantoms on the terrace",
+              "field of dreams engulfed in fire"
+            ]
+          }
+        },
+        {
+          "id": 10024536,
+          "title": "So Long, London",
+          "artist_names": "Taylor Swift",
+          "release_date": "2024-04-19",
+          "pageviews": 3235896,
+          "song_art_image_url": "https://images.genius.com/48394cc3d17656b89aec73549d8863b6.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/48394cc3d17656b89aec73549d8863b6.300x300x1.png",
+          "album": "THE TORTURED POETS DEPARTMENT",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 14064260,
+              "title": "So Long, London",
+              "artist": "Industrial Design Revolution (Ft. KRGKGM)",
+              "release_date": null
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker reflects on a failed relationship, expressing exhaustion and resentment. They describe carrying the weight of the relationship ('My spine split from carrying us up the hill') and feeling unappreciated ('I'm pissed off you let me give you all that youth for free'). The speaker acknowledges the end of the relationship ('So long, London') and the emotional toll it took ('How much sad did you think I had / Did you think I had in me?'). They express anger and a sense of betrayal ('You swore that you loved me, but where were the clues?') but also a determination to move on ('I'll find someone').",
+            "themes": [
+              "heartbreak",
+              "betrayal",
+              "resilience"
+            ],
+            "emotional_tone": "angry, reflective, determined",
+            "key_imagery": [
+              "My spine split from carrying us up the hill",
+              "Two graves, one gun",
+              "I died on the altar waitin' for the proof"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "love",
+          "transformation",
+          "betrayal",
+          "resilience"
+        ],
+        "emotional_tone": [
+          "reflective",
+          "nostalgic",
+          "determined"
+        ],
+        "reasoning": "The themes of love, transformation, betrayal, and resilience are central to multiple songs in this era, reflecting a focus on personal growth and emotional challenges. The emotional tones of reflective, nostalgic, and determined are prevalent across the songs, capturing the artist's introspective and forward-looking mindset during this period."
+      }
+    },
+    {
+      "era": "unknown",
+      "label": "Unknown era (no release date)",
+      "start": null,
+      "end": null,
+      "total_samples": 0,
+      "totals": {
+        "samples": 0,
+        "sampled_in": 0,
+        "interpolates": 0,
+        "interpolated_by": 1
+      },
+      "songs": [
+        {
+          "id": 8929516,
+          "title": "The Eras Tour Dates",
+          "artist_names": "Taylor Swift",
+          "release_date": null,
+          "pageviews": 499574,
+          "song_art_image_url": "https://images.genius.com/1247c0ac7a5f890606a75c8331c99503.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/1247c0ac7a5f890606a75c8331c99503.300x300x1.png",
+          "album": "Taylor Swift ",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The lyrics list a series of dates and locations, organized into sections labeled 'NORTH AMERICA DATES,' 'INTERNATIONAL DATES,' and 'CANCELLED DATES.' The speaker provides a chronological itinerary of events, spanning multiple cities and countries over several years. For example, 'March 17th, 2023: Glendale, Arizona' and 'November 9th, 2023: Buenos Aires, Argentina.' The 'CANCELLED DATES' section notes specific events that were canceled, such as 'August 8th, 2024: Vienna, Austria.'",
+            "themes": [
+              "travel",
+              "scheduling",
+              "events"
+            ],
+            "emotional_tone": "neutral",
+            "key_imagery": [
+              "March 17th, 2023: Glendale, Arizona",
+              "November 9th, 2023: Buenos Aires, Argentina",
+              "August 8th, 2024: Vienna, Austria"
+            ]
+          }
+        },
+        {
+          "id": 5651836,
+          "title": "Need",
+          "artist_names": "Taylor Swift",
+          "release_date": null,
+          "pageviews": 429094,
+          "song_art_image_url": "https://images.genius.com/7866a22b8aac2987e3da91d891af2398.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7866a22b8aac2987e3da91d891af2398.300x300x1.png",
+          "album": null,
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes intense longing and dependency on a romantic partner, contrasting fleeting desires with deeper emotional needs. Examples include 'Want is the cigarette smoke on a jacket' and 'Desire is the sound of the whiskey'. The speaker dismisses passion as temporary ('Passion is a passing thing') and lust as deceptive ('Lust is a liar, a short-lived fire'), emphasizing a more profound connection ('It's a need, it's a need'). Fear and danger are also present ('Danger is a thousand prickles on my neck', 'Fear is the nightmare I had'), but the speaker's devotion remains unwavering ('I won't leave, it's a need'). The bridge reinforces this dependency ('It's essential to me that you love me more than wishing, longing').",
+            "themes": [
+              "longing",
+              "dependency",
+              "fear",
+              "desire"
+            ],
+            "emotional_tone": "intense, desperate, devoted",
+            "key_imagery": [
+              "cigarette smoke on a jacket",
+              "sound of the whiskey",
+              "thousand prickles on my neck",
+              "new kiss every time"
+            ]
+          }
+        },
+        {
+          "id": 7285163,
+          "title": "Picture to Burn (Original Version)",
+          "artist_names": "Taylor Swift",
+          "release_date": null,
+          "pageviews": 271515,
+          "song_art_image_url": "https://images.genius.com/2b3445dc296da47369d4a9e920e8acdc.1000x1000x1.jpg",
+          "song_art_image_thumbnail_url": "https://images.genius.com/2b3445dc296da47369d4a9e920e8acdc.300x300x1.jpg",
+          "album": "Promo Only: Country Radio, April 2008",
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [
+            {
+              "id": 132079,
+              "title": "Picture to Burn",
+              "artist": "Taylor Swift",
+              "release_date": "2006-10-24"
+            }
+          ],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker expresses frustration and anger toward a former lover, emphasizing their disappointment in the failed relationship. They accuse the person of selfishness ('you love yourself more than you could ever love me') and dishonesty ('You're a redneck heartbreak who's really bad at lyin''). The speaker plans revenge ('I'm just sittin' here planning my revenge') and dismisses the relationship as wasted time ('watch me strike a match on all my wasted time'). They also threaten consequences if the person tries to apologize ('My daddy's gonna show ya how sorry you'll be'). The speaker repeatedly emphasizes their hatred for the person's pickup truck ('I hate that stupid old pickup truck you never let me drive'), which symbolizes their resentment.",
+            "themes": [
+              "heartbreak",
+              "revenge",
+              "anger",
+              "disappointment"
+            ],
+            "emotional_tone": "angry and resentful",
+            "key_imagery": [
+              "stupid old pickup truck",
+              "strike a match on all my wasted time",
+              "just another picture to burn"
+            ]
+          }
+        },
+        {
+          "id": 3852794,
+          "title": "Let’s Go (Battle)",
+          "artist_names": "Taylor Swift",
+          "release_date": null,
+          "pageviews": 156955,
+          "song_art_image_url": "https://images.genius.com/7866a22b8aac2987e3da91d891af2398.1000x1000x1.png",
+          "song_art_image_thumbnail_url": "https://images.genius.com/7866a22b8aac2987e3da91d891af2398.300x300x1.png",
+          "album": null,
+          "sample_count": 0,
+          "sampled_by": [],
+          "samples": [],
+          "interpolates": [],
+          "interpolated_by": [],
+          "inspired_by": [],
+          "summary": {
+            "overview": "The speaker describes a conflict that has escalated into a metaphorical battle, expressing regret and frustration. They emphasize that they did not initiate the conflict ('No, no, that's not what happened at all') and are waiting for the other person's next move ('I'm waiting on your next move'). The speaker acknowledges their past alliance ('And I used to be on your side') but feels forced into a fight ('Now it's looking like we're going to battle'). They express reluctance to hurt the other person ('And I never wanna hurt you') but are tired of enduring attacks ('But I'm tired of taking all these blows'). The speaker reflects on the relationship's breakdown ('We had it all, but you couldn't keep a promise') and the emotional toll it has taken ('Can't you tell this is breaking my heart?'). Despite their desire to reconcile ('I'd rather be on your side'), they are prepared to fight if necessary ('But if you wanna fight, baby, let's go').",
+            "themes": [
+              "conflict",
+              "betrayal",
+              "emotional struggle",
+              "reluctance to fight"
+            ],
+            "emotional_tone": "frustrated, regretful, defiant",
+            "key_imagery": [
+              "standing in the ring",
+              "first shot's fired",
+              "breaking my heart",
+              "going to war"
+            ]
+          }
+        }
+      ],
+      "representative": {
+        "themes": [
+          "heartbreak",
+          "conflict",
+          "longing",
+          "betrayal"
+        ],
+        "emotional_tone": [
+          "angry and resentful",
+          "intense",
+          "desperate",
+          "frustrated"
+        ],
+        "reasoning": "The era is dominated by themes of heartbreak, conflict, longing, and betrayal, which are central to multiple songs. Emotional tones like 'angry and resentful,' 'intense,' 'desperate,' and 'frustrated' are prevalent, reflecting the raw and emotional struggles expressed across the songs."
+      }
+    }
+  ]
+}

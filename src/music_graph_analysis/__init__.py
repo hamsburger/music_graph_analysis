@@ -23,7 +23,10 @@ from .llm import LLMError, OpenRouterClient
 from .lyrics import LyricsError, LyricsSource
 from .render import (
     DIMENSIONS,
+    REPRESENTATIVE_DIMENSIONS,
     build_chart_svg,
+    era_dimension_tags,
+    era_representative,
     era_tag_counts,
     normalize_tags,
     render_html,
@@ -50,6 +53,7 @@ __all__ = [
     "LyricsError",
     "LyricsSource",
     "OpenRouterClient",
+    "REPRESENTATIVE_DIMENSIONS",
     "SongSummarizer",
     "UNKNOWN_ERA",
     "attach_representatives",
@@ -57,6 +61,8 @@ __all__ = [
     "build_chart_svg",
     "clean_lyrics",
     "compute_era_bounds",
+    "era_dimension_tags",
+    "era_representative",
     "era_tag_counts",
     "extract_json",
     "format_report",
